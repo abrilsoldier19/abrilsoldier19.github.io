@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+          background-image: url("https://t3.ftcdn.net/jpg/04/55/62/46/360_F_455624616_HQElDnVTyZMIgcx7SZ5CnvgCjbC6ucRF.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      </style>
+<section class="section">
+  <div class="section-header">
+      <h3 class="page__heading" style="font-family: Lastica, Arial, sans-serif; background-color: #000000; padding: 20px; text-align: center; margin-top: 100x; color: #492AE6; font-size: 50px;">
+          Formulas de mecanismos en robotica</h3>
+  </div>
+  
+</section>
+</head>
+<body>
+    <div class="menu" style="text-align: center;">
+        <ul style="list-style-type: none; padding: 0;">
+            <li style="display: inline-block; margin-right: 10px;">
+                <a href="simulacion_mecanismos.html" class="button">Inicio</a>
+              </li>
+          <li style="display: inline-block; margin-right: 10px;">
+            <a href="menu_ejercicios.html" class="button">Ejercicios de mecanismos</a>
+          </li>
+          <li style="display: inline-block; margin-right: 10px;">
+            <a href="menu_formulas.html" class="button">Formulas</a>
+          </li>
+          <li style="display: inline-block; margin-right: 10px;">
+            <a href="#" class="button">Acerca de</a>
+          </li>
+        </ul>
+      </div>
+  
+
+    <script>
+        function operacion() {
+          var label_num_D1 = parseFloat(document.getElementById('label_num_D1').value);
+          var label_num_D2 = parseFloat(document.getElementById('label_num_D2').value);
+    
+          var i = (label_num_D1)/(label_num_D2);
+    
+          document.getElementById('resultado').innerHTML = "" + i;
+        }
+
+        function mostrarImagen() {
+            var imageContainer = document.getElementById('imageContainer');
+            var image = document.createElement('img');
+            image.src = 'Rueda_dentada.png'; // Reemplaza con la ruta de tu imagen
+              
+            imageContainer.innerHTML = ''; // Limpiar el contenedor de imágenes
+            imageContainer.appendChild(image); // Agregar la imagen al contenedor
+    }
+      </script>
+
+<body>
+    <h1 style ="color: white; font-family: Century Gothic, sans-serif; text-align: center;">Simulación del cálculo de relación de transmisión de velocidad
+        del mecanismo de un una correa plana en m</h1>
+
+        <p style="color: #ffffff;  text-align: center; font-family: Arial, sans-serif; font-size: 20px;">
+            Fórmula de la relación de transmisión
+          </p>
+          <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+             i = D1/D2
+          </p>
+          <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+            donde:
+          </p>
+          <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+            i = relación de transmisión
+          </p>
+          <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+            D1 = diametro polea menor
+          </p>
+          <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+            D2 = diametro polea mayor
+          </p>
+  
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div style = "height: 3em;">
+              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="label_num_D1">Proporcione el valor del diámetro D1 de la polea menor en mm:</label>
+            </div>
+            <div style = "height: 3em;">
+              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="label_num_D1" placeholder="">
+            </div>
+          
+            <div style = "height: 3em;">
+              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="label_num_D2">Proporcione el valor del diámetro D2 de la polea mayor en mm:</label>
+            </div>
+            <div style = "height: 3em;">
+              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="label_num_D2" placeholder="">
+            </div>
+          </div>
+  
+          <div style="display: flex; justify-content: center;">
+            <button style="background-color: #000000; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; " class="button" onclick="operacion()">Calcular</button>
+          </div>
+    <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+       <p> La relación de transmisión de velocidad es i:</p>
+    </div>
+    <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+        <p style="display: flex; flex-direction: column; align-items: center;" id="resultado">  </p>
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <button style="background-color: #000000; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; " class="button" onclick="mostrarImagen()">Generar </button>
+      </div>
+
+      <div id="imageContainer" style="display: flex; justify-content: center;"> </div>
+  
+  </body>
+  
+  
+  
+
+
+  <button class="button" style="display: inline-block;
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;" onclick="window.location.href='https://github.com/abrilsoldier19/SimuladorMecanismosRobotica/tree/main'">Enlace a Github</button>
+
+<button class="button2"  onclick="window.location.href='https://trinket.io/pygame/c64d2314c3?showInstructions=true'">Simulador ejercicio ia) en Python inteerfaz grafica</button>
+<button class="button2"  onclick="window.location.href='https://avril-rock1471-gmail-com.trinket.io/sites/ia-relacion-transmision-velocidad'">Simulador ejercicio ia) en Python como menu interactivo</button>
+
+
+
+<style>
+  .button {
+  display: inline-block;
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.button2 {
+  display: inline-block;
+  background-color: #9F37F5;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #333;
+}
+
+.center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</body>
+</html>
+
+
+
+

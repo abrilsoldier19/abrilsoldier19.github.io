@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+          background-image: url("https://t3.ftcdn.net/jpg/04/55/62/46/360_F_455624616_HQElDnVTyZMIgcx7SZ5CnvgCjbC6ucRF.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      </style>
+<section class="section">
+  <div class="section-header">
+      <h3 class="page__heading" style="font-family: Lastica, Arial, sans-serif; background-color: #000000; padding: 20px; text-align: center; margin-top: 100x; color: #492AE6; font-size: 50px;">
+          Simulacion de mecanismos en robotica</h3>
+  </div>
+  
+</section>
+</head>
+<body>
+    
+    <div class="menu" style="text-align: center;">
+        <ul style="list-style-type: none; padding: 0;">
+            <li style="display: inline-block; margin-right: 10px;">
+                <a href="simulacion_mecanismos.html" class="button">Inicio</a>
+              </li>
+          <li style="display: inline-block; margin-right: 10px;">
+            <a href="menu_ejercicios.html" class="button">Ejercicios de mecanismos</a>
+          </li>
+          <li style="display: inline-block; margin-right: 10px;">
+            <a href="menu_formulas.html" class="button">Formulas</a>
+          </li>
+          <li style="display: inline-block; margin-right: 10px;">
+            <a href="#" class="button">Acerca de</a>
+          </li>
+        </ul>
+      </div>
+</body>
+
+    <script>
+        function operacion() {
+          var label_num_longitud1 = parseFloat(document.getElementById('label_num_longitud1').value);
+          var label_num_longitud2 = parseFloat(document.getElementById('label_num_longitud2').value);
+          var label_num_longitud3 = parseFloat(document.getElementById('label_num_longitud3').value);
+    
+          var L = Math.PI*(label_num_longitud1 + label_num_longitud2) + 2 * Math.sqrt(Math.pow(label_num_longitud3,2) + Math.pow(label_num_longitud1 - label_num_longitud2, 2));
+    
+          document.getElementById('resultado').innerHTML = "" + L;
+        }
+
+        function mostrarImagen() {
+            var imageContainer = document.getElementById('imageContainer');
+            var image = document.createElement('img');
+            image.src = 'Rueda_dentada.png'; // Reemplaza con la ruta de tu imagen
+              
+            imageContainer.innerHTML = ''; // Limpiar el contenedor de imágenes
+            imageContainer.appendChild(image); // Agregar la imagen al contenedor
+    }
+      </script>
+
+<h1 style ="color: white; font-family: Century Gothic, sans-serif; text-align: center;">Simulacion del calculo de la longitud de la correa que se necesita en mm</h1>
+<div style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">
+    <p style="color: #ffffff;  text-align: center; font-family: Arial, sans-serif; font-size: 20px;">
+        Fórmula de la ecuacion de longitud
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        \( L = \pi \cdot (L1 + L2) + 2 \cdot \sqrt{{L3^2 + (L1 - L2)^2}} \)
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        donde:
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        L longitud de la correa
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        L1 semicircunferencia de la polea conducida
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        L2 semicircunferencia de la polea conductora 
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        L3  distancia  entre  los  ejes de las poleas
+      </p>
+  </div>
+<body>
+    
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div style = "height: 3em;">
+              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="label_num_longitud1">Proporcione el valor de la semicircuferencia de la polea conducida en mm:</label>
+            </div>
+            <div style = "height: 3em;">
+              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="label_num_longitud1" placeholder="">
+            </div>
+          
+            <div style = "height: 3em;">
+              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="label_num_longitud2">Proporcione el valor de la semicircuferencia de la polea conductora en mm:</label>
+            </div>
+            <div style = "height: 3em;">
+              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="label_num_longitud2" placeholder="">
+            </div>
+            <div style = "height: 3em;">
+                <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="label_num_longitud3">Proporcione el valor de la distancia entre los ejes de las poleas en mm:</label>
+            </div>
+            <div style = "height: 3em;">
+                <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="label_num_longitud3" placeholder="">
+            </div>
+        </div>
+  
+          <div style="display: flex; justify-content: center;">
+            <button style="background-color: #000000; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; " class="button" onclick="operacion()">Calcular</button>
+          </div>
+    <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+       <p> El resultado de la longitud de la correa es L </p>
+    </div>
+    <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+        <p style="display: flex; flex-direction: column; align-items: center;" id="resultado">  </p>
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <button style="background-color: #000000; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; " class="button" onclick="mostrarImagen()">Generar </button>
+      </div>
+
+      <div id="imageContainer" style="display: flex; justify-content: center;"> </div>
+  
+  </body>
+  <button class="button" style="display: inline-block;
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;" onclick="window.location.href='https://github.com/abrilsoldier19/SimuladorMecanismosRobotica/tree/main'">Enlace a Github</button>
+
+<button class="button2"  onclick="window.location.href='https://trinket.io/pygame/972be6b2dc?showInstructions=true'">Enlace a simulador ejercicio iiia) en Python</button>
+<button class="button2"  onclick="window.location.href='https://avril-rock1471-gmail-com.trinket.io/sites/iiia-longitud-correa'">Simulador ejercicio iiia) en Python menu interactivo</button>
+
+
+<style>
+  .button {
+  display: inline-block;
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.button2 {
+  display: inline-block;
+  background-color: #9F37F5;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #333;
+}
+
+.center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  </style>
+</body>
+</html>
+
+
+
+

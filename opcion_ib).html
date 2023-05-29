@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <style>
+        body {
+          background-image: url("https://t3.ftcdn.net/jpg/04/55/62/46/360_F_455624616_HQElDnVTyZMIgcx7SZ5CnvgCjbC6ucRF.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      </style>
+<section class="section">
+  <div class="section-header">
+      <h3 class="page__heading" style="font-family: Lastica, Arial, sans-serif; background-color: #000000; padding: 20px; text-align: center; margin-top: 100x; color: #492AE6; font-size: 50px;">
+          Simulacion de mecanismos en robotica</h3>
+  </div>
+  
+</section>
+</head>
+<body>
+    <div class="menu" style="text-align: center;">
+        <ul style="list-style-type: none; padding: 0;">
+            <li style="display: inline-block; margin-right: 10px;">
+                <a href="simulacion_mecanismos.html" class="button">Inicio</a>
+              </li>
+          <li style="display: inline-block; margin-right: 10px;">
+            <a href="menu_ejercicios.html" class="button">Ejercicios de mecanismos</a>
+          </li>
+          <li style="display: inline-block; margin-right: 10px;">
+            <a href="menu_formulas.html" class="button">Formulas</a>
+          </li>
+          <li style="display: inline-block; margin-right: 10px;">
+            <a href="#" class="button">Acerca de</a>
+          </li>
+        </ul>
+      </div>
+  
+
+    <script>
+        function operacion() {
+          var D1 = parseFloat(document.getElementById('D1').value);
+          var D2 = parseFloat(document.getElementById('D2').value);
+          var D3 = parseFloat(document.getElementById('D3').value);
+          var D4 = parseFloat(document.getElementById('D4').value);
+          var D5 = parseFloat(document.getElementById('D5').value);
+          var D6 = parseFloat(document.getElementById('D6').value);
+    
+          var i = ((D1)*(D3)*(D5))/((D2)*(D4)*(D6));
+    
+          document.getElementById('resultado').innerHTML = "" + i;
+        }
+
+        function mostrarImagen() {
+            var imageContainer = document.getElementById('imageContainer');
+            var image = document.createElement('img');
+            image.src = 'tren_poleas_ib.jpg'; // Reemplaza con la ruta de tu imagen
+              
+            imageContainer.innerHTML = ''; // Limpiar el contenedor de imágenes
+            imageContainer.appendChild(image); // Agregar la imagen al contenedor
+    }
+      </script>
+
+<body>
+    <h1 style ="color: white; font-family: Century Gothic, sans-serif; text-align: center;">Simulación del cálculo de relación de transmisión del mecanismo de un
+        tren de poleas constituido por tres escalonamientos en mm</h1>
+        <div style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">
+          <p style="color: #ffffff;  text-align: center; font-family: Arial, sans-serif; font-size: 20px;">
+            Fórmula de relación de transmisión
+            </p>
+            <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+              \(i = \frac{D1 \cdot D3 \cdot D5}{D2 \cdot D4 \cdot D6}\)
+            </p>
+            <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+                i relación de transmisión
+            </p>
+            <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+                D1 diámetro de polea motora 1
+            </p>
+            <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+                D2 diámetro polea conducida 2
+            </p>
+            <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+                D3 diámetro de polea motora 3
+            </p>
+            <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+                D4 diámetro polea conducida 4
+            </p>
+            <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+                D5 diámetro de polea motora 5
+            </p>
+            <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+                D6 diámetro polea conducida 6
+            </p>
+        </div>
+
+        
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div style = "height: 3em;">
+              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="D1">Proporcione el valor del diámetro D1 de la polea motora 1 en mm:</label>
+            </div>
+            <div style = "height: 3em;">
+              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="D1" placeholder="">
+            </div>
+          
+            <div style = "height: 3em;">
+              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="D2">Proporcione el valor del diámetro D2 de la polea conducida 2 en mm:</label>
+            </div>
+            <div style = "height: 3em;">
+              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="D2" placeholder="">
+            </div>
+            <div style = "height: 3em;">
+                <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="D3">Proporcione el valor del diámetro D3 de la polea motora 3 en mm:</label>
+            </div>
+            <div style = "height: 3em;">
+                <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="D3" placeholder="">
+            </div>
+            <div style = "height: 3em;">
+                <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="D4">Proporcione el valor del diámetro D4 de la polea conducida 4 en mm:</label>
+              </div>
+              <div style = "height: 3em;">
+                <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="D4" placeholder="">
+              </div>
+            
+              <div style = "height: 3em;">
+                <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="D5">Proporcione el valor del diámetro D5 de la polea motora 5 en mm:</label>
+              </div>
+              <div style = "height: 3em;">
+                <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="D5" placeholder="">
+              </div>
+              <div style = "height: 3em;">
+                  <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="D6">Proporcione el valor del diámetro D6 de la polea conducida 6 en mm:</label>
+              </div>
+              <div style = "height: 3em;">
+                  <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="D6" placeholder="">
+              </div>
+        </div>
+  
+          <div style="display: flex; justify-content: center;">
+            <button style="background-color: #000000; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; " class="button" onclick="operacion()">Calcular</button>
+          </div>
+    <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+       <p> El resultado de la velocidad que gira el eje conducido es N2 </p>
+    </div>
+    <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+        <p style="display: flex; flex-direction: column; align-items: center;" id="resultado">  </p>
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <button style="background-color: #000000; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; " class="button" onclick="mostrarImagen()">Generar </button>
+      </div>
+
+      <div id="imageContainer" style="display: flex; justify-content: center;"> </div>
+  
+  </body>
+  
+  
+  
+
+
+  <button class="button" style="display: inline-block;
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;" onclick="window.location.href='https://github.com/abrilsoldier19/SimuladorMecanismosRobotica/tree/main'">Enlace a Github</button>
+
+<button class="button2"  onclick="window.location.href='https://trinket.io/pygame/ad35eb9c28?showInstructions=true'">Enlace a simulador ejercicio ib) en Python</button>
+<button class="button2"  onclick="window.location.href='https://avril-rock1471-gmail-com.trinket.io/sites/ib-relacion-transmision-mecanism'">Enlace a ejercicio ib) en Python</button>
+
+<style>
+  .button {
+  display: inline-block;
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.button2 {
+  display: inline-block;
+  background-color: #9F37F5;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #333;
+}
+
+.center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</body>
+</html>
+
+
+
+
+
