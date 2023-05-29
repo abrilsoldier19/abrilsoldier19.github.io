@@ -1,8 +1,4 @@
-# abrilsoldier19.github.io
 
-Da clic a este enlace para visitar la pagina https://abrilsoldier19.github.io/
-
-<!DOCTYPE html>
 <html>
 <head>
 <section class="section">
