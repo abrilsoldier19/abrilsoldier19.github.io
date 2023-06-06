@@ -1,7 +1,9 @@
-
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale-1.0">
   <style>
     html, body {
       height: 100%;
@@ -9,7 +11,7 @@
       padding: 0;
     }
     body {
-      background-image: url("https://i.pinimg.com/736x/81/29/c9/8129c9c6474902af2ba7b2e79a47322d.jpg");
+      background-image: url("https://coolwallpapers.me/picsup/6042591-mechanism-a-abstraction-abstraction.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -24,7 +26,7 @@
     @keyframes neon-animation {
       0% {
         color: #000000;
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #492AE6, 0 0 70px #492AE6, 0 0 80px #492AE6, 0 0 100px #492AE6, 0 0 150px #492AE6;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #2ae6d9, 0 0 70px #532ae6, 0 0 80px #2abae6, 0 0 100px #2ae6e3, 0 0 150px #492AE6;
       }
       100% {
         color: #ffffff;
@@ -35,7 +37,7 @@
   </style>
 <section class="section">
   <div class="section-header">
-      <h3 class="page__heading" style="font-family: Lastica, Arial, sans-serif; background-color: #000000; padding: 20px; text-align: center; margin-top: 100x; color: #492AE6; font-size: 50px;">
+      <h3 class="page__heading" style="font-family: Lastica, Arial, sans-serif; background-color: #000000; padding: 20px; text-align: center; margin-top: 100x; color: #2abae6; font-size: 50px;">
           Simulacion de mecanismos en robotica</h3>
   </div>
 </section>
@@ -58,21 +60,28 @@
       </ul>
     </div>
 
-    <form id="userForm">
-      <label for="nombre">Nombre de usuario:</label>
-      <input type="text" id="nombre" name="nombre" required><br>
+    <form onsubmit="myfunc(event)" class="futuristic-form horizontal-form">
+      <label style = "font-family: Century Gothic, Arial, sans-serif; color:#fff; background-color: #000000; width: 180px; margin-right: 5px;" for="nombre" >Nombre de usuario:</label>
+      <input type="text" id="nombre" name="nombre" required style = "width: 170px; margin-right: 20px;"><br>
 
-      <label for="grupo">Grupo:</label>
+      <label style = "font-family: Century Gothic, Arial, sans-serif; color:#fff; background-color: #000000; width: 80px; margin-right: 10px;" for="grupo">  Grupo:</label>
       <input type="text" id="grupo" name="grupo" required><br>
-
-      <label for="especialidad">Especialidad:</label>
-      <input type="text" id="especialidad" name="especialidad" required><br>
-
-      <label for="fecha">Fecha de práctica:</label>
-      <input type="text" id="fecha" name="fecha" required><br>
-
-      <button type="submit">Guardar</button>
   </form>
+
+  <form onsubmit="myfunc(event)" class="futuristic-form horizontal-form">
+    <label style = "font-family: Century Gothic, Arial, sans-serif; color:#fff; background-color: #000000; width: 180px; margin-right: 5px;" for="fecha" >Fecha de práctica:</label>
+    <input type="date" id="fecha" name="fecha" required style = "width: 170px; margin-right: 20px;"><br>
+
+    <label style = "font-family: Century Gothic, Arial, sans-serif; color:#fff; background-color: #000000; width: 80px; margin-right: 37px;" for="especialidad">  Especialidad:</label>
+    <input type="text" id="especialidad" name="especialidad" required style = "width: 170px; margin-right: 20px;"><br>
+  </form>
+
+  <form onsubmit="myfunc(event)" class="futuristic-form horizontal-form">
+    <button style = "padding: 10px 20px; border: none; border-radius: 5px; background-color: #0b428a; color: #fff; cursor: pointer; outline: none; margin-top: 10px; margin-right: 10px;" value="Guardar" onclick="guardarDatos()" >Guardar tabla</button>
+    <input style = "padding: 10px 20px; border: none; border-radius: 5px; background-color: #074c7d; color: #fff; cursor: pointer; outline: none; margin-top: 10px; margin-right: 10px;"type ="submit" value="Guardar"/>
+</form>
+
+  
 
 
     <title>Tabla de datos</title>
@@ -86,12 +95,8 @@
           <th style="font-family: Century Gothic, Arial, sans-serif;">Fecha de práctica</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody style="font-family: Century Gothic, Arial, sans-serif;">
         <tr>
-          <td style="font-family: Century Gothic, Arial, sans-serif;">Abril Mejia Rangel</td>
-          <td style="font-family: Century Gothic, Arial, sans-serif;">INGENIERÍA DE SOFTWARE B</td>
-          <td style="font-family: Century Gothic, Arial, sans-serif;">Ingeniería en Sistemas Computacionales</td>
-          <td style="font-family: Century Gothic, Arial, sans-serif;">05/29/2023</td>
         </tr>
       </tbody>
     </table>
@@ -141,50 +146,158 @@ table {
     tr:hover {
       background-color: #333333;
     }
-  </style>
 
-<script>
-  // Obtener referencia al formulario y a la tabla
-  const form = document.getElementById('userForm');
-  const table = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
+   
+    .futuristic-form {
+    font-family: "Century Gothic", Arial, sans-serif;
+    color: #fff;
+    background-color: #000000;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+}
 
-  // Agregar evento de envío del formulario
-  form.addEventListener('submit', function(event) {
-      event.preventDefault(); // Evitar el envío del formulario
 
-      // Obtener los valores de los campos del formulario
-      const nombre = document.getElementById('nombre').value;
-      const grupo = document.getElementById('grupo').value;
-      const especialidad = document.getElementById('especialidad').value;
-      const fecha = document.getElementById('fecha').value;
+.futuristic-form input[type="text"],
+.futuristic-form input[type="date"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    outline: none;
+}
 
-      // Crear una nueva fila en la tabla
-      const newRow = table.insertRow();
+.horizontal-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
-      // Insertar celdas en la fila
-      const cell1 = newRow.insertCell();
-      cell1.textContent = nombre;
+</style>
 
-      const cell2 = newRow.insertCell();
-      cell2.textContent = grupo;
+<script type="text/javascript">
+        function myfunc(event)
+        {
+            event.preventDefault();
 
-      const cell3 = newRow.insertCell();
-      cell3.textContent = especialidad;
+            var nombre = document.getElementById("nombre").value;
+            var grupo = document.getElementById("grupo").value;
+            var especialidad = document.getElementById("especialidad").value;
+            var fecha = document.getElementById("fecha").value;
 
-      const cell4 = newRow.insertCell();
-      cell4.textContent = fecha;
+            var data = {
+                nombre: nombre,
+                grupo: grupo,
+                especialidad: especialidad,
+                fecha: fecha
+            };
+            var savedData = localStorage.getItem('userData');
+            var parsedData = savedData ? JSON.parse(savedData) : [];
+            parsedData.push(data);
+            localStorage.setItem('userData', JSON.stringify(parsedData));
 
-      // Limpiar los campos del formulario
-      form.reset();
+            addRowToTable(nombre, grupo, especialidad, fecha);
 
-      // Guardar los datos como CSV en disco duro (requiere el uso del lado del servidor)
-      const csvData = `${nombre},${grupo},${especialidad},${fecha}\n`;
-      // Aquí puedes implementar el código para guardar el contenido en disco duro, como enviarlo al servidor.
+        }
 
-  });
+  
+        function addRowToTable(nombre, grupo, especialidad, fecha) 
+        {
+            var table = document.getElementById("dataTable");
+            var newRow = table.insertRow();
+
+            var cell1 = newRow.insertCell();
+            cell1.textContent = nombre;
+
+            var cell2 = newRow.insertCell();
+            cell2.textContent = grupo;
+
+            var cell3 = newRow.insertCell();
+            cell3.textContent = especialidad;
+
+            var cell4 = newRow.insertCell();
+            cell4.textContent = fecha;
+
+            var cell5 = newRow.insertCell();
+            var editButton = document.createElement("button");
+            editButton.textContent = "Editar";
+            editButton.addEventListener("click", function() 
+            {
+              editarFila(newRow);
+            });
+            cell5.appendChild(editButton);
+        }
+        function mostrarDatosEnTabla() {
+            var savedData = localStorage.getItem('userData');
+            if (savedData) {
+                var parsedData = JSON.parse(savedData);
+                parsedData.forEach(function (data) {
+                    addRowToTable(data.nombre, data.grupo, data.especialidad, data.fecha);
+                });
+            }
+        }
+
+        function editarFila(row) 
+        {
+            var nombre = prompt("Ingrese el nuevo nombre");
+            var grupo = prompt("Ingrese el nuevo grupo");
+            var especialidad = prompt("Ingrese la nueva especialidad");
+            var fecha = prompt("Ingrese la nueva fecha");
+
+            if (nombre && grupo && especialidad && fecha) 
+            {
+              var cells = row.getElementsByTagName("td");
+              cells[0].textContent = nombre;
+              cells[1].textContent = grupo;
+              cells[2].textContent = especialidad;
+              cells[3].textContent = fecha;
+
+              // Actualizar los datos en localStorage si es necesario
+              var savedData = localStorage.getItem('userData');
+              if (savedData) 
+              {
+                var parsedData = JSON.parse(savedData);
+                var rowIndex = row.rowIndex - 1;
+                parsedData[rowIndex].nombre = nombre;
+                parsedData[rowIndex].grupo = grupo;
+                parsedData[rowIndex].especialidad = especialidad;
+                parsedData[rowIndex].fecha = fecha;
+                localStorage.setItem('userData', JSON.stringify(parsedData));
+              }
+              } else {
+                 alert("Debe ingresar todos los campos para editar la fila.");
+              }
+        }
+
+
+        window.addEventListener('load', mostrarDatosEnTabla)
+  
+  function guardarDatos() {
+      var nombre = document.getElementById("nombre").value;
+      var grupo = document.getElementById("grupo").value;
+      var especialidad = document.getElementById("especialidad").value;
+      var fecha = document.getElementById("fecha").value;
+
+      var datos = [nombre, grupo, especialidad, fecha];
+      var csv = datos.join(",") + "\n";
+
+      var link = document.createElement("a");
+      link.href = "data:text/csv;charset=utf-8," + encodeURIComponent(csv);
+      link.download = "datos_usuario.csv";
+      link.style.display = "none";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
 </script>
 </body>
 </html>
+
+
+
+
+
 
 
 
