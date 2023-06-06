@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-image: url("https://i.pinimg.com/736x/81/29/c9/8129c9c6474902af2ba7b2e79a47322d.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .neon-effect {
+      color: #000000;
+      text-align: center;
+      animation: neon-animation 1s ease-in-out infinite alternate;
+    }
+    
+    @keyframes neon-animation {
+      0% {
+        color: #000000;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #492AE6, 0 0 70px #492AE6, 0 0 80px #492AE6, 0 0 100px #492AE6, 0 0 150px #492AE6;
+      }
+      100% {
+        color: #ffffff;
+        text-shadow: none;
+      }
+    }
+    
+  </style>
+<section class="section">
+  <div class="section-header">
+      <h3 class="page__heading" style="font-family: Lastica, Arial, sans-serif; background-color: #000000; padding: 20px; text-align: center; margin-top: 100x; color: #492AE6; font-size: 50px;">
+          Simulacion de mecanismos en robotica</h3>
+  </div>
+</section>
+</head>
+<body>
+  <div class="menu" style="text-align: center;">
+      <ul style="list-style-type: none; padding: 0;">
+          <li style="display: inline-block; margin-right: 10px;">
+              <a href="simulacion_mecanismos.html" class="button">Inicio</a>
+            </li>
+        <li style="display: inline-block; margin-right: 10px;">
+          <a href="menu_ejercicios.html" class="button">Ejercicios de mecanismos</a>
+        </li>
+        <li style="display: inline-block; margin-right: 10px;">
+          <a href="menu_formulas.html" class="button">Formulas</a>
+        </li>
+        <li style="display: inline-block; margin-right: 10px;">
+          <a href="datos.html" class="button">Acerca de</a>
+        </li>
+      </ul>
+    </div>
+
+    <form id="userForm">
+      <label for="nombre">Nombre de usuario:</label>
+      <input type="text" id="nombre" name="nombre" required><br>
+
+      <label for="grupo">Grupo:</label>
+      <input type="text" id="grupo" name="grupo" required><br>
+
+      <label for="especialidad">Especialidad:</label>
+      <input type="text" id="especialidad" name="especialidad" required><br>
+
+      <label for="fecha">Fecha de práctica:</label>
+      <input type="text" id="fecha" name="fecha" required><br>
+
+      <button type="submit">Guardar</button>
+  </form>
+
+
+    <title>Tabla de datos</title>
+    <h1 class="neon-effect" style="font-family: Azonix, Arial, sans-serif;">Tabla de datos</h1>
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th style="font-family: Century Gothic, Arial, sans-serif;">Nombre de usuario</th>
+          <th style="font-family: Century Gothic, Arial, sans-serif;">Grupo</th>
+          <th style="font-family: Century Gothic, Arial, sans-serif;">Especialidad</th>
+          <th style="font-family: Century Gothic, Arial, sans-serif;">Fecha de práctica</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-family: Century Gothic, Arial, sans-serif;">Abril Mejia Rangel</td>
+          <td style="font-family: Century Gothic, Arial, sans-serif;">INGENIERÍA DE SOFTWARE B</td>
+          <td style="font-family: Century Gothic, Arial, sans-serif;">Ingeniería en Sistemas Computacionales</td>
+          <td style="font-family: Century Gothic, Arial, sans-serif;">05/29/2023</td>
+        </tr>
+      </tbody>
+    </table>
+    
+</body>
+
+<style>
+  .button {
+  display: inline-block;
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #333;
+}
+
+table {
+      border-collapse: collapse;
+      width: 100%;
+      background-color: #000000;
+      color: #ffffff;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #474646;
+    }
+    h1 {
+      color: #000000;
+      text-align: center;
+      
+    }
+    tr:nth-child(even) {
+      background-color: #1a1a1a;
+    }
+    tr:hover {
+      background-color: #333333;
+    }
+  </style>
+
+<script>
+  // Obtener referencia al formulario y a la tabla
+  const form = document.getElementById('userForm');
+  const table = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
+
+  // Agregar evento de envío del formulario
+  form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Evitar el envío del formulario
+
+      // Obtener los valores de los campos del formulario
+      const nombre = document.getElementById('nombre').value;
+      const grupo = document.getElementById('grupo').value;
+      const especialidad = document.getElementById('especialidad').value;
+      const fecha = document.getElementById('fecha').value;
+
+      // Crear una nueva fila en la tabla
+      const newRow = table.insertRow();
+
+      // Insertar celdas en la fila
+      const cell1 = newRow.insertCell();
+      cell1.textContent = nombre;
+
+      const cell2 = newRow.insertCell();
+      cell2.textContent = grupo;
+
+      const cell3 = newRow.insertCell();
+      cell3.textContent = especialidad;
+
+      const cell4 = newRow.insertCell();
+      cell4.textContent = fecha;
+
+      // Limpiar los campos del formulario
+      form.reset();
+
+      // Guardar los datos como CSV en disco duro (requiere el uso del lado del servidor)
+      const csvData = `${nombre},${grupo},${especialidad},${fecha}\n`;
+      // Aquí puedes implementar el código para guardar el contenido en disco duro, como enviarlo al servidor.
+
+  });
+</script>
+</body>
+</html>
+
+
+
+
+
