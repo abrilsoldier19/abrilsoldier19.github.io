@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+  <style>
+    body {
+      background-image: url("https://www.shutterstock.com/shutterstock/videos/1054859426/thumb/7.jpg?ip=x480");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  </style>
 <section class="section">
   <div class="section-header">
       <h3 class="page__heading" style="font-family: Lastica, Arial, sans-serif; background-color: #000000; padding: 20px; text-align: center; margin-top: 100x; color: #492AE6; font-size: 50px;">
@@ -27,20 +37,53 @@
       </li>
     </ul>
   </div>
-  <h1 style="color: black; text-align: center; font-family: Arial, sans-serif; padding: 20px; font-size: 25px;">Bienvenido/a</h1>
-  <p style="color: #333;  text-align: center; font-family: Arial, sans-serif; font-size: 20px;">
-    Escoge cualquier ejercicio para calcular:
-  </p>
+
+  <body>
+    <h1 style= "animation: blink 2s infinite, slide 4s linear infinite; color: rgb(127, 188, 245); text-align: center; font-family: a Astro Space, Arial, sans-serif; padding: 15px; font-size: 40px; text-shadow: 2px 2px 4px black;">Potencia nominal de correa</h1>
+</body>
+<div style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">
+    <h1 style="color: rgb(255, 255, 255); text-align: center; font-family: Arial, sans-serif; font-size: 25px;">Bienvenido/a</h1>
+    <p style="color: #ffffff; text-align: center; font-family: Century  Gothic, sans-serif; font-size: 17px; text-align: justify;">
+      El cálculo de la potencia nominal de una correa se refiere a determinar la capacidad de transmisión de potencia que tiene una correa en una determinada aplicación o sistema. 
+      Dependiendo del tipo de correa se debe seleccionar la ecuación adecuada para calcular la potencia. 
+    </p>
+    <div class="center">
+      <img src="pnc.png" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);max-width: 400px;" alt="Descripción de la imagen">
+  </div>
+    <p style="color: #ffffff; text-align: center; font-family: Century  Gothic, sans-serif; font-size: 17px; text-align: justify;">
+      La potencia nominal de una correa es la máxima potencia que puede transmitir de manera continua sin sufrir daños o fallas prematuras.
+    </p>
+    <p style="color: #ffffff; text-align: center; font-family: Century  Gothic, sans-serif; font-size: 17px; text-align: justify;">
+      Para calcular la potencia nominal de correa, se necesita los siguientes datos:
+    </p>
+    <lu style = "  list-style-type: none; padding: 0;">
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        \(Dp = {2 \cdot (poleaMayor)}\)
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        \(dp = {2 \cdot (poleamenor)}\)
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        rel_diam\( = \frac{Dp}{dp}\)
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        \(r = \frac{1800}{1000}\)
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        \(ksr = {float \cdot(rel_diam)}\)
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        \( pnc = \left( dp \cdot r \right) \left( 1004 - \frac{1652}{dp} - 0.1547 \cdot \left( dp \cdot r \right)^2 - 0.2126 \cdot \log \left( dp \cdot r \right) \right) + \left( 1652 \cdot r \right) \left( 1 - \frac{1}{ksr} \right) \)
+      </p>
+      
+    </lu>
+    <p style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;">
+      Selecciona el ejercicio:
+      </p>
   <div class="menu" style="text-align: left; margin-top: 20px;">
     <ul style="list-style-type: none; padding: 0; display: flex; flex-direction: column;">
       <li style="margin-bottom: 10px;">
-        <a href="simulacion_mecanismos.html" class="button">Ejercicio ia) Cálculo de la Relación de transmisión de velocidad</a>
-      </li>
-      <li style="margin-bottom: 10px;">
-        <a href="menu_ejercicios.html" class="button">Ejercicio iia) Cálculo de velocidad que gira el eje conducido</a>
-      </li>
-      <li style="margin-bottom: 10px;">
-        <a href="menu_formulas.html" class="button">Ejercicio iiia) Cálculo de Longitud de correa</a>
+        <a href="opcion_c).html" class="button">Ejercicio c) Cálculo potencia nominal de correa</a>
       </li>
     </ul>
   </div>
@@ -104,6 +147,8 @@
   </style>
 </body>
 </html>
+
+
 
 
 
