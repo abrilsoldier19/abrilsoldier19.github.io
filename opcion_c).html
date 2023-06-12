@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+          background-image: url("https://t3.ftcdn.net/jpg/04/55/62/46/360_F_455624616_HQElDnVTyZMIgcx7SZ5CnvgCjbC6ucRF.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      </style>
+<section class="section">
+  <div class="section-header">
+      <h3 class="page__heading" style="font-family: Lastica, Arial, sans-serif; background-color: #000000; padding: 20px; text-align: center; margin-top: 100x; color: #492AE6; font-size: 50px;">
+          Simulacion de mecanismos en robotica</h3>
+  </div>
+  
+</section>
+</head>
+<body>
+    
+    <div class="menu" style="text-align: center;">
+        <ul style="list-style-type: none; padding: 0;">
+            <li style="display: inline-block; margin-right: 10px;">
+                <a href="simulacion_mecanismos.html" class="button">Inicio</a>
+              </li>
+          <li style="display: inline-block; margin-right: 10px;">
+            <a href="menu_ejercicios.html" class="button">Ejercicios de mecanismos</a>
+          </li>
+          <li style="display: inline-block; margin-right: 10px;">
+            <a href="menu_formulas.html" class="button">Formulas</a>
+          </li>
+          <li style="display: inline-block; margin-right: 10px;">
+            <a href="datos.html" class="button">Acerca de</a>
+          </li>
+        </ul>
+      </div>
+</body>
+
+    <script>
+        function operacion() {
+          var L = parseFloat(document.getElementById('L').value);
+          var poleaMayor = parseFloat(document.getElementById('poleaMayor').value);
+          var poleamenor = parseFloat(document.getElementById('poleamenor').value);
+    
+          var Dp = ((2)*(poleaMayor));
+          var dp = ((2)*(poleamenor));
+          var rel_diam = ((2)*(poleaMayor))/((2)*(poleamenor));
+          var r = (1800/1000);
+          var ksr = (rel_diam)
+          var pnc = (dp*r)*(1004-(1652/dp)-(0.1547*Math.pow(dp*r,2))-(0.2126*Math.log(dp*r)))+((1652*r)*1-(1/ksr));
+    
+          document.getElementById('resultado_Dp').innerHTML = "" + Dp;
+    
+          document.getElementById('resultado_dp').innerHTML = "" + dp;
+
+          document.getElementById('resultado_rel_diam').innerHTML = "" + rel_diam;
+    
+          document.getElementById('resultado_ksr').innerHTML = "" + ksr;
+
+          document.getElementById('resultado_pnc').innerHTML = "" + pnc;
+        }
+
+        function mostrarImagen() {
+            var imageContainer = document.getElementById('imageContainer');
+            var image = document.createElement('img');
+            image.src = 'pnc.png'; // Reemplaza con la ruta de tu imagen
+              
+            imageContainer.innerHTML = ''; // Limpiar el contenedor de imágenes
+            imageContainer.appendChild(image); // Agregar la imagen al contenedor
+    }
+      </script>
+
+<h1 style ="color: white; font-family: Century Gothic, sans-serif; text-align: center;">Simulacion del calculo de la potencia nominal del sistema por correa</h1>
+<div style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">
+    <p style="color: #ffffff;  text-align: center; font-family: Arial, sans-serif; font-size: 20px;">
+      Apartir de la Fórmula de de relación de transmisión y regimen del funcionamiento del motor
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        \(Dp = {2 \cdot (poleaMayor)}\)
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        \(dp = {2 \cdot (poleamenor)}\)
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        rel_diam\( = \frac{Dp}{dp}\)
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        \(r = \frac{1800}{1000}\)
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        \(ksr = {float \cdot(rel_diam)}\)
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        \( pnc = \left( dp \cdot r \right) \left( 1004 - \frac{1652}{dp} - 0.1547 \cdot \left( dp \cdot r \right)^2 - 0.2126 \cdot \log \left( dp \cdot r \right) \right) + \left( 1652 \cdot r \right) \left( 1 - \frac{1}{ksr} \right) \)
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        L longitud de la correa
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        R1 radio de la polea mayor
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        r1 radio de la  polea menor
+      </p>
+  </div>
+<body>
+    
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div style = "height: 3em;">
+              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="L">Proporcione el valor de la Longitud de la correa en m:</label>
+            </div>
+            <div style = "height: 3em;">
+              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="L" placeholder="">
+            </div>
+          
+            <div style = "height: 3em;">
+              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="poleaMayor">Proporcione la dimensión del diámetro de la polea mayor en m:</label>
+            </div>
+            <div style = "height: 3em;">
+              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="poleaMayor" placeholder="">
+            </div>
+            <div style = "height: 3em;">
+                <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="poleamenor">Proporcione la dimensión del diámetro de la polea menor en m:</label>
+            </div>
+            <div style = "height: 3em;">
+                <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="poleamenor" placeholder="">
+            </div>
+        </div>
+  
+        <div style="display: flex; justify-content: center;">
+            <button style="background-color: #000000; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; " class="button" onclick="operacion()">Calcular</button>
+            </div>
+                <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+                <p style="display: flex; flex-direction: column; align-items: center;  margin-bottom: 3px;"> El valor de Dp es de </p>
+            </div>
+            <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+                <p style="display: flex; flex-direction: column; align-items: center; margin-bottom: 3px; padding: 10px 20px; background-color: #0000009b;" id="resultado_Dp">  </p>
+            </div>
+            <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+                <p style="display: flex; flex-direction: column; align-items: center;  margin-bottom: 3px;"> El valor de dp es de </p>
+            </div>
+            <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+                <p style="display: flex; flex-direction: column; align-items: center; margin-bottom: 3px; padding: 10px 20px; background-color: #0000009b;" id="resultado_dp">  </p>
+            </div>
+            <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+                <p style="display: flex; flex-direction: column; align-items: center;  margin-bottom: 3px;"> El valor de rel_diam es de</p>
+            </div>
+            <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+                 <p style="display: flex; flex-direction: column; align-items: center; margin-bottom: 3px; padding: 10px 20px; background-color: #0000009b;" id="resultado_rel_diam">  </p>
+            </div>
+            <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+                <p style="display: flex; flex-direction: column; align-items: center;  margin-bottom: 3px;"> El valor de Ksr es de </p>
+            </div>
+            <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+                <p style="display: flex; flex-direction: column; align-items: center; margin-bottom: 3px; padding: 10px 20px; background-color: #0000009b;" id="resultado_ksr">  </p>
+            </div>
+            <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+                <p style="display: flex; flex-direction: column; align-items: center;  margin-bottom: 3px;"> El valor de la potencia nominal es </p>
+            </div>
+            <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+                <p style="display: flex; flex-direction: column; align-items: center; padding: 10px 20px; margin-bottom: 3px; background-color: #0000009d;" id="resultado_pnc">  </p>
+            </div>
+            <div style="display: flex; justify-content: center;">
+            <button style="background-color: #000000; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; " class="button" onclick="mostrarImagen()">Generar </button>
+        </div>
+
+      <div id="imageContainer" style="display: flex; justify-content: center;"> </div>
+  
+  </body>
+  <button class="button" style="display: inline-block;
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;" onclick="window.location.href='https://github.com/abrilsoldier19/SimuladorMecanismosRobotica/tree/main'">Enlace a Github</button>
+
+<button class="button2"  onclick="window.location.href='https://avril-rock1471-gmail-com.trinket.io/sites/ejercicio-c-potencia-nominal-correa'">Enlace a simulador ejercicio c) en Python</button>
+<button class="button2"  onclick="window.location.href='https://avril-rock1471-gmail-com.trinket.io/sites/c-potencia-nominal'">Simulador interactivo ejercicio c) en Python</button>
+
+
+<style>
+  .button {
+  display: inline-block;
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.button2 {
+  display: inline-block;
+  background-color: #9F37F5;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #333;
+}
+
+.center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  </style>
+</body>
+</html>
+
+
+
+
