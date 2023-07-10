@@ -52,8 +52,13 @@
             var imageContainer = document.getElementById('imageContainer');
             var image = document.createElement('img');
             image.src = 'Tren_engranajes_Simple_iid.png'; // Reemplaza con la ruta de tu imagen
-              
+            image.style.width = '450px'; // Set the desired width
+            image.style.height = '250px';
             imageContainer.innerHTML = ''; // Limpiar el contenedor de imágenes
+
+            imageContainer.style.display = 'flex';
+            imageContainer.style.justifyContent = 'center';
+            imageContainer.style.alignItems = 'center';
             imageContainer.appendChild(image); // Agregar la imagen al contenedor
     }
       </script>
@@ -111,13 +116,10 @@
         <button style="background-color: #000000; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; " class="button" onclick="mostrarImagen()">Generar </button>
       </div>
 
-      <div id="imageContainer" style="display: flex; justify-content: center;"> </div>
+      <div id="imageContainer" style="display: flex; justify-content: center; align-items: center;"> </div> 
   
   </body>
   
-  
-  
-
 
   <button class="button" style="display: inline-block;
   background-color: #000000;
@@ -131,8 +133,8 @@
   border: none;
   cursor: pointer;" onclick="window.location.href='https://github.com/abrilsoldier19/SimuladorMecanismosRobotica/tree/main'">Enlace a Github</button>
 
-<button class="button2"  onclick="window.location.href='https://trinket.io/pygame/235da6e92e?showInstructions=true'">Enlace a simulador ejercicio iid) en Python</button>
-<button class="button2"  onclick="window.location.href='https://avril-rock1471-gmail-com.trinket.io/sites/iib-velocidad-eje-salida'">Enlace a simulador ejercicio iid) en Python</button>
+<button class="button2"  onclick="window.location.href='https://trinket.io/pygame/235da6e92e?showInstructions=true'">Enlace a simulador ejercicio iib) en Python</button>
+<button class="button2"  onclick="window.location.href='https://avril-rock1471-gmail-com.trinket.io/sites/iib-velocidad-eje-salida'">Enlace a simulador ejercicio iib) en Python</button>
 
 <style>
   .button {
@@ -175,6 +177,3 @@
   </style>
 </body>
 </html>
-
-
-
