@@ -56,15 +56,20 @@
             var imageContainer = document.getElementById('imageContainer');
             var image = document.createElement('img');
             image.src = 'Trenengranajessimple.png'; // Reemplaza con la ruta de tu imagen
-              
+            image.style.width = '350px'; // Set the desired width
+            image.style.height = '250px';
             imageContainer.innerHTML = ''; // Limpiar el contenedor de imágenes
+
+            imageContainer.style.display = 'flex';
+            imageContainer.style.justifyContent = 'center';
+            imageContainer.style.alignItems = 'center';
             imageContainer.appendChild(image); // Agregar la imagen al contenedor
     }
       </script>
 
 <body>
     <h1 style ="color: white; font-family: Century Gothic, sans-serif; text-align: center;">Simulación del cálculo de relación de transmisión del mecanismo de un Tren de engranajes
-    simple constituido por tres escalonamientos en mm</h1>
+        simple constituido por tres escalonamientos en mm</h1>
         <div style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">
           <p style="color: #ffffff;  text-align: center; font-family: Arial, sans-serif; font-size: 20px;">
             Fórmula de relación de transmisión
@@ -150,14 +155,9 @@
         <button style="background-color: #000000; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; " class="button" onclick="mostrarImagen()">Generar </button>
       </div>
 
-      <div id="imageContainer" style="display: flex; justify-content: center;"> </div>
+      <div id="imageContainer" style="display: flex; justify-content: center; align-items: center;"> </div> 
   
   </body>
-  
-  
-  
-
-
   <button class="button" style="display: inline-block;
   background-color: #000000;
   color: white;
@@ -214,8 +214,3 @@
   </style>
 </body>
 </html>
-
-
-
-
-
