@@ -41,17 +41,17 @@
     <script>
         function operacion() {
           var label_transmisioni = parseFloat(document.getElementById('label_transmisioni').value);
-          var label_velocidadN1 = parseFloat(document.getElementById('label_velocidadN1').value);
+          var label_velocidadNe = parseFloat(document.getElementById('label_velocidadNe').value);
     
-          var i = (label_transmisioni)*(label_velocidadN1);
+          var Ns = (label_velocidadNe)/(label_transmisioni);
     
-          document.getElementById('resultado').innerHTML = "" + i;
+          document.getElementById('resultado').innerHTML = "" + Ns;
         }
 
         function mostrarImagen() {
             var imageContainer = document.getElementById('imageContainer');
             var image = document.createElement('img');
-            image.src = 'tren_poleas_ib.jpg'; // Reemplaza con la ruta de tu imagen
+            image.src = 'Tren_engranajes_Simple_iid.png'; // Reemplaza con la ruta de tu imagen
               
             imageContainer.innerHTML = ''; // Limpiar el contenedor de imágenes
             imageContainer.appendChild(image); // Agregar la imagen al contenedor
@@ -59,23 +59,23 @@
       </script>
 
 <body>
-    <h1 style ="color: white; font-family: Century Gothic, sans-serif; text-align: center;">Simulación del cálculo de la velocidad del eje de salida de un tren de 
-      poleas constituido por tres escalonamientos en mm</h1>
+    <h1 style ="color: white; font-family: Century Gothic, sans-serif; text-align: center;">Simulación del cálculo de la velocidad del eje de salida de un Tren de engranajes simple
+        constituido por tres escalonamientos en mm</h1>
         <div style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">
           <p style="color: #ffffff;  text-align: center; font-family: Arial, sans-serif; font-size: 20px;">
             Apartir de la Fórmula de de relación de transmisión
             </p>
             <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
-              \(N6 = {i \cdot N1}\)
+                \(Ns = \frac{Ne}{i}\)
             </p>
             <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
               i representa a relación de transmisión
             </p>
             <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
-              N6 representa velocidad del eje de salida 6
+              Ns velocidad del eje de salida
             </p>
             <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
-              N1 representa velocidad de la rueda de motora 1
+              Ne velocidad de la rueda de entrada
             </p>
         </div>
 
@@ -89,10 +89,10 @@
             </div>
           
             <div style = "height: 3em;">
-              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="label_velocidadN1">Proporcione la velocidad N1 de la rueda motora 1 en RPM</label>
+              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="label_velocidadNe">Proporcione la velocidad Ne de la rueda de entrada</label>
             </div>
             <div style = "height: 3em;">
-              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="label_velocidadN1" placeholder="">
+              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="label_velocidadNe" placeholder="">
             </div>
         </div>
   
@@ -100,7 +100,9 @@
             <button style="background-color: #000000; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; " class="button" onclick="operacion()">Calcular</button>
           </div>
     <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
-       <p> La velocidad N6 del eje de salida 6 es de: </p>
+       <p> La velocidad Ns del eje de salida
+        
+        es de: </p>
     </div>
     <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
         <p style="display: flex; flex-direction: column; align-items: center;" id="resultado">  </p>
@@ -129,8 +131,8 @@
   border: none;
   cursor: pointer;" onclick="window.location.href='https://github.com/abrilsoldier19/SimuladorMecanismosRobotica/tree/main'">Enlace a Github</button>
 
-<button class="button2"  onclick="window.location.href='https://trinket.io/pygame/235da6e92e?showInstructions=true'">Enlace a simulador ejercicio iib) en Python</button>
-<button class="button2"  onclick="window.location.href='https://avril-rock1471-gmail-com.trinket.io/sites/iib-velocidad-eje-salida'">Enlace a simulador ejercicio iib) en Python</button>
+<button class="button2"  onclick="window.location.href='https://trinket.io/pygame/235da6e92e?showInstructions=true'">Enlace a simulador ejercicio iid) en Python</button>
+<button class="button2"  onclick="window.location.href='https://avril-rock1471-gmail-com.trinket.io/sites/iib-velocidad-eje-salida'">Enlace a simulador ejercicio iid) en Python</button>
 
 <style>
   .button {
@@ -173,7 +175,6 @@
   </style>
 </body>
 </html>
-
 
 
 
