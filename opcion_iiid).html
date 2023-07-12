@@ -42,113 +42,94 @@
 
     <script>
         function operacion() {
-          var D1 = parseFloat(document.getElementById('D1').value);
-          var D2 = parseFloat(document.getElementById('D2').value);
-          var D3 = parseFloat(document.getElementById('D3').value);
-          var D4 = parseFloat(document.getElementById('D4').value);
-          var D5 = parseFloat(document.getElementById('D5').value);
-          var D6 = parseFloat(document.getElementById('D6').value);
-          var N1 = parseFloat(document.getElementById('N1').value);
+          var label_dientesZ1 = parseFloat(document.getElementById('label_dientesZ1').value);
+          var label_dientesZ3 = parseFloat(document.getElementById(' label_dientesZ3').value);
+          var label_velocidadn1 = parseFloat(document.getElementById('label_velocidadn1').value);
+          
     
-          var i = ((D1)*(D3)*(D5))/((D2)*(D4)*(D6));
-          var N6 = (((D1)*(D3)*(D5))/((D2)*(D4)*(D6)))*(N1);
+          var i = (label_dientesZ1)/(label_dientesZ3);
+          var N2 = (i)*(label_velocidadn1);
     
           document.getElementById('resultado_i').innerHTML = "" + i;
     
-          document.getElementById('resultado_N6').innerHTML = "" + N6;
+          document.getElementById('resultado_N2').innerHTML = "" + N2;
         }
 
         function mostrarImagen() {
             var imageContainer = document.getElementById('imageContainer');
             var image = document.createElement('img');
-            image.src = 'tren_poleas_ib.jpg'; // Reemplaza con la ruta de tu imagen
+            image.src = 'tren de engranajes.png'; // Reemplaza con la ruta de tu imagen
               
+            image.style.width = '450px'; // Set the desired width
+            image.style.height = '250px';
             imageContainer.innerHTML = ''; // Limpiar el contenedor de imágenes
+
+            imageContainer.style.display = 'flex';
+            imageContainer.style.justifyContent = 'center';
+            imageContainer.style.alignItems = 'center';
             imageContainer.appendChild(image); // Agregar la imagen al contenedor
     }
       </script>
 
-<h1 style ="color: white; font-family: Century Gothic, sans-serif; text-align: center;">Simulacion del calculo la velocidad del ultimo arbol de un tren
-de poleas constituido por 3 escalamientos en mm</h1>
+<h1 style ="color: white; font-family: Century Gothic, sans-serif; text-align: center;">Simulación del cálculo de Velocidad de giro de un tren de engranajes 
+    formado por engranajes en rpm</h1>
 <div style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">
     <p style="color: #ffffff;  text-align: center; font-family: Arial, sans-serif; font-size: 20px;">
-      Apartir de la Fórmula de de relación de transmisión y regimen del funcionamiento del motor
+      a partir de la ecuación:
       </p>
       <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
-        \(i = \frac{D1 \cdot D3 \cdot D5}{D2 \cdot D4 \cdot D6}\)
+        \(i = \frac{Z1}{Z3}\)
       </p>
       <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
-        D1 diámetro polea motora 1
+       \(i = \frac{n2}{n1}\)
       </p>
       <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
-        D2 diámetro polea conducida 2
+        Se despeja n2 de la ecuacion anterior:
       </p>
       <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
-        D3 diámetro de polea motora 3
+        \(n2 = i \cdot n1\)
       </p>
       <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
-        D4 diámetro polea conducida 4
+        donde:
       </p>
       <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
-        D5 diámetro de polea motora 5
+        i relación de transmisión
       </p>
       <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
-        D6 diámetro polea conducida 6
+        Z1 número de dientes rueda motriz
       </p>
       <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
-        N1 velocidad del árbol motor 1
+        Z3 número de dientes rueda conducida
       </p>
       <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
-        N6 velocidad del último árbol 6
+        n1 velocidad del eje de entrada del primer engranaje en RPM
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        n2 velocidad del eje conducido del tercer engranaje en RPM
       </p>
   </div>
 <body>
     
         <div style="display: flex; flex-direction: column; align-items: center;">
             <div style = "height: 3em;">
-              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="D1">Proporcione el valor del diámetro de la polea motora D1 en mm:</label>
+              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="label_dientesZ1">Proporcione el número de dientes Z1 del engranaje de entrada 1:</label>
             </div>
             <div style = "height: 3em;">
-              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="D1" placeholder="">
-            </div>
-          
-            <div style = "height: 3em;">
-              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="D2">Proporcione el valor del diámetro de la polea conducida 2 en mm:</label>
-            </div>
-            <div style = "height: 3em;">
-              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="D2" placeholder="">
-            </div>
-            <div style = "height: 3em;">
-                <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="D3">Proporcione el valor del diámetro de la polea motora 3 en mm:</label>
-            </div>
-            <div style = "height: 3em;">
-                <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="D3" placeholder="">
-            </div>
-            <div style = "height: 3em;">
-              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="D4">Proporcione el valor del diámetro de la polea conducida 4 en mm:</label>
-            </div>
-            <div style = "height: 3em;">
-              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="D4" placeholder="">
+              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="label_dientesZ1" placeholder="">
             </div>
           
             <div style = "height: 3em;">
-              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="D5">Proporcione el valor del diámetro de la polea motora 5 en mm:</label>
+              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for=" label_dientesZ3">Proporcione el número de dientes Z3 del engranaje conducida 3:</label>
             </div>
             <div style = "height: 3em;">
-              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="D5" placeholder="">
+              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id=" label_dientesZ3" placeholder="">
             </div>
             <div style = "height: 3em;">
-                <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="D6">Proporcione el valor del diámetro de la polea conducida 6 en mm:</label>
+                <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="label_velocidadn1">Proporcione el valor de la velocidad del eje de entrada N1 en RPM:</label>
             </div>
             <div style = "height: 3em;">
-                <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="D6" placeholder="">
+                <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="label_velocidadn1" placeholder="">
             </div>
-            <div style = "height: 3em;">
-              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="N1">Proporcione la velocidad del árbol motriz N1 en RPM:</label>
-          </div>
-          <div style = "height: 3em;">
-              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="N1" placeholder="">
-          </div>
         </div>
   
           <div style="display: flex; justify-content: center;">
@@ -161,10 +142,10 @@ de poleas constituido por 3 escalamientos en mm</h1>
         <p style="display: flex; flex-direction: column; align-items: center;" id="resultado_i">  </p>
     </div>
     <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
-      <p> La velocidad del último árbol N6 es de = </p>
+      <p> La velocidad de giro del tercer engranaje es n2 </p>
    </div>
    <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
-       <p style="display: flex; flex-direction: column; align-items: center;" id="resultado_N6">  </p>
+       <p style="display: flex; flex-direction: column; align-items: center;" id="resultado_N2">  </p>
    </div>
     <div style="display: flex; justify-content: center;">
         <button style="background-color: #000000; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; " class="button" onclick="mostrarImagen()">Generar </button>
@@ -231,7 +212,3 @@ de poleas constituido por 3 escalamientos en mm</h1>
   </style>
 </body>
 </html>
-
-
-
-
