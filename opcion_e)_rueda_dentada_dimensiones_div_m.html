@@ -1,46 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>La rueda dentada y sus dimensiones, division y modulo</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    
+    <style>
+        body {
+          background-image: url("ruedas_dentadas.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        @keyframes blink {
+            0% { transform: translateX(10px);  color: rgb(62, 128, 214);}
+            50% { transform: translateX(150px);  color: rgb(255, 255, 255);}
+            100% { transform: translateX(10px);  color: rgb(40, 121, 226);}
+        }
+      </style>
 <section class="section">
   <div class="section-header">
       <h3 class="page__heading" style="font-family: Lastica, Arial, sans-serif; background-color: #000000; padding: 20px; text-align: center; margin-top: 100x; color: #492AE6; font-size: 50px;">
-          Formulas de mecanismos en robotica</h3>
+          Simulacion de mecanismos en robotica</h3>
   </div>
 </section>
 </head>
 <body>
   
 
-  <div class="menu" style="text-align: center; margin-top: 20px;">
+  <div class="menu" style="text-align: center;">
     <ul style="list-style-type: none; padding: 0;">
         <li style="display: inline-block; margin-right: 10px;">
-            <a href="simulacion_mecanismos.html" class="button">Inicio</a>
+            <button class="button"  onclick="window.location.href='simulacion_mecanismos.html'">Inicio</button>
           </li>
       <li style="display: inline-block; margin-right: 10px;">
-        <a href="menu_ejercicios.html" class="button">Ejercicios de mecanismos</a>
+        <button class="button"  onclick="window.location.href='menu_ejercicios.html'">Ejercicios de mecanismos</button>
       </li>
       <li style="display: inline-block; margin-right: 10px;">
-        <a href="menu_formulas.html" class="button">Formulas</a>
+        <button class="button"  onclick="window.location.href='menu_formulas.html'">Formulas</button>
       </li>
       <li style="display: inline-block; margin-right: 10px;">
-        <a href="datos.html" class="button">Acerca de</a>
+        <button class="button"  onclick="window.location.href='datos.html'">Acerca de</button>
       </li>
     </ul>
   </div>
-  <h1 style="color: black; text-align: center; font-family: Arial, sans-serif; padding: 20px; font-size: 25px;">Bienvenido/a</h1>
-  <p style="color: #333;  text-align: center; font-family: Arial, sans-serif; font-size: 20px;">
-    Escoge cualquier ejercicio para calcular:
-  </p>
+  <script>
+    $(function() {
+        $('[data-toggle="popover"]').popover();
+    });
+</script>
+  <body>
+    <h1 style= "animation: blink 2s infinite, slide 4s linear infinite; color: rgb(196, 127, 245); text-align: center; font-family: a Astro Space, Arial, sans-serif; padding: 15px; font-size: 40px; text-shadow: 2px 2px 4px black;">La rueda dentada y sus dimensiones, division y modulo </h1>
+</body>
+<div style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">
+    <h1 style="color: rgb(255, 255, 255); text-align: center; font-family: Arial, sans-serif; font-size: 25px;">Bienvenido/a</h1>
+    <p style="color: #ffffff; text-align: center; font-family: Century  Gothic, sans-serif; font-size: 17px; text-align: justify;">
+      Una rueda dentada es un mecanismo de forma circular que transmite movimiento mediante “dientes”.
+    </p>
+    <p style="color: #ffffff; text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px; text-align: justify; display: flex; justify-content: center; gap: 20px;">
+        <button class="btn btn-pink-black" data-toggle="popover" data-placement="left" title="División" data-content="es distancia entre la mitad de dos dientes consecutivos medida en radiantes sobre el diámetro del círculo primitivo. Se representa como: p">División</button>
+        <button class="btn btn-purple-black" data-toggle="popover" data-placement="right" title="Módulo" data-content="El módulo es una magnitud normalizada que permite el cálculo con cifras fijas. Se representa como m">Módulo</button>
+    </p>
+    <h1 style="color: rgb(255, 255, 255); text-align: center; font-family: Arial, sans-serif; font-size: 20px;">Elementos de la rueda dentada</h1>
+    <p style="color: #ffffff; text-align: center; font-family: Century  Gothic, sans-serif; font-size: 17px; text-align: justify;">
+      Sus elementos son:
+    </p>
+    <lu style = "  list-style-type: none; padding: 0;">
+      <div class="horizontal-list">
+        <img src="partes_rueda_dentada.png" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);max-width: 600px;" alt="Descripción de la imagen">
+      </div>
+    </lu>
+    <p style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;">
+        Escoge cualquier ejercicio para calcular:
+      </p>
+  </div>
   <div class="menu" style="text-align: left; margin-top: 20px;">
     <ul style="list-style-type: none; padding: 0; display: flex; flex-direction: column;">
       <li style="margin-bottom: 10px;">
-        <a href="simulacion_mecanismos.html" class="button">Ejercicio ia) Cálculo de la Relación de transmisión de velocidad</a>
+        <button class="button"  onclick="window.location.href='opcion_ie).html'">Ejercicio ie) División y módulo  de rueda dentada</button>
       </li>
       <li style="margin-bottom: 10px;">
-        <a href="menu_ejercicios.html" class="button">Ejercicio iia) Cálculo de velocidad que gira el eje conducido</a>
-      </li>
-      <li style="margin-bottom: 10px;">
-        <a href="menu_formulas.html" class="button">Ejercicio iiia) Cálculo de Longitud de correa</a>
+        <button onclick="window.location.href='opcion_iie).html'" class="button">Ejercicio iie) La rueda dentada y sus dimensiones</button>
       </li>
     </ul>
   </div>
@@ -101,10 +145,63 @@
       align-items: center;
     }
 
+.horizontal-list {
+  display: flex;
+  justify-content: center;
+}
+
+.horizontal-list li {
+  margin-right: 20px;
+}
+.btn-pink-black {
+  background-color: rgb(33, 174, 209);
+    border-color: rgb(0, 157, 248);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+.btn-pink-black:hover {
+    background-color: rgb(10, 73, 86);
+    border-color: rgb(134, 190, 233);
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+}
+.btn-purple-black {
+    background-color: rgb(33, 174, 209);
+    border-color: rgb(34, 140, 233);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+.btn-purple-black:hover {
+    background-color: rgb(10, 31, 86);
+    border-color: rgb(34, 140, 233);
+    color: rgb(74, 216, 248);
+    border-radius: 50px;
+}
+
+ .popover-header {
+  font-family: Century Gothic, sans-serif;
+  color: rgb(118, 205, 255);
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgb(0, 0, 0);
+  width: 200px;
+}
+
+.popover-body
+{
+    font-family: Century Gothic, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    text-align: justify;
+    background-color: rgb(0, 0, 0);
+    width: 200px;
+}
+
   </style>
 </body>
 </html>
-
-
-
 
