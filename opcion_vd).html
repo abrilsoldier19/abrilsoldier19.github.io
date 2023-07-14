@@ -4,6 +4,16 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
     <style>
         body {
           background-image: url("https://t3.ftcdn.net/jpg/04/55/62/46/360_F_455624616_HQElDnVTyZMIgcx7SZ5CnvgCjbC6ucRF.jpg");
@@ -25,106 +35,192 @@
     <div class="menu" style="text-align: center;">
         <ul style="list-style-type: none; padding: 0;">
             <li style="display: inline-block; margin-right: 10px;">
-                <a href="simulacion_mecanismos.html" class="button">Inicio</a>
+                <button class="button"  onclick="window.location.href='simulacion_mecanismos.html'">Inicio</button>
               </li>
           <li style="display: inline-block; margin-right: 10px;">
-            <a href="menu_ejercicios.html" class="button">Ejercicios de mecanismos</a>
+            <button class="button"  onclick="window.location.href='menu_ejercicios.html'">Ejercicios de mecanismos</button>
           </li>
           <li style="display: inline-block; margin-right: 10px;">
-            <a href="menu_formulas.html" class="button">Formulas</a>
+            <button class="button"  onclick="window.location.href='menu_formulas.html'">Formulas</button>
           </li>
           <li style="display: inline-block; margin-right: 10px;">
-            <a href="datos.html" class="button">Acerca de</a>
+            <button class="button"  onclick="window.location.href='datos.html'">Acerca de</button>
           </li>
         </ul>
       </div>
-</body>
-
     <script>
         function operacion() {
-          var D1 = parseFloat(document.getElementById('D1').value);
-          var D2 = parseFloat(document.getElementById('D2').value);
-          var D3 = parseFloat(document.getElementById('D3').value);
-          var N1 = parseFloat(document.getElementById('N1').value);
-          var N4 = parseFloat(document.getElementById('N4').value);
+          var n1 = parseFloat(document.getElementById('n1').value);
+          var pb = parseFloat(document.getElementById('pb').value);
+          var z1 = parseFloat(document.getElementById('z1').value);
+          var z2 = parseFloat(document.getElementById('z2').value);
+          var c = parseFloat(document.getElementById('c').value);
+          var bs = parseFloat(document.getElementById('bs').value);
+          var bso = parseFloat(document.getElementById('bso').value);
+          var Ta = parseFloat(document.getElementById('Ta').value);
+          var m = parseFloat(document.getElementById('m').value);
     
-          var D = ((N1)*(D1)*(D3))/((D2)*(N4));
+          var v = ((n1)*(pb)*(z1))/(60000);
+          var zm = ((z1 / 2) - ((pb * z1) / (2*Math.pow(Math.PI,2)*c))) * (z2 - z1);
+          var kw = (bs)/(bso);
+          var kz = 1 - 0.2*(6-zm);
+          var p = ((kz)*(kw)*(Ta)-(bs*m*Math.pow(v,2)/bso)*v*Math.pow(10,-3));
     
-          document.getElementById('resultado_D').innerHTML = "" + D;
+          document.getElementById('resultado_v').innerHTML = "" + v;
+          document.getElementById('resultado_zm').innerHTML = "" + zm;
+          document.getElementById('resultado_kw').innerHTML = "" + kw;
+          document.getElementById('resultado_kz').innerHTML = "" + kz;
+          document.getElementById('resultado_p').innerHTML = "" + p;
         }
+
 
         function mostrarImagen() {
             var imageContainer = document.getElementById('imageContainer');
             var image = document.createElement('img');
-            image.src = 'tren_poleas_ib.jpg'; // Reemplaza con la ruta de tu imagen
+            image.src = 'engranajes.png'; // Reemplaza con la ruta de tu imagen
               
+            image.style.width = '450px'; // Set the desired width
+            image.style.height = '250px';
             imageContainer.innerHTML = ''; // Limpiar el contenedor de imágenes
+
+            imageContainer.style.display = 'flex';
+            imageContainer.style.justifyContent = 'center';
+            imageContainer.style.alignItems = 'center';
             imageContainer.appendChild(image); // Agregar la imagen al contenedor
     }
+  $(function () {
+    $('[data-toggle="popover"]').popover({
+      template: '<div class="popover custom-popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
+    })
+      .on('shown.bs.popover', function () {
+        MathJax.Hub.Queue(['Typeset', MathJax.Hub, $(this).next('.popover').find('.popover-body')[0]]);
+      });
+  });
       </script>
 
-<h1 style ="color: white; font-family: Century Gothic, sans-serif; text-align: center;">Simulación del cálculo del diámetro de la polea de un tren de poleas
-    constituido por tres escalonamientos en mm</h1>
+<h1 style ="color: white; font-family: Century Gothic, sans-serif; text-align: center;">Simulación del cálculo de la potencia nominal en transmisión por correa dentada, considerando el
+    funcionamiento con carga suave y constante</h1>
 <div style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">
     <p style="color: #ffffff;  text-align: center; font-family: Arial, sans-serif; font-size: 20px;">
-        Apartir de la Fórmula de diámetro de la polea
+        Las formulas involucradas son:
       </p>
-      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
-        \(D = \frac{N1 \cdot D1 \cdot D5}{D2  \cdot N4}\)
+      <p style="color: #ffffff; text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        <button type="button" class="btn btn-pink-black" data-toggle="popover" title="Formulas" data-content="\(v=\frac{n1 \cdot pb \cdot z1}{60000}\)<br>
+          \(Zm=\frac{z1}{2} - \frac{(pb) \cdot (z1)}{2 \cdot &pi;^2 \cdot C}(z2-z1)\)<br>
+          \(kw = \left(\frac{bs}{bso}\right)^{1.14}\)<br>
+          if zm &lt; 6:<br>
+          &emsp;kz = (1 - 0.2 * (6 - zm))<br>
+          else zm ≥ 6:<br>
+          &emsp;kz = 1<br>
+          \(kz=\frac{z1}{2} - \frac{(pb) \cdot (z1)}{2 \cdot &pi;^2 \cdot C}(z2-z1)\)<br>
+          \(P=(kz \cdot kw \cdot Ta - \frac{bs \cdot m \cdot v^2}{bso})\cdot v \cdot 10^{-3}\)</span>" data-html="true">
+          Mostrar formulas
+        </button>
       </p>
-      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
-        D diámetro polea que arrastra al eje de la cinta transportadora,
+      
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px;">
+        Especificación de valores:
       </p>
-      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
-        D1 diámetro polea motora 1,
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px">
+        P:  Potencia nominal de la correa (kW)
       </p>
-      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
-        D2 diámetro polea conducida 2,
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px">
+        kz:  Factor de engrane de los dientes
       </p>
-      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
-        D3 diámetro polea motora 3,
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px">
+        kw: Factor de ancho
       </p>
-      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
-        N1 velocidad del eje motor 1,
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px">
+        Ta: Fuerza maxima admisible en la correa segun el ancho de referencia (N)
       </p>
-      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
-        N4 velocidad de giro de la cinta transportadora
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px">
+        bs: Ancho de la correa en mm
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px">
+        bso = Ancho de referencia para el paso de la correa en mm
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px">
+        m = Masa lineal de la correa segun ancho de referencia en Kg/m 
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px">
+        v = Velocidad de la correa en m/s
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px">
+        n1 = Frecuencia de rotacion polea menor (min^-1)
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px">
+        pb =  Paso de los dientes de la correa y poeleas en mm
+      </p><p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px">
+        z1 = numero de dientes polea menor
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px">
+        z2 = numero de dientes polea mayor 
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px">
+        zm = Numero de dientes de la correa engranados con la polea menor
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px">
+        C = Distancia entre centros de poleas en mm
       </p>
   </div>
 <body>
     
         <div style="display: flex; flex-direction: column; align-items: center;">
             <div style = "height: 3em;">
-              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="D1">Proporcione el valor del diámetro de la polea motora D1 en mm:</label>
+              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="Ta">Proporcione el la fuerza maxima admisible en Newtons:</label>
             </div>
             <div style = "height: 3em;">
-              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="D1" placeholder="">
-            </div>
-          
-            <div style = "height: 3em;">
-              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="D2">Proporcione el valor del diámetro de la polea conducida D2 en mm:</label>
-            </div>
-            <div style = "height: 3em;">
-              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="D2" placeholder="">
-            </div>
-            <div style = "height: 3em;">
-              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="D3">Proporcione el valor del diámetro de la polea motora D3 en mm:</label>
-            </div>
-            <div style = "height: 3em;">
-              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="D3" placeholder="">
+              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="Ta" placeholder="">
             </div>
           
             <div style = "height: 3em;">
-              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="N1">Proporcione la velocidad del eje motor N1 en RPM:</label>
+              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="bs">Proporcione el valor del ancho de la correa en mm:</label>
             </div>
             <div style = "height: 3em;">
-              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="N1" placeholder="">
+              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="bs" placeholder="">
             </div>
             <div style = "height: 3em;">
-              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="N4">Proporcione la velocidad de giro de la cinta transportadora N4 en RPM:</label>
+              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="bso">Proporcione el valor del ancho de referencia de la correa en mm:</label>
             </div>
             <div style = "height: 3em;">
-              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="N4" placeholder="">
+              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="bso" placeholder="">
+            </div>
+          
+            <div style = "height: 3em;">
+              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="m">Proporcione el valor de la masa de la correa según el ancho de referencia em kg:</label>
+            </div>
+            <div style = "height: 3em;">
+              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="m" placeholder="">
+            </div>
+            <div style = "height: 3em;">
+              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="n1">Proporcione el valor de la frecuencia de rotación en la polea menor en minutos:</label>
+            </div>
+            <div style = "height: 3em;">
+              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="n1" placeholder="">
+            </div>
+            <div style = "height: 3em;">
+              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="pb">Proporcione el valor del paso de los dientes de la correa y las poleas en mm:</label>
+            </div>
+            <div style = "height: 3em;">
+              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="pb" placeholder="">
+            </div>
+            <div style = "height: 3em;">
+              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="z1">Proporcione el numero de los dientes de la polea menor:</label>
+            </div>
+            <div style = "height: 3em;">
+              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="z1" placeholder="">
+            </div>
+            <div style = "height: 3em;">
+              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="z2">Proporcione el numero de los dientes de la polea mayor:</label>
+            </div>
+            <div style = "height: 3em;">
+              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="z2" placeholder="">
+            </div>
+            <div style = "height: 3em;">
+              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="c">Proporcione la distancia entre centros de las poleas en mm:</label>
+            </div>
+            <div style = "height: 3em;">
+              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="c" placeholder="">
             </div>
         </div>
   
@@ -132,33 +228,68 @@
             <button style="background-color: #000000; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; " class="button" onclick="operacion()">Calcular</button>
           </div>
     <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
-       <p> El valor del diámetro D de la polea que arrastra </p>
+       <p> El valor del factor del engranaje de los dientes es: </p>
     </div>
     <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
-        <p style="display: flex; flex-direction: column; align-items: center;" id="resultado_D">  </p>
+        <p style="display: flex; flex-direction: column; align-items: center; background-color: #000000;" id="resultado_kz">  </p>
+    </div>
+    <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+       <p> El valor del factor de ancho es: </p>
+    </div>
+    <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+        <p style="display: flex; flex-direction: column; align-items: center; background-color: #000000;" id="resultado_kw">  </p>
+    </div>
+    <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+       <p> El valor de la velocidad de la correa es: </p>
+    </div>
+    <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+        <p style="display: flex; flex-direction: column; align-items: center; background-color: #000000;" id="resultado_v">  </p>
+    </div>
+    <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+       <p> La cantidad de dientes de la correa engranados con la polea menor es: </p>
+    </div>
+    <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+        <p style="display: flex; flex-direction: column; align-items: center; background-color: #000000;" id="resultado_zm">  </p>
+    </div>
+    <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+       <p> La potencia nominal de la correa es: </p>
+    </div>
+    <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+        <p style="display: flex; flex-direction: column; align-items: center; background-color: #000000;" id="resultado_p">  </p>
     </div>
     <div style="display: flex; justify-content: center;">
         <button style="background-color: #000000; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; " class="button" onclick="mostrarImagen()">Generar </button>
       </div>
 
-      <div id="imageContainer" style="display: flex; justify-content: center;"> </div>
+      <div id="imageContainer" style="display: flex; justify-content: center; padding: 20px 60px;"> </div>
   
   </body>
-  <button class="button" style="display: inline-block;
-  background-color: #000000;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 5px;
-  margin-top: 20px;
-  border: none;
-  cursor: pointer;" onclick="window.location.href='https://github.com/abrilsoldier19/SimuladorMecanismosRobotica/tree/main'">Enlace a Github</button>
-
-<button class="button2"  onclick="window.location.href='https://avril-rock1471-gmail-com.trinket.io/sites/ejercicio-vb-diametro-de-polea'">Enlace a simulador ejercicio vb) en Python</button>
-<button class="button2"  onclick="window.location.href='https://avril-rock1471-gmail-com.trinket.io/sites/vb-diametro-de-polea'">Simulador interactivo ejercicio vb) en Python</button>
-
+  <body>
+    <div class="menu" style="text-align: center;">
+      <ul style="list-style-type: none; padding: 0;">
+          <li style="display: inline-block; margin-right: 10px;">
+            <button class="button" style="display: inline-block;
+            background-color: #000000;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;" onclick="window.location.href='https://github.com/abrilsoldier19/SimuladorMecanismosRobotica/tree/main'">Enlace a Github</button>
+          
+            </li>
+        <li style="display: inline-block; margin-right: 10px;">
+          <button class="button2"  style = "margin-right: 10px;"onclick="window.location.href='https://avril-rock1471-gmail-com.trinket.io/sites/ejercicio-vb-diametro-de-polea'">Enlace a simulador ejercicio vd) en Python</button>
+        </li>
+        <li style="display: inline-block; margin-right: 10px;">
+          <button class="button2" style = "margin-right: 10px;" onclick="window.location.href='https://avril-rock1471-gmail-com.trinket.io/sites/vb-diametro-de-polea'">Simulador interactivo ejercicio vd) en Python</button>
+        </li>
+      </ul>
+    </div>
+  </body>
 
 <style>
   .button {
@@ -199,10 +330,37 @@
       align-items: center;
     }
 
+.btn-pink-black {
+    background-color: rgb(233, 134, 221);
+    border-color: rgb(233, 134, 221);
+    color: black;
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+.btn-pink-black:hover {
+    background-color: rgb(86, 10, 77);
+    border-color: rgb(233, 134, 221);
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+}
+
+.custom-popover .popover-header {
+  font-family: Century Gothic, sans-serif;
+  color: rgb(38, 0, 255);
+  font-size: 18px;
+  background-color: rgb(202, 196, 230);
+  width: 300px;
+}
+
+.custom-popover .popover-body
+{
+    font-family: Century Gothic, sans-serif;
+    color: rgb(184, 165, 255);
+    font-size: 14px;
+    background-color: rgb(0, 0, 0);
+    width: 300px;
+}
   </style>
 </body>
 </html>
-
-
-
-
