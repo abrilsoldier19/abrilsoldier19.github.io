@@ -1,10 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <title>Accionamiento por cremallera y por tornillo sin fin:</title>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <meta charset="UTF-8">
+  </head>
+
+    
+    <style>
+        body {
+          background-image: url("/static/pinon_cremallera.jpg");
+          background-size: contain;
+          background-color: black;
+        }
+
+        @keyframes blink {
+            0% { transform: translateX(10px);  color: rgb(0, 0, 0);}
+            50% { transform: translateX(150px);  color: rgb(123, 123, 123);}
+            100% { transform: translateX(10px);  color: rgb(0, 0, 0);}
+        }
+      </style>
 <section class="section">
   <div class="section-header">
-      <h3 class="page__heading" style="font-family: Lastica, Arial, sans-serif; background-color: #000000; padding: 20px; text-align: center; margin-top: 100x; color: #492AE6; font-size: 50px;">
-          Formulas de mecanismos en robotica</h3>
+      <h3 class="page__heading" style="font-family: Lastica, Arial, sans-serif; background-color: #000000; padding: 20px; text-align: center; margin-top: 100x; color: #ffffff; font-size: 50px;">
+          Simulacion de mecanismos en robotica</h3>
   </div>
 </section>
 </head>
@@ -14,40 +38,160 @@
   <div class="menu" style="text-align: center; margin-top: 20px;">
     <ul style="list-style-type: none; padding: 0;">
         <li style="display: inline-block; margin-right: 10px;">
-            <a href="simulacion_mecanismos.html" class="button">Inicio</a>
+            <a href="/home" class="btn button">Inicio</a>
+          </li>
+          <li style="display: inline-block; margin-right: 10px;">
+            <a href="/menu_ejercicios" class="btn button">Ejercicios de mecanismos</a>
+          </li>
+          <li style="display: inline-block; margin-right: 10px;">
+            <a href="/menu_formulas" class="btn button">Formulas</a>
           </li>
       <li style="display: inline-block; margin-right: 10px;">
-        <a href="menu_ejercicios.html" class="button">Ejercicios de mecanismos</a>
-      </li>
-      <li style="display: inline-block; margin-right: 10px;">
-        <a href="menu_formulas.html" class="button">Formulas</a>
-      </li>
-      <li style="display: inline-block; margin-right: 10px;">
-        <a href="datos.html" class="button">Acerca de</a>
+        <a href="/datos" class="btn button">Acerca de</a>
       </li>
     </ul>
   </div>
-  <h1 style="color: black; text-align: center; font-family: Arial, sans-serif; padding: 20px; font-size: 25px;">Bienvenido/a</h1>
-  <p style="color: #333;  text-align: center; font-family: Arial, sans-serif; font-size: 20px;">
-    Escoge cualquier ejercicio para calcular:
-  </p>
-  <div class="menu" style="text-align: left; margin-top: 20px;">
-    <ul style="list-style-type: none; padding: 0; display: flex; flex-direction: column;">
-      <li style="margin-bottom: 10px;">
-        <a href="simulacion_mecanismos.html" class="button">Ejercicio ia) Cálculo de la Relación de transmisión de velocidad</a>
-      </li>
-      <li style="margin-bottom: 10px;">
-        <a href="menu_ejercicios.html" class="button">Ejercicio iia) Cálculo de velocidad que gira el eje conducido</a>
-      </li>
-      <li style="margin-bottom: 10px;">
-        <a href="menu_formulas.html" class="button">Ejercicio iiia) Cálculo de Longitud de correa</a>
-      </li>
-    </ul>
-  </div>
-  
-  
-  
+  <script>
 
+        function operacion() {
+          var z = parseFloat(document.getElementById('z').value);
+          var m = parseFloat(document.getElementById('m').value);
+    
+          var s = z * m * Math.PI;
+
+          document.getElementById('resultado_s').innerHTML = "" + s;
+        }
+
+
+        function mostrarImagen() {
+        var imageContainer = document.getElementById('imageContainer');
+        var image = document.createElement('img');
+        image.src = '/static/cremallera_opcion_h).png'; // Reemplaza con la ruta de tu imagen
+        image.style.width = '350px'; // Set the desired width
+        image.style.height = '250px';
+        
+        // Agregar estilo para el efecto de luz
+        image.style.borderRadius = '10px';
+        image.style.boxShadow = '0 0 20px rgba(255, 255, 255, 0.7)'; // Cambia el valor según tus preferencias
+
+        imageContainer.innerHTML = ''; // Limpiar el contenedor de imágenes
+        imageContainer.style.display = 'flex';
+        imageContainer.style.justifyContent = 'center';
+        imageContainer.style.alignItems = 'center';
+        imageContainer.appendChild(image); // Agregar la imagen al contenedor
+    }
+  $(function () {
+    $('[data-toggle="popover"]').popover({
+      template: '<div class="popover custom-popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
+    })
+      .on('shown.bs.popover', function () {
+        MathJax.Hub.Queue(['Typeset', MathJax.Hub, $(this).next('.popover').find('.popover-body')[0]]);
+      });
+  });
+    $(function() {
+        $('[data-toggle="popover"]').popover();
+    });
+</script>
+  <body>
+    <h1 style= "animation: blink 2s infinite, slide 4s linear infinite; background-color: rgba(8, 8, 8, 0.4); text-align: center; font-family: a Astro Space, Arial, sans-serif; padding: 15px; font-size: 40px; text-shadow: 2px 2px 4px rgb(255, 255, 255);">Accionamiento por cremallera y por tornillo sin fin: <br>
+      carrera de cremallera, accionamiento por tornillo sin fin, interdependencias</h1>
+</body>
+
+<div style="background-color: rgba(0, 0, 0, 0.55); padding: 20px; border-radius: 10px; width: 850px; margin: 0 auto;">
+    <h1 style="color: rgb(255, 255, 255); text-align: center; font-family: Arial, sans-serif; font-size: 35px;">Bienvenido/a</h1>
+    <p style="color: #ffffff; font-family: Century  Gothic, sans-serif; font-size: 18px; text-align: justify; width: 780px; margin: 0 auto;">
+      El <strong>Accionamiento por cremallera y por tornillo sin fin</strong> son métodos de transmisión de movimiento en sistemas mecánicos. 
+    </p>
+    <br>
+    <li style="color: #ffffff; font-family: Century  Gothic, sans-serif; font-size: 18px; text-align: justify; width: 780px; margin: 0 auto;">
+      <strong style="color:rgb(0, 0, 0); background-color: #92929246;">Accionamiento por cremallera</strong>: permite transformar el movimiento de rotación del piñón en el rectilíneo de la cremallera o viceversa. 
+      <div class="horizontal-list">
+        <img src="{{ url_for('static', filename='carreraCremallera.PNG') }}" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); width: 300px; margin-right: 20px;" alt="Descripción de la imagen">
+      </div>
+    </li>
+    <br>
+    <li style="color: #ffffff; font-family: Century  Gothic, sans-serif; font-size: 18px; text-align: justify; width: 780px; margin: 0 auto;">
+      <strong style="color:rgb(0, 0, 0); background-color: #b9b9b946;">Accionamiento por tornillo sin fin</strong>: es una especie de tornillo cuyo hilo se enrolla alrededor de una "tuerca". 
+      <div class="horizontal-list">
+        <img src="{{ url_for('static', filename='hilo.PNG') }}" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); width: 400px; margin-right: 20px;" alt="Descripción de la imagen">
+        <img src="{{ url_for('static', filename='interdependencias.PNG') }}" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); width: 300px; margin-right: 20px;" alt="Descripción de la imagen">
+      </div>
+    </li>
+    <br>
+    <p style="color: #ffffff; font-family: Century  Gothic, sans-serif; font-size: 18px; text-align: justify; width: 780px; margin: 0 auto;">
+      Para el Accionamiento por cremallera y por tornillo sin fin, se calcula la carrera de 
+      cremallera, accionamiento por tornillo sin fin, e interdependencias. 
+    </p>
+    
+    <br>
+    <p style="color: #ffffff; font-weight: bold;font-family: Century  Gothic, sans-serif; font-size: 22px; text-align: center; width: 800px; margin: 0 auto;">
+      Sus elementos son:
+    </p><br>
+    <p style="color: #ffffff; text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px; text-align: justify; display: flex; justify-content: center; gap: 20px;">
+        <button class="btn btn-purple-black" data-toggle="popover" data-placement="left" title="Carrera de cremallera" data-content="distancia total que recorre una cremallera en un sistema de accionamiento por cremallera y piñón. <br> Se representa como: \(s\)" data-html="true" >Carrera de cremallera</button>
+        <button class="btn btn-pink-black" data-toggle="popover" data-placement="bottom" title="ángulo de giro parcial" data-content="cambio angular que experimenta un objeto en movimiento al rotar solo una fracción del círculo completo alrededor de su eje.  <br> Se representa como \(&#x03B1;\)" data-html="true">ángulo de giro parcial</button>
+        <button class="btn btn-pink-black" data-toggle="popover" data-placement="bottom" title="Num. hilos tornillo sin fin" data-content="Cantidad de vueltas completas del hilo del tornillo que están enrolladas alrededor de la circunferencia del cuerpo del tornillo. <br> Se representa como \(G\) \((z_1)\)" data-html="true">Num. hilos tornillo sin fin</button>
+        <button class="btn btn-purple-black" data-toggle="popover" data-placement="right" title="Num. dientes rueda helicoidal" data-content="cantidad de salientes en forma de dientes en la circunferencia de la rueda. <br> Se representa como \(z_2\)" data-html="true">Num. dientes rueda helicoidal</button>
+    </p>
+    <p style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;">
+        A continuación, te invito resolver el siguiente ejercicio sobre este tema:
+      </p>
+  </div>
+<br>
+
+  <div style="background-color: rgba(3, 74, 105, 0.437); padding: 20px; border-radius: 10px; width: 850px; margin: 0 auto;">
+    <p style="color: #ffffff;  text-align: center; font-family: Arial, sans-serif; font-size: 20px;">
+      La formula involucrada es:
+    </p>
+    <p style="color: #000000; text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+      <button type="button" class="btn btn-formula" data-toggle="popover" data-content="A partir de la ecuación: </span><br>\(s =  z \cdot  m \cdot  &pi;\)" data-html="true">
+        Mostrar formula
+      </button>
+    </p>
+    
+    <p style="color: #000000;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px;">
+      donde:
+    </p>
+    <p style="color: #000000;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px">
+      \(z\) = dientes de la cremallera
+    </p>
+    <p style="color: #000000;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px">
+      \(m\) = modulo
+    </p>
+    
+    <br>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <div style = "height: 3em;">
+        <label style="color: #000000; text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;" for="z">Ingrese el número de dientes de la cremallera (z):</label>
+      </div>
+      <div style = "height: 3em;">
+        <input style="color: #002850; text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;  border-radius: 50px;" type="number" id="z" placeholder="">
+      </div>
+    
+      <div style = "height: 3em;">
+        <label style="color: #000000; text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;" for="m">Ingrese <strong style="color: rgb(255, 255, 255)">módulo (m):</strong></label>
+      </div>
+      <div style = "height: 3em;">
+        <input style="color: #002850; text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px; border-radius: 50px;" type="number" id="m" placeholder="">
+      </div>
+
+
+      <div style="display: flex; justify-content: center;">
+        <button style="background-color: #000000; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; " class="button" onclick="operacion()">Calcular</button>
+      </div>
+      
+    </div>
+    <div style="display: flex; justify-content: center; color: #ffffff; padding: 10px 30px; font-family: Century Gothic, sans-serif; ">
+        <p> El accionamiento de la cremallera es: </p>
+    </div>
+    <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+        <p style="display: flex; flex-direction: column; align-items: center; background-color: #000000;" id="resultado_s">  </p>
+    </div>
+    <div style="display: flex; justify-content: center;">
+     <button style="background-color: #000000; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; " class="button" onclick="mostrarImagen()">Generar </button>
+   </div><br>
+   <div id="imageContainer" style="display: flex; justify-content: center; border-radius: 10px;"> </div>
+  </div>
 
   <button class="button" style="display: inline-block;
   background-color: #000000;
@@ -92,7 +236,8 @@
 }
 
 .button:hover {
-  background-color: #333;
+  background-color: #cecece;
+  color: #333;
 }
 
 .center {
@@ -101,10 +246,76 @@
       align-items: center;
     }
 
+.horizontal-list {
+  display: flex;
+  justify-content: center;
+}
+
+.horizontal-list li {
+  margin-right: 20px;
+}
+.btn-pink-black {
+  background-color: rgb(78, 78, 78);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+.btn-pink-black:hover {
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(109, 113, 113);
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+}
+.btn-purple-black {
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+.btn-purple-black:hover {
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    color: rgb(81, 81, 81);
+    border-radius: 50px;
+}
+
+.btn-formula {
+    background-color: rgb(123, 214, 237);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border-radius: 50px;
+    transition: .5s;
+}
+
+.btn-formula:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(160, 219, 233);
+    border-radius: 50px;
+}
+
+ .popover-header {
+  font-family: Century Gothic, sans-serif;
+  color: rgb(118, 205, 255);
+  font-size: 19px;
+  font-weight: bold;
+  background-color: rgb(0, 0, 0);
+  width: 200px;
+}
+
+
+.popover-body
+{
+    font-family: Century Gothic, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    text-align: justify;
+    background-color: rgb(0, 0, 0);
+    width: 200px;
+}
+
   </style>
 </body>
 </html>
-
-
-
-

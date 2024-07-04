@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <title>Accionamiento múltiple por Rueda dentada</title>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8">
+  </head>
+
+    
+    <style>
+        body {
+          background-image: url("/static/ruedadentadasimple.jpg");
+          background-size: contain;
+          background-color: black;
+        }
+
+        @keyframes blink {
+            0% { transform: translateX(10px);  color: rgb(62, 128, 214);}
+            50% { transform: translateX(150px);  color: rgb(255, 255, 255);}
+            100% { transform: translateX(10px);  color: rgb(40, 121, 226);}
+        }
+      </style>
 <section class="section">
   <div class="section-header">
       <h3 class="page__heading" style="font-family: Lastica, Arial, sans-serif; background-color: #000000; padding: 20px; text-align: center; margin-top: 100x; color: #492AE6; font-size: 50px;">
-          Formulas de mecanismos en robotica</h3>
+          Simulacion de mecanismos en robotica</h3>
   </div>
 </section>
 </head>
@@ -14,40 +40,175 @@
   <div class="menu" style="text-align: center; margin-top: 20px;">
     <ul style="list-style-type: none; padding: 0;">
         <li style="display: inline-block; margin-right: 10px;">
-            <a href="simulacion_mecanismos.html" class="button">Inicio</a>
+            <a href="/home" class="btn button">Inicio</a>
+          </li>
+          <li style="display: inline-block; margin-right: 10px;">
+            <a href="/menu_ejercicios" class="btn button">Ejercicios de mecanismos</a>
+          </li>
+          <li style="display: inline-block; margin-right: 10px;">
+            <a href="/menu_formulas" class="btn button">Formulas</a>
           </li>
       <li style="display: inline-block; margin-right: 10px;">
-        <a href="menu_ejercicios.html" class="button">Ejercicios de mecanismos</a>
-      </li>
-      <li style="display: inline-block; margin-right: 10px;">
-        <a href="menu_formulas.html" class="button">Formulas</a>
-      </li>
-      <li style="display: inline-block; margin-right: 10px;">
-        <a href="datos.html" class="button">Acerca de</a>
+        <a href="/datos" class="btn button">Acerca de</a>
       </li>
     </ul>
   </div>
-  <h1 style="color: black; text-align: center; font-family: Arial, sans-serif; padding: 20px; font-size: 25px;">Bienvenido/a</h1>
-  <p style="color: #333;  text-align: center; font-family: Arial, sans-serif; font-size: 20px;">
-    Escoge cualquier ejercicio para calcular:
-  </p>
-  <div class="menu" style="text-align: left; margin-top: 20px;">
-    <ul style="list-style-type: none; padding: 0; display: flex; flex-direction: column;">
-      <li style="margin-bottom: 10px;">
-        <a href="simulacion_mecanismos.html" class="button">Ejercicio ia) Cálculo de la Relación de transmisión de velocidad</a>
-      </li>
-      <li style="margin-bottom: 10px;">
-        <a href="menu_ejercicios.html" class="button">Ejercicio iia) Cálculo de velocidad que gira el eje conducido</a>
-      </li>
-      <li style="margin-bottom: 10px;">
-        <a href="menu_formulas.html" class="button">Ejercicio iiia) Cálculo de Longitud de correa</a>
-      </li>
-    </ul>
-  </div>
-  
-  
-  
+  <script>
 
+        function operacion() {
+          var z1 = parseFloat(document.getElementById('z1').value);
+          var z2 = parseFloat(document.getElementById('z2').value);
+          var z3 = parseFloat(document.getElementById('z3').value);
+          var z4 = parseFloat(document.getElementById('z4').value);
+    
+          var i = (z2*z4)/(z1*z3);
+
+          document.getElementById('resultado_i').innerHTML = "" + i;
+        }
+
+
+        function mostrarImagen() {
+        var imageContainer = document.getElementById('imageContainer');
+        var image = document.createElement('img');
+        image.src = '/static/engranaje_opcion_g).PNG'; // Reemplaza con la ruta de tu imagen
+        image.style.width = '350px'; // Set the desired width
+        image.style.height = '250px';
+        
+        // Agregar estilo para el efecto de luz
+        image.style.borderRadius = '10px';
+        image.style.boxShadow = '0 0 20px rgba(255, 255, 255, 0.7)'; // Cambia el valor según tus preferencias
+
+        imageContainer.innerHTML = ''; // Limpiar el contenedor de imágenes
+        imageContainer.style.display = 'flex';
+        imageContainer.style.justifyContent = 'center';
+        imageContainer.style.alignItems = 'center';
+        imageContainer.appendChild(image); // Agregar la imagen al contenedor
+    }
+  $(function () {
+    $('[data-toggle="popover"]').popover({
+      template: '<div class="popover custom-popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
+    })
+      .on('shown.bs.popover', function () {
+        MathJax.Hub.Queue(['Typeset', MathJax.Hub, $(this).next('.popover').find('.popover-body')[0]]);
+      });
+  });
+    $(function() {
+        $('[data-toggle="popover"]').popover();
+    });
+</script>
+  <body>
+    <h1 style= "animation: blink 2s infinite, slide 4s linear infinite; color: rgb(196, 127, 245); text-align: center; font-family: a Astro Space, Arial, sans-serif; padding: 15px; font-size: 40px; text-shadow: 2px 2px 4px black;">Accionamiento múltiple por Rueda dentada:
+       transmisiones parciales y transmision parcial</h1>
+</body>
+<div style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px; width: 850px; margin: 0 auto;">
+    <h1 style="color: rgb(255, 255, 255); text-align: center; font-family: Arial, sans-serif; font-size: 35px;">Bienvenido/a</h1>
+    <p style="color: #ffffff; font-family: Century  Gothic, sans-serif; font-size: 18px; text-align: justify; width: 780px; margin: 0 auto;">
+      El <strong>Accionamiento múltiple por Rueda dentada</strong> es una técnica comúnmente utilizada en la ingeniería mecánica para lograr una 
+      variedad de objetivos, como el cambio de velocidad, la transmisión de fuerza y la distribución del movimiento en máquinas y sistemas. 
+    </p>
+    <br>
+    <p style="color: #ffffff; font-family: Century  Gothic, sans-serif; font-size: 18px; text-align: justify; width: 780px; margin: 0 auto;">
+      Para el accionamiento múltiple por rueda dentada, se realiza el cálculo de las 
+    transmisiones parciales y transmisión total. 
+    </p>
+    
+    <br>
+    <p style="color: #ffffff; text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px; text-align: justify; display: flex; justify-content: center; gap: 20px;">
+        <button class="btn btn-purple-black" data-toggle="popover" data-placement="left" title="Número de dientes" data-content="cantidad de ciclos completos de rotación que ocurren desde el comienzo de un proceso o movimiento hasta un punto de referencia determinado. <br> Se representa como: \(n_A\)" data-html="true" >Número inicial de revoluciones</button>
+        <button class="btn btn-pink-black" data-toggle="popover" data-placement="bottom" title="Número de revoluciones" data-content="medida que describe cuántas vueltas completas realiza un objeto o sistema alrededor de su eje en un período de tiempo específico.  <br> Se representa como \(n_E\)" data-html="true">Número final de revoluciones</button>
+        <button class="btn btn-pink-black" data-toggle="popover" data-placement="bottom" title="Transmisión total" data-content="se utiliza para describir un sistema o mecanismo de transmisión en el cual la potencia o movimiento se transfiere de una fuente de energía. <br> Se representa como \(i\)" data-html="true">Transmisión total</button>
+        <button class="btn btn-pink-black" data-toggle="popover" data-placement="right" title="Transmisión parcial" data-content="Transferencia de energía, movimiento o información en una proporción o grado incompleto en comparación con el total disponible. <br> Se representa como \(i_1\) y \(i_2\)" data-html="true">Transmisión parcial</button>
+    </p>
+    <p style="color: #ffffff; font-weight: bold;font-family: Century  Gothic, sans-serif; font-size: 22px; text-align: center; width: 800px; margin: 0 auto;">
+      Sus elementos son:
+    </p><br>
+    <lu style = "  list-style-type: none; padding: 0;">
+      <div class="horizontal-list">
+        <img src="{{ url_for('static', filename='transmisionParcial.PNG') }}" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);max-width: 600px; margin-right: 20px;" alt="Descripción de la imagen">
+        
+        <img src="{{ url_for('static', filename='transmisionTotal.png') }}" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);  width: 400px;" alt="Descripción de la imagen">
+      </div><br>
+      
+    </lu>
+    <p style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;">
+        A continuación, te invito resolver el siguiente ejercicio sobre este tema:
+      </p>
+  </div>
+<br>
+
+  <div style="background-color: rgba(3, 74, 105, 0.437); padding: 20px; border-radius: 10px; width: 850px; margin: 0 auto;">
+    <p style="color: #ffffff;  text-align: center; font-family: Arial, sans-serif; font-size: 20px;">
+      Las formulas involucradas son:
+    </p>
+    <p style="color: #ffffff; text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+      <button type="button" class="btn btn-formula" data-toggle="popover" data-content="A partir de la ecuación: </span><br>\(i = \frac{ z2 \cdot  z4}{ z1 \cdot  z3}\)" data-html="true">
+        Mostrar formula
+      </button>
+    </p>
+    
+    <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px;">
+      donde:
+    </p>
+    <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px">
+      \(z1\) = numero de dientes 1
+    </p>
+    <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px">
+      \(z2\) = numero de dientes 2
+    </p>
+    <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px">
+      
+      \(z3\) = numero de dientes 3
+    </p>
+    <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px">
+      \(z4\) = numero de dientes 4
+    </p>
+    
+    <br>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <div style = "height: 3em;">
+        <label style="color: #ffffff; text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;" for="z1">Ingrese el número de dientes 1 (z1):</label>
+      </div>
+      <div style = "height: 3em;">
+        <input style="color: #002850; text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;  border-radius: 50px;" type="number" id="z1" placeholder="">
+      </div>
+    
+      <div style = "height: 3em;">
+        <label style="color: #ffffff; text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;" for="z2">Ingrese el número de dientes 2 (z2):</label>
+      </div>
+      <div style = "height: 3em;">
+        <input style="color: #002850; text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px; border-radius: 50px;" type="number" id="z2" placeholder="">
+      </div>
+
+      <div style = "height: 3em;">
+        <label style="color: #ffffff; text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;" for="z3">Ingrese el número de dientes 3 (z3):</label>
+      </div>
+      <div style = "height: 3em;">
+        <input style="color: #002850; text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;  border-radius: 50px;" type="number" id="z3" placeholder="">
+      </div>
+    
+      <div style = "height: 3em;">
+        <label style="color: #ffffff; text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;" for="z4">Ingrese el número de dientes 4 (z4):</label>
+      </div>
+      <div style = "height: 3em;">
+        <input style="color: #002850; text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px; border-radius: 50px;" type="number" id="z4" placeholder="">
+      </div>
+
+      <div style="display: flex; justify-content: center;">
+        <button style="background-color: #000000; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; " class="button" onclick="operacion()">Calcular</button>
+      </div>
+      
+    </div>
+    <div style="display: flex; justify-content: center; color: #ffffff; padding: 10px 30px; font-family: Century Gothic, sans-serif; ">
+        <p> La Transmisión total es: </p>
+    </div>
+    <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+        <p style="display: flex; flex-direction: column; align-items: center; background-color: #000000;" id="resultado_i">  </p>
+    </div>
+    <div style="display: flex; justify-content: center;">
+     <button style="background-color: #000000; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; " class="button" onclick="mostrarImagen()">Generar </button>
+   </div><br>
+   <div id="imageContainer" style="display: flex; justify-content: center; border-radius: 10px;"> </div>
+  </div>
 
   <button class="button" style="display: inline-block;
   background-color: #000000;
@@ -93,6 +254,7 @@
 
 .button:hover {
   background-color: #333;
+  color: rgb(103, 198, 239);
 }
 
 .center {
@@ -101,10 +263,77 @@
       align-items: center;
     }
 
+.horizontal-list {
+  display: flex;
+  justify-content: center;
+}
+
+.horizontal-list li {
+  margin-right: 20px;
+}
+.btn-pink-black {
+  background-color: rgb(33, 174, 209);
+    border-color: rgb(0, 157, 248);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+.btn-pink-black:hover {
+    background-color: rgb(10, 73, 86);
+    border-color: rgb(134, 190, 233);
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+}
+.btn-purple-black {
+    background-color: rgb(33, 174, 209);
+    border-color: rgb(34, 140, 233);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+.btn-purple-black:hover {
+    background-color: rgb(10, 31, 86);
+    border-color: rgb(34, 140, 233);
+    color: rgb(74, 216, 248);
+    border-radius: 50px;
+}
+
+.btn-formula {
+    background-color: rgb(123, 214, 237);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border-radius: 50px;
+    transition: .5s;
+}
+
+.btn-formula:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(160, 219, 233);
+    border-radius: 50px;
+}
+
+ .popover-header {
+  font-family: Century Gothic, sans-serif;
+  color: rgb(118, 205, 255);
+  font-size: 19px;
+  font-weight: bold;
+  background-color: rgb(0, 0, 0);
+  width: 200px;
+}
+
+
+.popover-body
+{
+    font-family: Century Gothic, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    text-align: justify;
+    background-color: rgb(0, 0, 0);
+    width: 200px;
+}
+
   </style>
 </body>
 </html>
-
-
-
-

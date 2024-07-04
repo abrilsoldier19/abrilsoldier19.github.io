@@ -1,10 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <title>La rueda dentada y sus dimensiones, division y modulo</title>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <meta charset="UTF-8">
+  </head>
+
+    
+    <style>
+        body {
+          background-image: url("/static/ruedadentadasimple.jpg");
+          background-size: contain;
+          background-color: black;
+        }
+
+        @keyframes blink {
+            0% { transform: translateX(10px);  color: rgb(62, 128, 214);}
+            50% { transform: translateX(150px);  color: rgb(255, 255, 255);}
+            100% { transform: translateX(10px);  color: rgb(40, 121, 226);}
+        }
+      </style>
 <section class="section">
   <div class="section-header">
       <h3 class="page__heading" style="font-family: Lastica, Arial, sans-serif; background-color: #000000; padding: 20px; text-align: center; margin-top: 100x; color: #492AE6; font-size: 50px;">
-          Formulas de mecanismos en robotica</h3>
+          Simulacion de mecanismos en robotica</h3>
   </div>
 </section>
 </head>
@@ -14,40 +38,167 @@
   <div class="menu" style="text-align: center; margin-top: 20px;">
     <ul style="list-style-type: none; padding: 0;">
         <li style="display: inline-block; margin-right: 10px;">
-            <a href="simulacion_mecanismos.html" class="button">Inicio</a>
+            <a href="/home" class="btn button">Inicio</a>
+          </li>
+          <li style="display: inline-block; margin-right: 10px;">
+            <a href="/menu_ejercicios" class="btn button">Ejercicios de mecanismos</a>
+          </li>
+          <li style="display: inline-block; margin-right: 10px;">
+            <a href="/menu_formulas" class="btn button">Formulas</a>
           </li>
       <li style="display: inline-block; margin-right: 10px;">
-        <a href="menu_ejercicios.html" class="button">Ejercicios de mecanismos</a>
-      </li>
-      <li style="display: inline-block; margin-right: 10px;">
-        <a href="menu_formulas.html" class="button">Formulas</a>
-      </li>
-      <li style="display: inline-block; margin-right: 10px;">
-        <a href="datos.html" class="button">Acerca de</a>
+        <a href="/datos" class="btn button">Acerca de</a>
       </li>
     </ul>
   </div>
-  <h1 style="color: black; text-align: center; font-family: Arial, sans-serif; padding: 20px; font-size: 25px;">Bienvenido/a</h1>
-  <p style="color: #333;  text-align: center; font-family: Arial, sans-serif; font-size: 20px;">
-    Escoge cualquier ejercicio para calcular:
-  </p>
-  <div class="menu" style="text-align: left; margin-top: 20px;">
-    <ul style="list-style-type: none; padding: 0; display: flex; flex-direction: column;">
-      <li style="margin-bottom: 10px;">
-        <a href="simulacion_mecanismos.html" class="button">Ejercicio ia) Cálculo de la Relación de transmisión de velocidad</a>
-      </li>
-      <li style="margin-bottom: 10px;">
-        <a href="menu_ejercicios.html" class="button">Ejercicio iia) Cálculo de velocidad que gira el eje conducido</a>
-      </li>
-      <li style="margin-bottom: 10px;">
-        <a href="menu_formulas.html" class="button">Ejercicio iiia) Cálculo de Longitud de correa</a>
-      </li>
-    </ul>
-  </div>
-  
-  
-  
+  <script>
 
+        function operacion() {
+          var z1 = parseFloat(document.getElementById('z1').value);
+          var z2 = parseFloat(document.getElementById('z2').value);
+          var n1 = parseFloat(document.getElementById('n1').value);
+    
+          var n2 = (z1*n1)/z2;
+
+          document.getElementById('resultado_n2').innerHTML = "" + n2;
+        }
+
+
+        function mostrarImagen() {
+        var imageContainer = document.getElementById('imageContainer');
+        var image = document.createElement('img');
+        image.src = '/static/Rueda_dentada.PNG'; // Reemplaza con la ruta de tu imagen
+        image.style.width = '350px'; // Set the desired width
+        image.style.height = '250px';
+        
+        // Agregar estilo para el efecto de luz
+        image.style.borderRadius = '10px';
+        image.style.boxShadow = '0 0 20px rgba(255, 255, 255, 0.7)'; // Cambia el valor según tus preferencias
+
+        imageContainer.innerHTML = ''; // Limpiar el contenedor de imágenes
+        imageContainer.style.display = 'flex';
+        imageContainer.style.justifyContent = 'center';
+        imageContainer.style.alignItems = 'center';
+        imageContainer.appendChild(image); // Agregar la imagen al contenedor
+    }
+  $(function () {
+    $('[data-toggle="popover"]').popover({
+      template: '<div class="popover custom-popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
+    })
+      .on('shown.bs.popover', function () {
+        MathJax.Hub.Queue(['Typeset', MathJax.Hub, $(this).next('.popover').find('.popover-body')[0]]);
+      });
+  });
+    $(function() {
+        $('[data-toggle="popover"]').popover();
+    });
+</script>
+  <body>
+    <h1 style= "animation: blink 2s infinite, slide 4s linear infinite; color: rgb(196, 127, 245); text-align: center; font-family: a Astro Space, Arial, sans-serif; padding: 15px; font-size: 40px; text-shadow: 2px 2px 4px black;">Accionamiento simple por Rueda dentada:
+       interdependencia y transmision </h1>
+</body>
+<div style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px; width: 850px; margin: 0 auto;">
+    <h1 style="color: rgb(255, 255, 255); text-align: center; font-family: Arial, sans-serif; font-size: 35px;">Bienvenido/a</h1>
+    <p style="color: #ffffff; font-family: Century  Gothic, sans-serif; font-size: 18px; text-align: justify; width: 780px; margin: 0 auto;">
+      El <strong>Accionamiento simple por Rueda dentada</strong> es un mecanismo que utiliza ruedas dentadas (engranajes) para transmitir movimiento o potencia de un componente a otro en una máquina o sistema. 
+    </p>
+    <br>
+    <p style="color: #ffffff; font-family: Century  Gothic, sans-serif; font-size: 18px; text-align: justify; width: 780px; margin: 0 auto;">
+      Para el accionamiento simple por rueda dentada, se calcula la interdependencia y transmisión 
+    </p>
+    
+    <br>
+    <p style="color: #ffffff; text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px; text-align: justify; display: flex; justify-content: center; gap: 20px;">
+        <button class="btn btn-purple-black" data-toggle="popover" data-placement="left" title="Número de dientes" data-content="Se refiere a la cantidad de muescas que se pueden contar en el borde de la rueda. Se representa como: 'z'">Número de dientes</button>
+        <button class="btn btn-pink-black" data-toggle="popover" data-placement="bottom" title="Número de revoluciones" data-content="Cantidad de veces que un objeto gira completamente alrededor de su eje en cierto tiempo. Se representa como 'n'">Número de revoluciones</button>
+        <button class="btn btn-pink-black" data-toggle="popover" data-placement="top" title="Transmisión" data-content="Es la transferencia de movimiento rotativo desde un componente a otro componente a través de algún mecanismo. Se representa como: 'i'">Transmisión</button>
+        <button class="btn btn-pink-black" data-toggle="popover" data-placement="bottom" title="Distancia entre ejes" data-content="Separación física entre los ejes de dos ruedas dentadas (engranajes) que están conectadas en un sistema de transmisión. Se representa como 'a'">Distancia entre ejes</button>
+        <button class="btn btn-purple-black" data-toggle="popover" data-placement="right" title="Diámetro de circulo primitivo" data-content="Círculo imaginario que pasa por el punto medio de los dientes de una rueda dentada. Se representa como 'd'">Diámetro de circulo primitivo</button>
+    </p>
+    <p style="color: #ffffff; font-weight: bold;font-family: Century  Gothic, sans-serif; font-size: 22px; text-align: center; width: 800px; margin: 0 auto;">
+      Sus elementos son:
+    </p><br>
+    <lu style = "  list-style-type: none; padding: 0;">
+      <div class="horizontal-list">
+        <img src="{{ url_for('static', filename='interpendencia.PNG') }}" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);max-width: 600px; margin-right: 20px;" alt="Descripción de la imagen">
+        
+        <img src="{{ url_for('static', filename='interpendenciadz.PNG') }}" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);max-width: 600px;" alt="Descripción de la imagen">
+      </div><br>
+      <div class="horizontal-list">
+        <img src="{{ url_for('static', filename='transmision.PNG') }}" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);max-width: 600px; margin-right: 20px;" alt="Descripción de la imagen">
+
+        <img src="{{ url_for('static', filename='distanciaejes.PNG') }}" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);max-width: 600px;" alt="Descripción de la imagen">
+      </div><br>
+    </lu>
+    <p style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;">
+        A continuación, te invito resolver el siguiente ejercicio sobre este tema:
+      </p>
+  </div>
+<br>
+
+  <div style="background-color: rgba(0, 96, 137, 0.275); padding: 20px; border-radius: 10px; width: 850px; margin: 0 auto;">
+    <p style="color: #ffffff;  text-align: center; font-family: Arial, sans-serif; font-size: 20px;">
+      Las formulas involucradas son:
+    </p>
+    <p style="color: #ffffff; text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+      <button type="button" class="btn btn-formula" data-toggle="popover" data-content="A partir de la ecuación, se despeja n2 <br> \(z1 \cdot n1  = z2 \cdot n2\)</span><br>\(n2 = \frac{z1 \cdot n1}{z2}\)" data-html="true">
+        Mostrar formula
+      </button>
+    </p>
+    
+    <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px;">
+      donde:
+    </p>
+    <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px">
+      
+      \(z1\) = numero de dientes 1
+    </p>
+    <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px">
+      \(z2\) = numero de dientes 2
+    </p>
+    <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px">
+      \(n1\) = revolucion inicial
+    </p>
+    
+    <br>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <div style = "height: 3em;">
+        <label style="color: #ffffff; text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;" for="z1">Ingrese el número de dientes 1 (z1):</label>
+      </div>
+      <div style = "height: 3em;">
+        <input style="color: #002850; text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;  border-radius: 50px;" type="number" id="z1" placeholder="">
+      </div>
+    
+      <div style = "height: 3em;">
+        <label style="color: #ffffff; text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;" for="z2">Ingrese el número de dientes 2 (z2):</label>
+      </div>
+      <div style = "height: 3em;">
+        <input style="color: #002850; text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px; border-radius: 50px;" type="number" id="z2" placeholder="">
+      </div>
+
+      <div style = "height: 3em;">
+        <label style="color: #ffffff; text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;" for="n1">Ingrese la Revolución inicial (n1):</label>
+      </div>
+      <div style = "height: 3em;">
+        <input style="color: #002850; text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;  border-radius: 50px;" type="number" id="n1" placeholder="">
+      </div>
+
+      <div style="display: flex; justify-content: center;">
+        <button style="background-color: #000000; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; " class="button" onclick="operacion()">Calcular</button>
+      </div>
+      
+    </div>
+    <div style="display: flex; justify-content: center; color: #ffffff; padding: 10px 30px; font-family: Century Gothic, sans-serif; ">
+        <p> La Transmisión parcial 1 es: </p>
+    </div>
+    <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+        <p style="display: flex; flex-direction: column; align-items: center; background-color: #000000;" id="resultado_n2">  </p>
+    </div>
+    <div style="display: flex; justify-content: center;">
+     <button style="background-color: #000000; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; " class="button" onclick="mostrarImagen()">Generar </button>
+   </div><br>
+   <div id="imageContainer" style="display: flex; justify-content: center; border-radius: 10px;"> </div>
+  </div>
 
   <button class="button" style="display: inline-block;
   background-color: #000000;
@@ -93,6 +244,7 @@
 
 .button:hover {
   background-color: #333;
+  color: rgb(103, 198, 239);
 }
 
 .center {
@@ -101,10 +253,77 @@
       align-items: center;
     }
 
+.horizontal-list {
+  display: flex;
+  justify-content: center;
+}
+
+.horizontal-list li {
+  margin-right: 20px;
+}
+.btn-pink-black {
+  background-color: rgb(33, 174, 209);
+    border-color: rgb(0, 157, 248);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+.btn-pink-black:hover {
+    background-color: rgb(10, 73, 86);
+    border-color: rgb(134, 190, 233);
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+}
+.btn-purple-black {
+    background-color: rgb(33, 174, 209);
+    border-color: rgb(34, 140, 233);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+.btn-purple-black:hover {
+    background-color: rgb(10, 31, 86);
+    border-color: rgb(34, 140, 233);
+    color: rgb(74, 216, 248);
+    border-radius: 50px;
+}
+
+.btn-formula {
+    background-color: rgb(123, 214, 237);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border-radius: 50px;
+    transition: .5s;
+}
+
+.btn-formula:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(160, 219, 233);
+    border-radius: 50px;
+}
+
+ .popover-header {
+  font-family: Century Gothic, sans-serif;
+  color: rgb(118, 205, 255);
+  font-size: 19px;
+  font-weight: bold;
+  background-color: rgb(0, 0, 0);
+  width: 200px;
+}
+
+
+.popover-body
+{
+    font-family: Century Gothic, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    text-align: justify;
+    background-color: rgb(0, 0, 0);
+    width: 200px;
+}
+
   </style>
 </body>
 </html>
-
-
-
-
