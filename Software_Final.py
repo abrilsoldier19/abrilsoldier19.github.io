@@ -73,7 +73,7 @@ def ejercicio_1_opciona():
 #Generar grafica de opcion f)
     def GenerarGrafica_opcionf():
         plt.title("Mecanismo de un una correa plana ia)")
-        image = img.imread('ia)_relacion_transmision.JPG')
+        image = img.imread('img/ia)_relacion_transmision.JPG')
         plt.imshow(image)
         plt.show()
 
@@ -158,7 +158,7 @@ def ejercicio_2_opciona():
 #Generar grafica de opcion f)
     def GenerarGrafica_opciona():
         plt.title("Velocidad de eje conducido de iia)")
-        image = img.imread('iia)velocidad_eje.JPG')
+        image = img.imread('img/iia)velocidad_eje.JPG')
         plt.imshow(image)
         plt.show()
 
@@ -238,7 +238,7 @@ def ejercicio_3_opciona():
 #Generar grafica de opcion a)
     def GenerarGrafica_opcion_iiia():
         plt.title("Longitud correa iiia)")
-        image = img.imread('longitud_correa.png')
+        image = img.imread('img/longitud_correa.png')
         plt.imshow(image)
         plt.show()
         
@@ -336,7 +336,7 @@ tren de poleas constituido por tres escalonamientos en mm""",
 #Generar grafica de opcion f)
     def GenerarGrafica_opcionf():
         plt.title("Relacion de transmision de mecanismo ib)")
-        image = img.imread('tren_poleas_ib.jpg')
+        image = img.imread('img/tren_poleas_ib.jpg')
         plt.imshow(image)
         plt.show()
 
@@ -408,7 +408,7 @@ constituido por tres escalonamientos en mm""",
 #Generar grafica de opcion f)
     def GenerarGrafica_opcionf():
         plt.title("Velocidad eje salida iib)")
-        image = img.imread('tren_poleas_ib.jpg')
+        image = img.imread('img/tren_poleas_ib.jpg')
         plt.imshow(image)
         plt.show()
 
@@ -548,7 +548,7 @@ constituido por tres escalonamientos en mm""",
 #Generar grafica de opcion f)
     def GenerarGrafica_opcionf():
         plt.title("Caluclo velocidad ultimo arbol iiib)")
-        image = img.imread('tren_poleas_ib.jpg')
+        image = img.imread('img/tren_poleas_ib.jpg')
         plt.imshow(image)
         plt.show()
 
@@ -624,7 +624,7 @@ poleas constituido por tres escalonamientos en mm""",
 #Generar grafica de opcion f)
     def GenerarGrafica_opcionf():
         plt.title("Relacion transmision de velocidad total ivb)")
-        image = img.imread('tren_poleas_ib.jpg')
+        image = img.imread('img/tren_poleas_ib.jpg')
         plt.imshow(image)
         plt.show()
 
@@ -719,7 +719,7 @@ constituido por tres escalonamientos en mm""",
 #Generar grafica de opcion f)
     def GenerarGrafica_opcionf():
         plt.title("Diametro de la polea vb)")
-        image = img.imread('tren_poleas_ib.jpg')
+        image = img.imread('img/tren_poleas_ib.jpg')
         plt.imshow(image)
         plt.show()
 
@@ -849,7 +849,7 @@ def ejercicio_opcionc():
 #Generar grafica de opcion f)
     def GenerarGrafica_opcionf():
         plt.title("Potencia nominal sistema de correa c)")
-        image = img.imread('pnc.png')
+        image = img.imread('img/pnc.png')
         plt.imshow(image)
         plt.show()
 
@@ -953,7 +953,7 @@ def ejercicio_1_opciond():
 #Se genera grafica del ejercicio opcion g)
     def GenerarGrafica_opciong():
         plt.title("relación de transmisión del mecanismo de un Tren de engranajes id)")
-        image = img.imread('Trenengranajessimple.png')
+        image = img.imread('img/Trenengranajessimple.png')
         plt.imshow(image)
         plt.show()
 
@@ -1029,7 +1029,7 @@ constituido por tres escalonamientos en mm""",
 #Se genera grafica del ejercicio opcion g)
     def GenerarGrafica_opciong():
         plt.title("Tren de engranajes simple iid)")
-        image = img.imread('Tren_engranajes_Simple_iid.png')
+        image = img.imread('img/Tren_engranajes_Simple_iid.png')
         plt.imshow(image)
         plt.show()
 
@@ -1134,7 +1134,7 @@ def ejercicio_3_opciond():
 #Se genera grafica del ejercicio opcion g)
     def GenerarGrafica_opciong():
         plt.title("Velocidad de giro de un tren de engranajes iiid)")
-        image = img.imread('tren de engranajes.png')
+        image = img.imread('img/tren de engranajes.png')
         plt.imshow(image)
         plt.show()
 
@@ -1240,7 +1240,7 @@ def ejercicio_4_opciond():
 #Se genera grafica del ejercicio opcion g)
     def GenerarGrafica_opciong():
         plt.title("número de dientes de las ruedas conducidas de un tren de engranajes ivd)")
-        image = img.imread('Tren_engranes.jpg')
+        image = img.imread('img/Tren_engranes.jpg')
         plt.imshow(image)
         plt.show()
 
@@ -1440,7 +1440,7 @@ def ejercicio_5_opciond():
 #Se genera grafica del ejercicio opcion g)
     def GenerarGrafica_opciong():
         plt.title("potencia nominal en transmisión por correa dentada vd)")
-        image = img.imread('engranajes.png')
+        image = img.imread('img/engranajes.png')
         plt.imshow(image)
         plt.show()
 
@@ -1512,7 +1512,7 @@ def ejercicio_1_opcione():
 #Se genera grafica del ejercicio opcion g)
     def GenerarGrafica_opciong():
         plt.title("Diámetro primitivo (Dp) rueda dentada ie)")
-        image = img.imread('diametroPrimitivo.png')
+        image = img.imread('img/diametroPrimitivo.png')
         plt.imshow(image)
         plt.show()
 
@@ -1635,7 +1635,7 @@ def ejercicio_2_opcione():
 #Se genera grafica del ejercicio opcion g)
     def GenerarGrafica_opciong():
         plt.title("La rueda dentada y sus dimensiones")
-        image = img.imread('dimensiones_rueda_dentada_iie.jpg')
+        image = img.imread('img/dimensiones_rueda_dentada_iie.jpg')
         plt.imshow(image)
         plt.show()
 
@@ -1714,7 +1714,7 @@ def ejercicio_61_opcionf():
 #Generar grafica de opcion f)
     def GenerarGrafica_opcionf():
         plt.title("Rueda dentada de ejercicio opcion f)")
-        image = img.imread('Rueda_dentada.png')
+        image = img.imread('img/Rueda_dentada.png')
         plt.imshow(image)
         plt.show()
 
@@ -1797,7 +1797,7 @@ def ejercicio_71_opciong():
 #Se genera grafica del ejercicio opcion g)
     def GenerarGrafica_opciong():
         plt.title("Engranaje y rueda de ejercicio opcion g)")
-        image = img.imread('engranaje_opcion_g).png')
+        image = img.imread('img/engranaje_opcion_g).png')
         plt.imshow(image)
         plt.show()
 
@@ -1868,7 +1868,7 @@ def ejercicio_81_opcionh():
 #Se genera grafica del ejercicio opcion h)
     def GenerarGrafica_opciong():
         plt.title("Cremallera de ejercicio opcion h)")
-        image = img.imread('cremallera_opcion_h).png')
+        image = img.imread('img/cremallera_opcion_h).png')
         plt.imshow(image)
         plt.show()
 
@@ -1956,7 +1956,7 @@ def ejercicio_91_opcioni():
 #Se genera grafica del ejercicio opcion i)
     def GenerarGrafica_opcioni():
         plt.title("Juego de ruedas de ejercicio opcion i)")
-        image = img.imread("juego_ruedas_opcioni).png")
+        image = img.imread("img/juego_ruedas_opcioni).png")
         plt.imshow(image)
         plt.show()
 
@@ -2035,7 +2035,7 @@ def ejercicio_10_1_opcionj():
 #Se genera grafica del ejercicio opcion j)
     def GenerarGrafica_opcionj():
         plt.title("Engranaje como convertidor par de ejercicio opcion j)")
-        image = img.imread("engranaje_opcionj).png")
+        image = img.imread("img/engranaje_opcionj).png")
         plt.imshow(image)
         plt.show()
 
@@ -2055,7 +2055,7 @@ def abroimagenf11():
     ventanaAbrir=Tk()
     ventanaAbrir.geometry("400x310+100+100")
     ventanaAbrir.title("Formula 1 de Accionamiento simple por Rueda dentada interdependencia")
-    imagenf11=PhotoImage(file="formula_1_ejer_1_AS_ruedadent_interdepen.png", master=ventanaAbrir)
+    imagenf11=PhotoImage(file="img/formula_1_ejer_1_AS_ruedadent_interdepen.png", master=ventanaAbrir)
     lblImagen11=Label(ventanaAbrir,image=imagenf11)
 
 #Interfaz    
@@ -2107,16 +2107,16 @@ def abroimagenf12():
                         message="Esta es la formula para calcular transmision de la rueda dentada")
     
     ventanaAbrir=Tk()
-    ventanaAbrir.geometry("400x220+100+100")
+    ventanaAbrir.geometry("450x280+350+350")
     ventanaAbrir.title("Formula 2 de Accionamiento simple por Rueda dentada transmisión")
-    imagenf12=PhotoImage(file="formula_1_ejer_1_AS_ruedadent_transmision.png", master=ventanaAbrir)
+    imagenf12=PhotoImage(file="img/formula_1_ejer_1_AS_ruedadent_transmision.png", master=ventanaAbrir)
     lblImagen12=Label(ventanaAbrir,image=imagenf12)
     
 
 #Interfaz    
     def descarga():
         ventana=Tk()
-        ventana.geometry("400x310+100+100")
+        ventana.geometry("450x280+150+150")
         ventana.title("Descarga de toma de Screenshot")
 
         label_guardar=Label(ventana,text="Guardar como: ", font=("",10,"bold"), bg="white")
@@ -2151,7 +2151,7 @@ def abroimagenf12():
         botonnavegar.grid(row=2,column=1,pady=5,padx=5)
 
         ventana.mainloop()
-    boton=Button(ventanaAbrir, image=imagenf12, command=descarga, height=168, width=260).place(x=65, y=30)
+    boton=Button(ventanaAbrir, image=imagenf12, command=descarga, height=208, width=320).place(x=65, y=30)
  #cambio de codigo en comando, original command=abroimagenf12
     ventanaAbrir.mainloop()
 
@@ -2163,7 +2163,7 @@ def abroimagenf13():
     ventanaAbrir=Tk()
     ventanaAbrir.geometry("400x220+100+100")
     ventanaAbrir.title("Formula 3 de Accionamiento simple por Rueda dentada transmisión")
-    imagenf13=PhotoImage(file="formula_1_ejer_2_AS_ruedadent_distancia.png", master=ventanaAbrir)
+    imagenf13=PhotoImage(file="img/formula_1_ejer_2_AS_ruedadent_distancia.png", master=ventanaAbrir)
     lblImagen13=Label(ventanaAbrir,image=imagenf13)
     
 #Interfaz    
@@ -2218,7 +2218,7 @@ def abroimageng21():
     ventanaAbrir=Tk()
     ventanaAbrir.geometry("430x440+100+100")
     ventanaAbrir.title("Formula 1 de Accionamiento múltiple por Rueda dentada transmisiones parciales transmisión total")
-    imageng21=PhotoImage(file="formula_2_ejer_1_reuda_dent_TP.png", master=ventanaAbrir)
+    imageng21=PhotoImage(file="img/formula_2_ejer_1_reuda_dent_TP.png", master=ventanaAbrir)
     lblImagen21=Label(ventanaAbrir,image=imageng21)
     
 
@@ -2270,7 +2270,7 @@ def abroimageng22():
     ventanaAbrir=Tk()
     ventanaAbrir.geometry("445x320+100+100")
     ventanaAbrir.title("Formula 2 de Accionamiento múltiple por Rueda dentada transmisiones parciales transmisión total")
-    imageng22=PhotoImage(file="formula_2_ejer_2_reuda_dent_TT.png", master=ventanaAbrir)
+    imageng22=PhotoImage(file="img/formula_2_ejer_2_reuda_dent_TT.png", master=ventanaAbrir)
     lblImagen22=Label(ventanaAbrir,image=imageng22)
     
 
@@ -2325,7 +2325,7 @@ def abroimagenh31():
     ventanaAbrir=Tk()
     ventanaAbrir.geometry("550x400+100+100")
     ventanaAbrir.title("Formula 1 de Accionamiento por cremallera y por tornillo sin fin")
-    imagenh31=PhotoImage(file="formula_3_ejer_1_tornillo.png", master=ventanaAbrir)
+    imagenh31=PhotoImage(file="img/formula_3_ejer_1_tornillo.png", master=ventanaAbrir)
     lblImagen31=Label(ventanaAbrir,image=imagenh31)
     #Interfaz    
     def descarga():
@@ -2376,7 +2376,7 @@ def abroimagenh32():
     ventanaAbrir=Tk()
     ventanaAbrir.geometry("450x250+100+100")
     ventanaAbrir.title("Formula 2 de Accionamiento por cremallera y por tornillo sin fin")
-    imagenh32=PhotoImage(file="formula_3_ejer_2_cremallera.png", master=ventanaAbrir)
+    imagenh32=PhotoImage(file="img/formula_3_ejer_2_cremallera.png", master=ventanaAbrir)
     lblImagen32=Label(ventanaAbrir,image=imagenh32)
 
 #Interfaz    
@@ -2431,7 +2431,7 @@ def abroimageni4():
     ventanaAbrir=Tk()
     ventanaAbrir.geometry("700x460+100+100")
     ventanaAbrir.title("Formula de Cálculo de ruedas de cambio interdependencia ruedas de cambio juegos de ruedas")
-    imageni4=PhotoImage(file="formula_4_ejer_1_ruedas.png", master=ventanaAbrir)
+    imageni4=PhotoImage(file="img/formula_4_ejer_1_ruedas.png", master=ventanaAbrir)
     lblImagen4=Label(ventanaAbrir,image=imageni4)
     #Interfaz    
     def descarga():
@@ -2484,7 +2484,7 @@ def abroimagenj51():
     ventanaAbrir=Tk()
     ventanaAbrir.geometry("435x500+100+100")
     ventanaAbrir.title("Formula 1 de Engranajes como convertidores de par, transmisión de engranajes y conversión de par")
-    imagenj51=PhotoImage(file="formula_5_ejer_1_engranajes_transmision.png", master=ventanaAbrir)
+    imagenj51=PhotoImage(file="img/formula_5_ejer_1_engranajes_transmision.png", master=ventanaAbrir)
     lblImagen51=Label(ventanaAbrir,image=imagenj51)
 
     #Interfaz    
@@ -2536,7 +2536,7 @@ def abroimagenj52():
     ventanaAbrir=Tk()
     ventanaAbrir.geometry("435x400+100+100")
     ventanaAbrir.title("Formula 2 de Engranajes como convertidores de par, transmisión de engranajes y conversión de par")
-    imagenj52=PhotoImage(file="formula_5_ejer_2_engranajes_conversion_par.png", master=ventanaAbrir)
+    imagenj52=PhotoImage(file="img/formula_5_ejer_2_engranajes_conversion_par.png", master=ventanaAbrir)
     lblImagen52=Label(ventanaAbrir,image=imagenj52)
          #Interfaz    
     def descarga():
@@ -2586,10 +2586,10 @@ root.title("Simulacion de mecanismos")
 root.configure(width=1000, height=500)
 
 #creamos imagen como background de la ventana root
-fondo =  PhotoImage(file='codigofondo.png')
+fondo =  PhotoImage(file='img/codigofondo.png')
 label_fondo = Label(root, image=fondo).place(x=0, y=0, relwidth = 1, relheight = 1)
 
-#imagen =  PhotoImage(file='engranajes-gif-sin-fondo-4.gif')
+#imagen =  PhotoImage(file='img/engranajes-gif-sin-fondo-4.gif')
 #label_imagen = Label(root, image=imagen).place(x=0,y=0)
 
 
