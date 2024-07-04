@@ -14,7 +14,7 @@
     
     <style>
         body {
-          background-image: url("/static/cambioRuedas.jpg");
+          background-image: url("static/cambioRuedas.jpg");
           background-size: contain;
           background-color: black;
         }
@@ -67,7 +67,7 @@
         function mostrarImagen() {
         var imageContainer = document.getElementById('imageContainer');
         var image = document.createElement('img');
-        image.src = '/static/engranaje_opcionj).PNG'; // Reemplaza con la ruta de tu imagen
+        image.src = 'static/engranaje_opcionj).PNG'; // Reemplaza con la ruta de tu imagen
         image.style.width = '350px'; // Set the desired width
         image.style.height = '250px';
         
@@ -119,7 +119,7 @@
     </li>
     <br>
     <div class="horizontal-list">
-      <img src="{{ url_for('static', filename='transmision_engranajes.PNG') }}" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); width: 300px; margin-right: 20px;" alt="Descripción de la imagen">
+      <img src="{{ url_for('static', filename='static/transmision_engranajes.PNG') }}" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); width: 300px; margin-right: 20px;" alt="Descripción de la imagen">
     </div>
     <br>
     <li class="list">
@@ -128,7 +128,7 @@
     </li>
     <br>
     <div class="horizontal-list">
-      <img src="{{ url_for('static', filename='conversion_par.PNG') }}" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); width: 300px; margin-right: 20px;" alt="Descripción de la imagen">
+      <img src="{{ url_for('static', filename='static/conversion_par.PNG') }}" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); width: 300px; margin-right: 20px;" alt="Descripción de la imagen">
     </div>
     <br>
     <p style="color: #ffffff; font-family: Century  Gothic, sans-serif; font-size: 18px; text-align: justify; width: 780px; margin: 0 auto;">
