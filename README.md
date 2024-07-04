@@ -20,7 +20,7 @@
         <a href="menu_formulas.html" class="button">Formulas</a>
       </li>
       <li style="display: inline-block; margin-right: 10px;">
-        <a href="#" class="button">Acerca de</a>
+        <a href="datos.html" class="button">Acerca de</a>
       </li>
     </ul>
   </div>
@@ -64,7 +64,7 @@ font-size: 16px;
 border-radius: 5px;
 margin-top: 20px;
 border: none;
-cursor: pointer;" onclick="window.location.href='https:https://avril-rock1471-gmail-com.trinket.io/sites/simulacionproyectofinal'">Enlace a simulador en Python interactivo</button>
+cursor: pointer;" onclick="window.location.href='https://avril-rock1471-gmail-com.trinket.io/sites/simulacionproyectofinal'">Enlace a simulador en Python interactivo</button>
 <style>
   .button {
   display: inline-block;
@@ -87,4 +87,5 @@ cursor: pointer;" onclick="window.location.href='https:https://avril-rock1471-gm
   </style>
 </body>
 </html>
+
 
