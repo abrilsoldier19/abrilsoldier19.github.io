@@ -14,7 +14,7 @@
     
     <style>
         body {
-          background-image: url("cambioRuedas.jpg");
+          background-image: url("static/cambioRuedas.jpg");
           background-size: contain;
           background-color: black;
         }
@@ -68,7 +68,7 @@
         function mostrarImagen() {
         var imageContainer = document.getElementById('imageContainer');
         var image = document.createElement('img');
-        image.src = '/static/juego_ruedas_opcioni).png'; // Reemplaza con la ruta de tu imagen
+        image.src = 'static/juego_ruedas_opcioni).png'; // Reemplaza con la ruta de tu imagen
         image.style.width = '350px'; // Set the desired width
         image.style.height = '250px';
         
@@ -112,7 +112,7 @@
     </li>
     <br>
     <div class="horizontal-list">
-      <img src="{{ url_for('static', filename='ruedasDeCambio.jpg') }}" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); width: 300px; margin-right: 20px;" alt="Descripción de la imagen">
+      <img src="{{ url_for('static', filename='static/ruedasDeCambio.jpg') }}" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); width: 300px; margin-right: 20px;" alt="Descripción de la imagen">
     </div>
     <br>
     <li class="list">
@@ -121,7 +121,7 @@
     </li>
     <br>
     <div class="horizontal-list">
-      <img src="{{ url_for('static', filename='interdependenciaRuedaCambio.jpg') }}" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); width: 300px; margin-right: 20px;" alt="Descripción de la imagen">
+      <img src="{{ url_for('static', filename='static/interdependenciaRuedaCambio.jpg') }}" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); width: 300px; margin-right: 20px;" alt="Descripción de la imagen">
     </div>
     <br>
     <li class="list">
@@ -131,7 +131,7 @@
     </li>
     <br>
     <div class="horizontal-list">
-      <img src="{{ url_for('static', filename='juegoRuedas.jpg') }}" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); width: 400px; margin-right: 20px;" alt="Descripción de la imagen">
+      <img src="{{ url_for('static', filename='static/juegoRuedas.jpg') }}" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); width: 400px; margin-right: 20px;" alt="Descripción de la imagen">
     </div>
     <br>
     <p style="color: #ffffff; font-family: Century  Gothic, sans-serif; font-size: 18px; text-align: justify; width: 780px; margin: 0 auto;">
