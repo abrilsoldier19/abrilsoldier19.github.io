@@ -1,70 +1,240 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title >Formulas</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/5.5.3/css/mdb.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/5.5.3/js/mdb.min.js"></script>
+ 
+  <meta charset="UTF-8">
   <style>
     body {
-      background-color: #959595;
-      background-repeat: no-repeat;
-      background-position: center;
+       background-image: url("static/clockwork.JPG");
+       background-size: auto;
     }
+
+    .section-body {
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .section-header {
+      padding: 20px;
+      text-align: center;
+      border-radius: 90px;
+    }
+    
+    .page-heading {
+      font-size: 56px;
+      margin: 0;
+      font-weight: 1000;
+      letter-spacing: 4px;
+      -webkit-text-stroke: 0.1px rgb(43, 0, 255);
+      text-shadow: 2px 2px 4px rgb(240, 114, 242);
+    }
+    
+    .menu ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+    }
+    
+    .menu li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    
+    .button {
+    display: inline-block;
+    background-color: #8c00ff55;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #333;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+          .img1 {
+              max-width: 100%;
+              height: auto;
+              border: 2px solid #ccc;
+              transition: transform 0.3s ease;
+          }
+    .button:hover {
+      background-color: #333;
+    }
+    
+    
+    .image-container {
+      margin-top: 20px;
+      width: 100%; /* Adjust the width as needed */
+  height: auto; /* Allow the height to adjust proportionally */
+  text-align: center; 
+    }
+    
+    .image-button {
+      display: inline-block;
+      background-color: rgb(172, 91, 168);
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      transition: transform 1.9 ease;
+    }
+    
+    .image-button:hover {
+      background-color: rgb(255, 255, 255);
+      transform: scale(1.09);
+      transition: transform 0.9 ease;
+    }
+    
+    .image-button img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .imagebutton1 {
+      display: inline-block;
+      background-color: rgb(172, 91, 168);
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.9 ease;
+    }
+    
+    .imagebutton1:hover {
+      background-color: rgb(255, 255, 255);
+      transform: scale(1.09);
+      transition: transform 0.9 ease;
+    }
+    .imagebutton1 img {
+      width: 300;
+      height: 214;
+}
+    
   </style>
-<section class="section">
-  <div class="section-header">
-      <h3 class="page__heading" style="font-family: Lastica, Arial, sans-serif; background-color: #000000; padding: 20px; text-align: center; margin-top: 100x; color: #492AE6; font-size: 50px;">
-          Formulas de mecanismos en robotica</h3>
-  </div>
-</section>
 </head>
 <body>
-  
+  <section class="section">
+    <div class="section-header" >
+      <h3 class="page-heading" style="font-family: Star Jedi, sans-serif; ">Formulas de mecanismos en robotica</h3>
+    </div>
+  </section>
 
   <div class="menu" style="text-align: center; margin-top: 20px;">
-    <ul style="list-style-type: none; padding: 0;">
-        <li style="display: inline-block; margin-right: 10px;">
-            <a href="simulacion_mecanismos.html" class="button">Inicio</a>
-          </li>
+    <ul style="list-style-type: none; padding: 0; font-family: Century Gothic, sans-serif;">
       <li style="display: inline-block; margin-right: 10px;">
-        <a href="menu_ejercicios.html" class="button">Ejercicios de mecanismos</a>
+        <a href="/home" class="button">Inicio</a>
       </li>
       <li style="display: inline-block; margin-right: 10px;">
-        <a href="menu_formulas.html" class="button">Formulas</a>
+        <a href="/menu_ejercicios" class="button">Ejercicios de mecanismos</a>
       </li>
       <li style="display: inline-block; margin-right: 10px;">
-        <a href="datos.html" class="button">Acerca de</a>
+        <a href="/menu_formulas" class="button">Formulas</a>
+      </li>
+      <li style="display: inline-block; margin-right: 10px;">
+        <a href="/datos" class="button">Acerca de</a>
       </li>
     </ul>
   </div>
   
   
 
-  <h1 style="color: black; text-align: center; font-family: Arial, sans-serif; padding: 20px; font-size: 25px;">Formulas del tema Accionamiento simple por Rueda dentada interdependencia y transmisión</h1>
-  <div class="center">
-    <img src="static/formula_1_ejer_1_AS_ruedadent_interdepen.png" alt="Descripción de la imagen">
-    <img src="static/formula_1_ejer_1_AS_ruedadent_transmision.png" alt="Descripción de la imagen">
+  <section class="section-body">
+    <div>
+        <h1 class="center" style="background-color: rgba(62, 50, 50, 0.5); padding: 20px; border-radius: 10px; width: 820px; margin: 0 auto; color: white; font-family: lastica, sans-serif; font-size: 25px;">Formulas de temas de mecanismos en robotica</h1>
+    </div>
+    <br><br>
+    <div>
+        <p style="background-color: rgba(192, 4, 213, 0.5);color: #ffffff; font-family: Century  Gothic, sans-serif; font-size: 18px; text-align: justify; padding: 20px; border-radius: 10px; width: 720px; margin: 0 auto;">
+          A continuación, se mostrara las siguientes fórmulas de cada tema:
+        </p>
+    </div>
+    <br><br>
+  <h1 class="center" style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px; width: 820px; margin: 0 auto; color: white; font-family: century gothic, sans-serif; font-size: 25px;">Accionamiento simple por Rueda dentada interdependencia y transmisión</h1>
+  <br>
+    <p style="color: #ffffff; font-family: Century  Gothic, sans-serif; font-size: 18px; text-align: justify; width: 720px; margin: 0 auto;">
+      Un <strong>accionamiento simple por rueda dentada</strong>  consta de un par de ruedas.
+Para calcular la interdependencia y transmisión para accionamiento simple por rueda 
+dentada, se usan las siguientes fórmulas, donde:
+    </p>
+  <div class="center image-container">
+      <a href="static/formula_1_ejer_1_AS_ruedadent_interdepen.png" class="image-button">
+          <img src="static/formula_1_ejer_1_AS_ruedadent_interdepen.png" alt="Descripción de la imagen">
+      </a>
+      
+      <a href="static/formula_1_ejer_2_AS_ruedadent_distancia.PNG" class="image-button">
+          <img src="static/formula_1_ejer_2_AS_ruedadent_distancia.png" alt="Descripción de la imagen">
+      </a>
+      <a href="static/formula_1_ejer_1_AS_ruedadent_transmision.png" class="imagebutton1" >
+        <img src="static/formula_1_ejer_1_AS_ruedadent_transmision.png"  alt="Descripción de la imagen">
+       </a>
+      <!-- Add more images with overlays here -->
   </div>
-  <div class="center">
-    <img src="static/formula_1_ejer_2_AS_ruedadent_distancia.png" alt="Descripción de la imagen">
+  <br><br>
+  <h1 class="center" style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px; width: 820px; margin: 0 auto; color: white; font-family: century gothic, sans-serif; font-size: 25px;">Accionamiento múltiple por Rueda dentada transmisiones parciales transmisión total</h1>
+  <br>
+  <p style="color: #ffffff; font-family: Century  Gothic, sans-serif; font-size: 18px; text-align: justify; width: 720px; margin: 0 auto;">
+    Para el <strong>accionamiento múltiple por rueda dentada</strong> se realiza el cálculo de las 
+    transmisiones parciales y transmisión total. Se utilizan las siguientes formulas para el accionamiento múltiple por rueda dentada para 
+    calcular las transmisiones parciales y totales:
+  </p>
+  <div class="center image-container" >
+      <a  href="static/formula_2_ejer_1_reuda_dent_TP.png" class="image-button">
+          <img src="static/formula_2_ejer_1_reuda_dent_TP.png" alt="Descripción de la imagen">
+      </a>
+      <a href="static/formula_2_ejer_2_reuda_dent_TT.png" class="image-button">
+          <img src="static/formula_2_ejer_2_reuda_dent_TT.png" alt="Descripción de la imagen">
+      </a>
   </div>
- 
-  <h1 style="color: black; text-align: center; font-family: Arial, sans-serif; padding: 20px; font-size: 25px;">Accionamiento múltiple por Rueda dentada transmisiones parciales transmisión total</h1>
-  <div class="center">
-    <img src="static/formula_2_ejer_1_reuda_dent_TP.png" alt="Descripción de la imagen">
-    <img src="static/formula_2_ejer_2_reuda_dent_TT.png" alt="Descripción de la imagen">
+  <br><br>
+  <h1 class="center" style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px; width: 820px; margin: 0 auto; color: white; font-family: century gothic, sans-serif; font-size: 25px;">Accionamiento por cremallera y por tornillo sin fin, carrera de cremallera accionamiento por tornillo sin fin, interdependencias</h1>
+  <div class="center image-container">
+      <a href="static/formula_3_ejer_1_tornillo.png" class="image-button">
+          <img src="static/formula_3_ejer_1_tornillo.png" alt="Descripción de la imagen">
+      </a>
+      <a href="static/formula_3_ejer_2_cremallera.png" class="image-button">
+          <img src="static/formula_3_ejer_2_cremallera.png" alt="Descripción de la imagen">
+      </a>
   </div>
-  <h1 style="color: black; text-align: center; font-family: Arial, sans-serif; padding: 20px; font-size: 25px;">Accionamiento por cremallera y por tornillo sin fin, carrera de cremallera accionamiento por tornillo sin fin, interdependencias</h1>
-  <div class="center">
-    <img src="static/formula_3_ejer_1_tornillo.png" alt="Descripción de la imagen">
-    <img src="static/formula_3_ejer_2_cremallera.png" alt="Descripción de la imagen">
+  <br><br>
+  <h1 class="center" style="background-color: rgba(255, 255, 255, 0.5); padding: 20px; border-radius: 10px; width: 820px; margin: 0 auto; color: rgb(0, 0, 0); font-family: century gothic, sans-serif; font-size: 25px;">Cálculo de ruedas de cambio interdependencia ruedas de cambio juegos de ruedas</h1>
+  <div class="center image-container">
+      <a href="static/formula_4_ejer_1_ruedas.png" class="image-button">
+        <img src="static/formula_4_ejer_1_ruedas.png" alt="Descripción de la imagen">
+      </a>
   </div>
-  <h1 style="color: black; text-align: center; font-family: Arial, sans-serif; padding: 20px; font-size: 25px;">Cálculo de ruedas de cambio interdependencia ruedas de cambio juegos de ruedas</h1>
-  <div class="center">
-    <img src="static/formula_4_ejer_1_ruedas.png" alt="Descripción de la imagen">
+<br><br>
+  <h1 class="center" style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px; width: 820px; margin: 0 auto; color: white; font-family: century gothic, sans-serif; font-size: 25px;">Engranajes como convertidores de par, transmisión de engranajes y conversión de par</h1>
+  <div class="center image-container" >
+      <a href="static/formula_5_ejer_1_engranajes_transmision.png" class="image-button">
+        <img src="static/formula_5_ejer_1_engranajes_transmision.png" alt="Descripción de la imagen">
+      </a>
+      <a href="static/formula_5_ejer_2_engranajes_conversion_par.png" class="image-button">
+        <img src="static/formula_5_ejer_2_engranajes_conversion_par.png" alt="Descripción de la imagen">
+      </a>
   </div>
-  <h1 style="color: black; text-align: center; font-family: Arial, sans-serif; padding: 20px; font-size: 25px;">Engranajes como convertidores de par, transmisión de engranajes y conversión de par</h1>
-  <div class="center">
-    <img src="static/formula_5_ejer_1_engranajes_transmision.png" alt="Descripción de la imagen">
-    <img src="static/formula_5_ejer_2_engranajes_conversion_par.png" alt="Descripción de la imagen">
-  </div>
+</section>
 
 
   <button class="button" style="display: inline-block;
@@ -81,34 +251,12 @@
 
 
 
-<style>
-  .button {
-  display: inline-block;
-  background-color: #000000;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  margin-top: 20px;
-  border: none;
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: #333;
-}
-
-.center {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-  </style>
 </body>
 </html>
+
+
+
+
 
 
 
