@@ -38,3 +38,24 @@
 #simulador iframe {
   border-radius: 10px;
 }
+
+.simulador-interactivo-btn,
+.simulador-GUI-btn {
+    display: inline-block;
+    background: #d81cfa;
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.simulador-interactivo-btn:hover,
+.simulador-GUI-btn:hover {
+    background: #000;
+    color: rgb(237, 173, 255);
+    text-decoration: none;
+    transform: translateY(-2px);
+    text-shadow: #b916ff 0 0 10px;
+}

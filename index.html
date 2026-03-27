@@ -34,18 +34,34 @@
 
   <button class="button" onclick="window.location.href='https://github.com/abrilsoldier19/SimuladorMecanismosRobotica/tree/main'">Enlace a Github</button>
 
-  <button class="button" onclick="window.location.href='https://trinket.io/pygame/46fdee9423?showInstructions=true'">Enlace a simulador en Python interfaz grafica</button>
-  <button class="button" onclick="window.location.href='https://avril-rock1471-gmail-com.trinket.io/sites/simulacionproyectofinal'">Enlace a simulador en Python interactivo</button>
+  <button class="simulador-GUI-btn" onclick="window.location.href='https://trinket.io/pygame/46fdee9423?showInstructions=true'">Enlace a simulador en Python interfaz grafica</button>
+  <button class="simulador-interactivo-btn" onclick="window.location.href='https://avril-rock1471-gmail-com.trinket.io/sites/simulacionproyectofinal'">Enlace a simulador en Python interactivo</button>
 
   <h2 class="simulador-interactivo" >Simulador interactivo</h2>
 
-<button class="button" onclick="mostrarSimulador()">
+<button class="simulador-interactivo-btn" onclick="mostrarSimulador()">
   Mostrar simulador
 </button>
 
-<div id="simulador" style="display: none; margin-top: 20px;">
+<div id="simulador-interactivo" style="display: none; margin-top: 20px;">
   <iframe 
     src="https://avril-rock1471-gmail-com.trinket.io/sites/simulacionproyectofinal"
+    width="100%" 
+    height="500"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+</div>
+
+<h2 class="simulador-GUI" >Simulador en Python con interfaz gráfica</h2>
+
+<button class="simulador-GUI-btn" onclick="mostrarSimuladorGUI()">
+  Mostrar simulador
+</button>
+
+<div id="simulador-GUI" style="display: none; margin-top: 20px;">
+  <iframe 
+    src="https://trinket.io/pygame/46fdee9423?showInstructions=true"
     width="100%" 
     height="500"
     frameborder="0"
