@@ -16,6 +16,25 @@
   background-color: #333;
 }
 
+.simulador-interactivo {
+  color: rgb(149, 0, 157);
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 28px;
+  position: relative;
+}
+
+.simulador-interactivo::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  color: black;
+  background: rgb(244, 114, 251);
+  margin: 10px auto 0;
+}
+
 #simulador iframe {
   border-radius: 10px;
 }
