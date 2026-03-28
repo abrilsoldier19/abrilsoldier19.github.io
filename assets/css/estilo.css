@@ -35,12 +35,34 @@
   margin: 10px auto 0;
 }
 
+.simulador-GUI {
+    font-family: century gothic, sans-serif;
+  color: rgb(225, 200, 227);
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 28px;
+  position: relative;
+}
+
+.simulador-GUI::after {
+    font-family: century gothic, sans-serif;
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  color: black;
+  background: rgb(244, 114, 251);
+  margin: 10px auto 0;
+}
+
 #simulador iframe {
   border-radius: 10px;
 }
 
 .simulador-interactivo-btn,
 .simulador-GUI-btn {
+    font-family: century gothic, sans-serif;
     display: inline-block;
     background: #d81cfa;
     color: #fff;
@@ -53,6 +75,7 @@
 
 .simulador-interactivo-btn:hover,
 .simulador-GUI-btn:hover {
+    font-family: century gothic, sans-serif;
     background: #000;
     color: rgb(237, 173, 255);
     text-decoration: none;
