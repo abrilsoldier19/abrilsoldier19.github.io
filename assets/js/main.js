@@ -6,18 +6,19 @@ function mostrarSimuladorGUI() {
   document.getElementById("simulador-GUI").style.display = "block";
 }
 
-function toggleSimulador(id) {
-  let sim1 = document.getElementById("simulador-interactivo");
-  let sim2 = document.getElementById("simulador-GUI");
 
-  let actual = document.getElementById(id);
+function toggleSimulador(id) {
+  const simInteractivo = document.getElementById("simulador-interactivo");
+  const simGUI = document.getElementById("simulador-GUI");
+
+  const actual = document.getElementById(id);
 
   // Ocultar ambos primero
-  sim1.style.display = "none";
-  sim2.style.display = "none";
-
-  // Si el que clickeaste estaba oculto → mostrarlo
-  if (actual.style.display === "none") {
+  if (actual.style.display === "block") {
+    actual.style.display = "none";
+  } else {
+    simInteractivo.style.display = "none";
+    simGUI.style.display = "none";
     actual.style.display = "block";
   }
 }
