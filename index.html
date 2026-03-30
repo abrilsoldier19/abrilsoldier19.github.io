@@ -39,44 +39,34 @@
 
   <h2 class="simulador-interactivo">Simulador interactivo</h2>
 
-  <div class="contenedor-botones">
+<div class="contenedor-boton">
   <button class="simulador-interactivo-btn" onclick="toggleSimulador('simulador-interactivo')">
-    Simulador interactivo
-  </button>
-
-  <button class="simulador-GUI-btn" onclick="toggleSimulador('simulador-GUI')">
-    Simulador GUI
+    Mostrar simulador interactivo
   </button>
 </div>
 
-<button class="simulador-interactivo-btn" onclick="toggleSimulador('simulador-interactivo')">
-  Mostrar simulador interactivo
-</button>
-
-<div id="simulador-interactivo" style="display: none; margin-top: 20px;">
+<div id="simulador-interactivo" class="contenedor-simulador">
   <iframe 
     src="https://avril-rock1471-gmail-com.trinket.io/sites/simulacionproyectofinal"
     width="100%" 
-    height="500"
-    frameborder="0"
-    allowfullscreen>
+    height="500">
   </iframe>
 </div>
 
 
 <h2 class="simulador-GUI">Simulador en Python con interfaz gráfica</h2>
 
-<button class="simulador-GUI-btn" onclick="toggleSimulador('simulador-GUI')">
-  Mostrar simulador GUI
-</button>
+<div class="contenedor-boton">
+  <button class="simulador-GUI-btn" onclick="toggleSimulador('simulador-GUI')">
+    Mostrar simulador GUI
+  </button>
+</div>
 
-<div id="simulador-GUI" style="display: none; margin-top: 20px;">
+<div id="simulador-GUI" class="contenedor-simulador">
   <iframe 
     src="https://trinket.io/embed/pygame/46fdee9423"
     width="100%" 
-    height="500"
-    frameborder="0"
-    allowfullscreen>
+    height="500">
   </iframe>
 </div>
 
