@@ -37,9 +37,9 @@
   <a class="simulador-GUI-btn" href="https://trinket.io/pygame/46fdee9423?showInstructions=true">Enlace a simulador en Python interfaz grafica</a>
   <a class="simulador-interactivo-btn" href="https://avril-rock1471-gmail-com.trinket.io/sites/simulacionproyectofinal" >Enlace a simulador en Python interactivo</a>
 
-  <h2 class="simulador-interactivo" >Simulador interactivo</h2>
+  <h2 class="simulador-interactivo">Simulador interactivo</h2>
 
-<button class="simulador-interactivo-btn" onclick="mostrarSimuladorInteractivo()">
+<button class="simulador-interactivo-btn" onclick="toggleSimulador('simulador-interactivo')">
   Mostrar simulador
 </button>
 
@@ -53,15 +53,16 @@
   </iframe>
 </div>
 
-<h2 class="simulador-GUI" >Simulador en Python con interfaz gráfica</h2>
 
-<button class="simulador-GUI-btn" onclick="mostrarSimuladorGUI()">
+<h2 class="simulador-GUI">Simulador en Python con interfaz gráfica</h2>
+
+<button class="simulador-GUI-btn" onclick="toggleSimulador('simulador-GUI')">
   Mostrar simulador
 </button>
 
 <div id="simulador-GUI" style="display: none; margin-top: 20px;">
   <iframe 
-    src="https://trinket.io/pygame/46fdee9423?showInstructions=true"
+    src="https://trinket.io/embed/pygame/46fdee9423"
     width="100%" 
     height="500"
     frameborder="0"
