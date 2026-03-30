@@ -18,6 +18,7 @@
 
 .simulador-interactivo {
   color: rgb(149, 0, 157);
+  font-family: century gothic, sans-serif;
   font-weight: bold;
   text-align: center;
   margin-top: 40px;
@@ -37,7 +38,7 @@
 
 .simulador-GUI {
     font-family: century gothic, sans-serif;
-  color: rgb(225, 200, 227);
+  color: rgb(149, 0, 157);
   font-weight: bold;
   text-align: center;
   margin-top: 40px;
@@ -66,6 +67,7 @@
     display: inline-block;
     background: #d81cfa;
     color: #fff;
+    justify-content: center;
     padding: 12px 22px;
     border-radius: 8px;
     text-decoration: none;
@@ -77,6 +79,7 @@
 .simulador-GUI-btn:hover {
     font-family: century gothic, sans-serif;
     background: #000;
+    justify-content: center;
     color: rgb(237, 173, 255);
     text-decoration: none;
     transform: translateY(-2px);
