@@ -68,8 +68,9 @@
     background: #d81cfa;
     color: #fff;
     padding: 12px 22px;
-    text-decoration: none;
+    border-radius: 8px;
     cursor: pointer;
+    text-decoration: none;
     margin: 0 8px;
     transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
