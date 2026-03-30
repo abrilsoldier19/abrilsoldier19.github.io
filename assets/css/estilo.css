@@ -67,7 +67,6 @@
     display: inline-block;
     background: #d81cfa;
     color: #fff;
-    justify-content: center;
     padding: 12px 22px;
     border-radius: 8px;
     text-decoration: none;
@@ -79,9 +78,15 @@
 .simulador-GUI-btn:hover {
     font-family: century gothic, sans-serif;
     background: #000;
-    justify-content: center;
     color: rgb(237, 173, 255);
     text-decoration: none;
     transform: translateY(-2px);
     text-shadow: #b916ff 0 0 10px;
+}
+
+.contenedor-botones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
 }
