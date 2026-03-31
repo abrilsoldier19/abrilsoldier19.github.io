@@ -98,3 +98,7 @@
   display: none;
   margin-top: 20px;
 }
+
+body {
+  background: linear-gradient(180deg, #ff97fd, #c18ff7);
+}
