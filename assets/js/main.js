@@ -54,7 +54,8 @@ function operacion() {
         imageContainer.style.alignItems = 'center';
         imageContainer.appendChild(image); // Agregar la imagen al contenedor
     }
-  $(function () {
+
+  (function () {
     $('[data-toggle="popover"]').popover({
       template: '<div class="popover custom-popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
     })
@@ -62,7 +63,7 @@ function operacion() {
         MathJax.Hub.Queue(['Typeset', MathJax.Hub, $(this).next('.popover').find('.popover-body')[0]]);
       });
   });
-    $(function() {
+    (function() {
         $('[data-toggle="popover"]').popover();
     });
 
