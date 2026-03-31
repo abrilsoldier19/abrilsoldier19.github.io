@@ -3,82 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale-1.0">
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      background-image: url("https://coolwallpapers.me/picsup/6042591-mechanism-a-abstraction-abstraction.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/estilo-datos.css">
 
-    .neon-effect {
-      color: #000000;
-      text-align: center;
-      animation: neon-animation 1s ease-in-out infinite alternate;
-    }
-    
-    @keyframes neon-animation {
-      0% {
-        color: #000000;
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #2ae6d9, 0 0 70px #532ae6, 0 0 80px #2abae6, 0 0 100px #2ae6e3, 0 0 150px #492AE6;
-      }
-      100% {
-        color: #ffffff;
-        text-shadow: none;
-      }
-    }
-    
-  </style>
 <section class="section">
   <div class="section-header">
-      <h3 class="page__heading" style="font-family: Lastica, Arial, sans-serif; background-color: #000000; padding: 20px; text-align: center; margin-top: 100x; color: #2abae6; font-size: 50px;">
+      <h3 class="page-heading">
           Simulacion de mecanismos en robotica</h3>
   </div>
 </section>
 </head>
 <body>
-  <div class="menu" style="text-align: center;">
-      <ul style="list-style-type: none; padding: 0;">
-          <li style="display: inline-block; margin-right: 10px;">
+  <div class="menu-principal">
+      <ul class="menu-lista">
+          <li class="menu-item">
               <a href="simulacion_mecanismos.html" class="button">Inicio</a>
             </li>
-        <li style="display: inline-block; margin-right: 10px;">
+        <li class="menu-item">
           <a href="menu_ejercicios.html" class="button">Ejercicios de mecanismos</a>
         </li>
-        <li style="display: inline-block; margin-right: 10px;">
+        <li class="menu-item">
           <a href="menu_formulas.html" class="button">Formulas</a>
         </li>
-        <li style="display: inline-block; margin-right: 10px;">
+        <li class="menu-item">
           <a href="datos.html" class="button">Acerca de</a>
         </li>
       </ul>
     </div>
 
     <form onsubmit="myfunc(event)" class="futuristic-form horizontal-form">
-      <label style = "font-family: Century Gothic, Arial, sans-serif; color:#fff; background-color: #000000; width: 180px; margin-right: 5px;" for="nombre" >Nombre de usuario:</label>
+      <label class="label-usuario" for="nombre" >Nombre de usuario:</label>
       <input type="text" id="nombre" name="nombre" required style = "width: 170px; margin-right: 20px;"><br>
 
-      <label style = "font-family: Century Gothic, Arial, sans-serif; color:#fff; background-color: #000000; width: 80px; margin-right: 10px;" for="grupo">  Grupo:</label>
+      <label class="label-grupo" for="grupo">  Grupo:</label>
       <input type="text" id="grupo" name="grupo" required><br>
   </form>
 
   <form onsubmit="myfunc(event)" class="futuristic-form horizontal-form">
-    <label style = "font-family: Century Gothic, Arial, sans-serif; color:#fff; background-color: #000000; width: 180px; margin-right: 5px;" for="fecha" >Fecha de práctica:</label>
+    <label class="label-fecha-practica" for="fecha" >Fecha de práctica:</label>
     <input type="date" id="fecha" name="fecha" required style = "width: 170px; margin-right: 20px;"><br>
 
-    <label style = "font-family: Century Gothic, Arial, sans-serif; color:#fff; background-color: #000000; width: 80px; margin-right: 37px;" for="especialidad">  Especialidad:</label>
+    <label class="label-especialidad" for="especialidad">  Especialidad:</label>
     <input type="text" id="especialidad" name="especialidad" required style = "width: 170px; margin-right: 20px;"><br>
   </form>
 
   <form onsubmit="myfunc(event)" class="futuristic-form horizontal-form">
-    <button style = "padding: 10px 20px; border: none; border-radius: 5px; background-color: #0b428a; color: #fff; cursor: pointer; outline: none; margin-top: 10px; margin-right: 10px;" value="Guardar" onclick="guardarDatos()" >Guardar tabla</button>
-    <input style = "padding: 10px 20px; border: none; border-radius: 5px; background-color: #074c7d; color: #fff; cursor: pointer; outline: none; margin-top: 10px; margin-right: 10px;"type ="submit" value="Guardar"/>
+    <button class="btn-guardar-tabla-csv" value="Guardar" onclick="guardarDatos()" >Guardar tabla</button>
+    <input class="btn-registrar-tabla" type ="submit" value="Guardar"/>
 </form>
 
   
@@ -103,195 +74,8 @@
     
 </body>
 
-<style>
-  .button {
-  display: inline-block;
-  background-color: #000000;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  margin-top: 20px;
-  border: none;
-  cursor: pointer;
-}
 
-.button:hover {
-  background-color: #333;
-}
-
-table {
-      border-collapse: collapse;
-      width: 100%;
-      background-color: #000000;
-      color: #ffffff;
-    }
-    th, td {
-      padding: 8px;
-      text-align: left;
-    }
-    th {
-      background-color: #474646;
-    }
-    h1 {
-      color: #000000;
-      text-align: center;
-      
-    }
-    tr:nth-child(even) {
-      background-color: #1a1a1a;
-    }
-    tr:hover {
-      background-color: #333333;
-    }
-
-   
-    .futuristic-form {
-    font-family: "Century Gothic", Arial, sans-serif;
-    color: #fff;
-    background-color: #000000;
-    padding: 20px;
-    border: none;
-    border-radius: 10px;
-}
-
-
-.futuristic-form input[type="text"],
-.futuristic-form input[type="date"] {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    outline: none;
-}
-
-.horizontal-form {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-</style>
-
-<script type="text/javascript">
-        function myfunc(event)
-        {
-            event.preventDefault();
-
-            var nombre = document.getElementById("nombre").value;
-            var grupo = document.getElementById("grupo").value;
-            var especialidad = document.getElementById("especialidad").value;
-            var fecha = document.getElementById("fecha").value;
-
-            var data = {
-                nombre: nombre,
-                grupo: grupo,
-                especialidad: especialidad,
-                fecha: fecha
-            };
-            var savedData = localStorage.getItem('userData');
-            var parsedData = savedData ? JSON.parse(savedData) : [];
-            parsedData.push(data);
-            localStorage.setItem('userData', JSON.stringify(parsedData));
-
-            addRowToTable(nombre, grupo, especialidad, fecha);
-
-        }
-
-  
-        function addRowToTable(nombre, grupo, especialidad, fecha) 
-        {
-            var table = document.getElementById("dataTable");
-            var newRow = table.insertRow();
-
-            var cell1 = newRow.insertCell();
-            cell1.textContent = nombre;
-
-            var cell2 = newRow.insertCell();
-            cell2.textContent = grupo;
-
-            var cell3 = newRow.insertCell();
-            cell3.textContent = especialidad;
-
-            var cell4 = newRow.insertCell();
-            cell4.textContent = fecha;
-
-            var cell5 = newRow.insertCell();
-            var editButton = document.createElement("button");
-            editButton.textContent = "Editar";
-            editButton.addEventListener("click", function() 
-            {
-              editarFila(newRow);
-            });
-            cell5.appendChild(editButton);
-        }
-        function mostrarDatosEnTabla() {
-            var savedData = localStorage.getItem('userData');
-            if (savedData) {
-                var parsedData = JSON.parse(savedData);
-                parsedData.forEach(function (data) {
-                    addRowToTable(data.nombre, data.grupo, data.especialidad, data.fecha);
-                });
-            }
-        }
-
-        function editarFila(row) 
-        {
-            var nombre = prompt("Ingrese el nuevo nombre");
-            var grupo = prompt("Ingrese el nuevo grupo");
-            var especialidad = prompt("Ingrese la nueva especialidad");
-            var fecha = prompt("Ingrese la nueva fecha");
-
-            if (nombre && grupo && especialidad && fecha) 
-            {
-              var cells = row.getElementsByTagName("td");
-              cells[0].textContent = nombre;
-              cells[1].textContent = grupo;
-              cells[2].textContent = especialidad;
-              cells[3].textContent = fecha;
-
-              // Actualizar los datos en localStorage si es necesario
-              var savedData = localStorage.getItem('userData');
-              if (savedData) 
-              {
-                var parsedData = JSON.parse(savedData);
-                var rowIndex = row.rowIndex - 1;
-                parsedData[rowIndex].nombre = nombre;
-                parsedData[rowIndex].grupo = grupo;
-                parsedData[rowIndex].especialidad = especialidad;
-                parsedData[rowIndex].fecha = fecha;
-                localStorage.setItem('userData', JSON.stringify(parsedData));
-              }
-              } else {
-                 alert("Debe ingresar todos los campos para editar la fila.");
-              }
-        }
-
-
-        window.addEventListener('load', mostrarDatosEnTabla)
-
-  
-  function guardarDatos() {
-      var nombre = document.getElementById("nombre").value;
-      var grupo = document.getElementById("grupo").value;
-      var especialidad = document.getElementById("especialidad").value;
-      var fecha = document.getElementById("fecha").value;
-
-      var datos = [nombre, grupo, especialidad, fecha];
-      var csv = datos.join(",") + "\n";
-
-      var link = document.createElement("a");
-      link.href = "data:text/csv;charset=utf-8," + encodeURIComponent(csv);
-      link.download = "datos_usuario.csv";
-      link.style.display = "none";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
-</script>
+<script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 </html>
 

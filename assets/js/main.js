@@ -24,6 +24,8 @@ function toggleSimulador(id) {
 }
 
 
+
+
 // Función para realizar la operación en opcion h) Accionamiento por cremallera y por tornillo sin fin
 function operacion() {
           var z = parseFloat(document.getElementById('z').value);
@@ -63,3 +65,119 @@ function operacion() {
     $(function() {
         $('[data-toggle="popover"]').popover();
     });
+
+// vista de datos.html para guardar datos en localStorage y mostrar en una tabla los registros de estudiantes
+function myfunc(event)
+        {
+            event.preventDefault();
+
+            var nombre = document.getElementById("nombre").value;
+            var grupo = document.getElementById("grupo").value;
+            var especialidad = document.getElementById("especialidad").value;
+            var fecha = document.getElementById("fecha").value;
+
+            var data = {
+                nombre: nombre,
+                grupo: grupo,
+                especialidad: especialidad,
+                fecha: fecha
+            };
+            var savedData = localStorage.getItem('userData');
+            var parsedData = savedData ? JSON.parse(savedData) : [];
+            parsedData.push(data);
+            localStorage.setItem('userData', JSON.stringify(parsedData));
+
+            addRowToTable(nombre, grupo, especialidad, fecha);
+
+        }
+
+  
+        function addRowToTable(nombre, grupo, especialidad, fecha) 
+        {
+            var table = document.getElementById("dataTable");
+            var newRow = table.insertRow();
+
+            var cell1 = newRow.insertCell();
+            cell1.textContent = nombre;
+
+            var cell2 = newRow.insertCell();
+            cell2.textContent = grupo;
+
+            var cell3 = newRow.insertCell();
+            cell3.textContent = especialidad;
+
+            var cell4 = newRow.insertCell();
+            cell4.textContent = fecha;
+
+            var cell5 = newRow.insertCell();
+            var editButton = document.createElement("button");
+            editButton.textContent = "Editar";
+            editButton.addEventListener("click", function() 
+            {
+              editarFila(newRow);
+            });
+            cell5.appendChild(editButton);
+        }
+        function mostrarDatosEnTabla() {
+            var savedData = localStorage.getItem('userData');
+            if (savedData) {
+                var parsedData = JSON.parse(savedData);
+                parsedData.forEach(function (data) {
+                    addRowToTable(data.nombre, data.grupo, data.especialidad, data.fecha);
+                });
+            }
+        }
+
+        function editarFila(row) 
+        {
+            var nombre = prompt("Ingrese el nuevo nombre");
+            var grupo = prompt("Ingrese el nuevo grupo");
+            var especialidad = prompt("Ingrese la nueva especialidad");
+            var fecha = prompt("Ingrese la nueva fecha");
+
+            if (nombre && grupo && especialidad && fecha) 
+            {
+              var cells = row.getElementsByTagName("td");
+              cells[0].textContent = nombre;
+              cells[1].textContent = grupo;
+              cells[2].textContent = especialidad;
+              cells[3].textContent = fecha;
+
+              // Actualizar los datos en localStorage si es necesario
+              var savedData = localStorage.getItem('userData');
+              if (savedData) 
+              {
+                var parsedData = JSON.parse(savedData);
+                var rowIndex = row.rowIndex - 1;
+                parsedData[rowIndex].nombre = nombre;
+                parsedData[rowIndex].grupo = grupo;
+                parsedData[rowIndex].especialidad = especialidad;
+                parsedData[rowIndex].fecha = fecha;
+                localStorage.setItem('userData', JSON.stringify(parsedData));
+              }
+              } else {
+                 alert("Debe ingresar todos los campos para editar la fila.");
+              }
+        }
+
+
+        window.addEventListener('load', mostrarDatosEnTabla)
+
+  
+  function guardarDatos() {
+      var nombre = document.getElementById("nombre").value;
+      var grupo = document.getElementById("grupo").value;
+      var especialidad = document.getElementById("especialidad").value;
+      var fecha = document.getElementById("fecha").value;
+
+      var datos = [nombre, grupo, especialidad, fecha];
+      var csv = datos.join(",") + "\n";
+
+      var link = document.createElement("a");
+      link.href = "data:text/csv;charset=utf-8," + encodeURIComponent(csv);
+      link.download = "datos_usuario.csv";
+      link.style.display = "none";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
