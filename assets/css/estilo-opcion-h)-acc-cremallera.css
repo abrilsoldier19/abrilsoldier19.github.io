@@ -1,0 +1,369 @@
+body 
+{
+    background-image: url("/static/pinon_cremallera.jpg");
+    background-size: contain;
+    background-color: black;
+}
+
+@keyframes blink {
+    0% { transform: translateX(10px);  color: rgb(0, 0, 0);}
+    50% { transform: translateX(150px);  color: rgb(123, 123, 123);}
+    100% { transform: translateX(10px);  color: rgb(0, 0, 0);}
+}
+
+.bienvenido-titulo{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: Century Gothic, sans-serif;
+    font-size: 35px;
+}
+
+.page-heading {
+    font-family: Century Gothic, sans-serif;
+    background-color: #000000; 
+    padding: 20px; 
+    text-align: center; 
+    margin-top: 100x; 
+    color: #ffffff; 
+    font-size: 50px;
+}
+
+.menu-principal {
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+    margin-top: 20px;
+}
+
+.menu-lista {
+    list-style-type: none; 
+    padding: 0;
+}
+
+.menu-item {
+    display: inline-block; 
+    margin-right: 10px;
+}
+
+.panel-info-card {
+    background-color: rgba(0, 0, 0, 0.55); 
+    padding: 20px; 
+    border-radius: 10px; 
+    width: 850px; 
+    margin: 0 auto;
+}
+
+.panel-formula-card {
+    background-color: rgba(3, 74, 105, 0.437);
+    padding: 20px;
+    border-radius: 10px;
+    width: 850px;
+    margin: 0 auto;
+}
+
+.texto-princial{
+    color: #ffffff; 
+    font-family: Century  Gothic, sans-serif; 
+    font-size: 18px; 
+    text-align: justify; 
+    width: 780px; 
+    margin: 0 auto;
+}
+
+.titulo-tema {
+    animation: blink 2s infinite, slide 4s linear infinite; 
+    background-color: rgba(8, 8, 8, 0.4); 
+    text-align: center; 
+    font-family: century gothic, sans-serif; 
+    padding: 15px; 
+    font-size: 40px; 
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
+}
+
+.texto-centro {
+  text-align: center;
+}
+
+.texto-negrita-centro {
+  color: #ffffff; 
+  font-weight: bold;
+  font-family: Century  Gothic, sans-serif; 
+  font-size: 22px; 
+  text-align: center; 
+  width: 800px; 
+  margin: 0 auto;
+}
+
+.item-info {
+  color: #ffffff;
+  font-family: "Century Gothic", sans-serif;
+  font-size: 18px;
+  text-align: justify;
+  width: 780px;
+  margin: 0 auto;
+}
+
+.texto-resolver-ejercicio {
+    color: #ffffff; 
+    text-align: center; 
+    font-family: Century Gothic, sans-serif; 
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.texto-ejercicio {
+    color: #ffffff;  
+    text-align: center;
+    font-family: Century Gothic, sans-serif; 
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.texto-formula {
+    color: #000000; 
+    text-align: center; 
+    font-family: Century Gothic, sans-serif; 
+    font-size: 20px;
+}
+
+.texto-variable{
+    color: #000000;  
+    text-align: center; 
+    font-family: Century Gothic, sans-serif; 
+    font-size: 17px;
+}
+
+.card-formulario{
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+
+.label-campo{
+    color: #000000; 
+    text-align: center; 
+    font-family: Century Gothic, sans-serif; 
+    font-size: 20px;
+}
+
+.input-campo{
+    color: #002850; 
+    text-align: center; 
+    font-family: Century Gothic, sans-serif; 
+    font-size: 20px;  
+    border-radius: 50px;
+}
+
+.display-calcular-boton-center{
+    display: flex; 
+    justify-content: center;
+}
+
+.display-resultado-center{
+    display: flex; 
+    justify-content: center; 
+    color: #ffffff; 
+    padding: 10px 30px; 
+    font-family: Century Gothic, sans-serif;
+}
+
+.resultado-div{
+    display: flex; 
+    justify-content: center; 
+    color: #ffffff; 
+    font-family: Century Gothic, sans-serif;
+    font-weight: bold;
+}
+
+.resultado-valor{
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    background-color: #000000;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.button2 {
+  display: inline-block;
+  background-color: #9F37F5;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #cecece;
+  color: #333;
+}
+
+.center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+.horizontal-list {
+  display: flex;
+  justify-content: center;
+}
+
+.horizontal-list li {
+  margin-right: 20px;
+}
+.btn-pink-black {
+  background-color: rgb(78, 78, 78);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+.btn-pink-black:hover {
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(109, 113, 113);
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+}
+.btn-purple-black {
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+.btn-purple-black:hover {
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    color: rgb(81, 81, 81);
+    border-radius: 50px;
+}
+
+.btn-formula {
+    background-color: rgb(123, 214, 237);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border-radius: 50px;
+    transition: .5s;
+}
+
+.btn-formula:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(160, 219, 233);
+    border-radius: 50px;
+}
+
+ .popover-header {
+  font-family: Century Gothic, sans-serif;
+  color: rgb(118, 205, 255);
+  font-size: 19px;
+  font-weight: bold;
+  background-color: rgb(0, 0, 0);
+  width: 200px;
+}
+
+
+.popover-body
+{
+    font-family: Century Gothic, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    text-align: justify;
+    background-color: rgb(0, 0, 0);
+    width: 200px;
+}
+
+.texto-popover {
+    color: #ffffff; 
+    text-align: center; 
+    font-family: Century Gothic, sans-serif; 
+    font-size: 17px; 
+    text-align: justify; 
+    display: flex; 
+    justify-content: center; 
+    gap: 20px;
+}
+
+.btn-enlace-github
+{
+    display: inline-block;
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+
+}
+
+.btn-calcular
+{
+  display: inline-block;
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+
+}
+
+.btn-calcular:hover {
+  background-color: #cecece;
+  color: #333;
+}
+
+.btn-mostrar-imagen
+{
+  display: inline-block;
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+
+}
+
+.btn-mostrar-imagen:hover {
+  background-color: #cecece;
+  color: #333;
+}
