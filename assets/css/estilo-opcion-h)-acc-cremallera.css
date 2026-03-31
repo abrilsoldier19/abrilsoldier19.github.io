@@ -61,7 +61,7 @@ body
     margin: 0 auto;
 }
 
-.texto-princial{
+.texto-princial {
     color: #ffffff; 
     font-family: Century  Gothic, sans-serif; 
     font-size: 18px; 
@@ -313,14 +313,23 @@ body
     display: inline-block;
   background-color: #000000;
   color: white;
+  font-family: Century Gothic, sans-serif;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
+  font-weight: bold;
   border-radius: 5px;
   margin-top: 20px;
   border: none;
   cursor: pointer;
+
+}
+
+.btn-enlace-github:hover
+{
+    background-color: #cecece;
+    color: #333;
 
 }
 
