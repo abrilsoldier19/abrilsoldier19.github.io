@@ -69,6 +69,8 @@
     color: #fff;
     padding: 12px 22px;
     border-radius: 8px;
+    border: none;
+    outline: none;
     cursor: pointer;
     text-decoration: none;
     margin: 0 8px;
