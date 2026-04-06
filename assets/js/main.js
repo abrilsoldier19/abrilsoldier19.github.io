@@ -183,3 +183,26 @@ function myfunc(event)
       link.click();
       document.body.removeChild(link);
     }
+
+
+/// Scroll interactivo para la vista principal de simulacion_mecanismos.html
+
+function efectoScroll() {
+  const header = document.querySelector(".section-header");
+
+window.addEventListener("scroll", () => {
+  let scroll = window.scrollY;
+
+  // cuánto tarda en desaparecer (ajústalo)
+  let maxScroll = 200;
+
+  // calcula opacidad entre 1 y 0.3
+  let opacity = 1 - (scroll / maxScroll);
+
+  if (opacity < 0.3) opacity = 0.3;
+
+  header.style.background = `rgba(0, 0, 0, ${opacity})`;
+});
+
+}
+document.addEventListener("DOMContentLoaded", efectoScroll);
