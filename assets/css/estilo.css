@@ -9,6 +9,7 @@
   font-weight: bold;
   border-radius: 5px;
   border: #d630ff solid 2px;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
   margin-top: 20px;
   cursor: pointer;
 }
@@ -16,6 +17,7 @@
 .button:hover {
   background-color: #333;
   border: #a6a6a6 solid 2px;
+  text-shadow: #b916ff 0 0 10px;
 }
 
 .simulador-interactivo {
