@@ -113,6 +113,7 @@ function myfunc(event)
             var cell5 = newRow.insertCell();
             var editButton = document.createElement("button");
             editButton.textContent = "Editar";
+            editButton.classList.add("btn-guardar-tabla-csv");
             editButton.addEventListener("click", function() 
             {
               editarFila(newRow);
