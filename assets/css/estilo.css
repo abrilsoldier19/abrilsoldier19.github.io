@@ -100,5 +100,14 @@
 }
 
 body {
+  margin: 0;
   background: linear-gradient(180deg, #ff97fd, #c18ff7);
+}
+
+.header {
+  background-color: #000000; 
+  padding: 20px; 
+  text-align: center; 
+  margin-top: 100px; 
+  color: #492AE6; font-size: 50px;
 }
