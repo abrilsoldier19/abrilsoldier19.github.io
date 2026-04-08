@@ -114,7 +114,7 @@ html, body {
 
 body {
   min-height: 100vh;
-  background: linear-gradient(180deg, #ffffff, #ffffff, #c18ff7);
+  background: linear-gradient(180deg, #c9c9c9, #c9c9c9, #c18ff7);
   background-repeat: no-repeat;
 }
 
