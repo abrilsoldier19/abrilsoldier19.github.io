@@ -145,3 +145,20 @@ body {
   background: #7b00ff;  /* color de fondo */
   color: #ffffff;       /* color del texto */
 }
+
+.info-card {
+    background-color: rgba(51, 2, 106, 0.55); 
+    padding: 20px; 
+    border-radius: 10px; 
+    width: 850px; 
+    margin: 0 auto;
+}
+
+.texto-principal {
+    color: #ffffff; 
+    font-family: Century  Gothic, sans-serif; 
+    font-size: 18px; 
+    text-align: justify; 
+    width: 780px; 
+    margin: 0 auto;
+}
