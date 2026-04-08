@@ -33,54 +33,50 @@
   <p style="color: #333;  text-align: center; font-family: Arial, sans-serif;">¡Explora más contenido en los siguientes enlaces!</p>
 
   <div class="info-card">
-
     <h2 class="simulador-interactivo">Simulador interactivo</h2>
 
     <p class="texto-principal">
-      El <strong>Accionamiento por cremallera y por tornillo sin fin</strong> son métodos de transmisión de movimiento en sistemas mecánicos. 
-    </p>
-    <br>
-    
-    <p class="texto-principal">
-      Para el Accionamiento por cremallera y por tornillo sin fin, se calcula la carrera de 
-      cremallera, accionamiento por tornillo sin fin, e interdependencias. 
+      Explora y simula mecanismos en robótica modificando parámetros en tiempo real.<br>
+      Visualiza resultados y genera gráficas automáticamente.
     </p>
 
-<div class="contenedor-boton">
-  <button class="simulador-interactivo-btn" onclick="toggleSimulador('simulador-interactivo')">
-    Mostrar simulador interactivo
-  </button>
-</div>
+    <div class="contenedor-boton">
+      <button class="simulador-interactivo-btn" onclick="toggleSimulador('simulador-interactivo')">
+        Mostrar simulador interactivo
+      </button>
+    </div>
 
-<div id="simulador-interactivo" class="contenedor-simulador">
-  <iframe 
-    src="https://avril-rock1471-gmail-com.trinket.io/sites/simulacionproyectofinal"
-    width="100%" 
-    height="500">
-  </iframe>
-</div>
-    
+    <div id="simulador-interactivo" class="contenedor-simulador">
+      <iframe 
+        src="https://avril-rock1471-gmail-com.trinket.io/sites/simulacionproyectofinal"
+        width="100%" 
+        height="500">
+      </iframe>
+    </div>
   </div>
 
+  <div class="info-card">
+    <h2 class="simulador-GUI">Simulador en Python con interfaz gráfica</h2>
 
-  
+    <p class="texto-principal">
+      Simulador con interfaz gráfica que permite resolver ejercicios de mecanismos.<br>
+      Ingresa datos, obtén resultados y visualiza su comportamiento mediante gráficas.
+    </p>
 
+    <div class="contenedor-boton">
+      <button class="simulador-GUI-btn" onclick="toggleSimulador('simulador-GUI')">
+        Mostrar simulador GUI
+      </button>
+    </div>
 
-<h2 class="simulador-GUI">Simulador en Python con interfaz gráfica</h2>
-
-<div class="contenedor-boton">
-  <button class="simulador-GUI-btn" onclick="toggleSimulador('simulador-GUI')">
-    Mostrar simulador GUI
-  </button>
-</div>
-
-<div id="simulador-GUI" class="contenedor-simulador">
-  <iframe 
-    src="https://trinket.io/embed/pygame/46fdee9423"
-    width="100%" 
-    height="500">
-  </iframe>
-</div>
+    <div id="simulador-GUI" class="contenedor-simulador">
+      <iframe 
+        src="https://trinket.io/embed/pygame/46fdee9423"
+        width="100%" 
+        height="500">
+      </iframe>
+    </div>
+  </div>
 
    <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
