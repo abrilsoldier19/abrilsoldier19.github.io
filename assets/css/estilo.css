@@ -109,7 +109,7 @@
 
 body {
   margin: 0;
-  background: linear-gradient(180deg, #ff97fd, #c18ff7);
+  background: linear-gradient(180deg, #ffffff, #c18ff7, #fb98f9);
 }
 
 .page__heading {
@@ -119,11 +119,9 @@ body {
   line-height: 1.2;
   color: transparent;
   -webkit-text-stroke: 1.5px #7b2cff;
-
   text-shadow: 
     0 0 10px rgba(123, 44, 255, 0.5),
     0 0 20px rgba(200, 80, 255, 0.3);
-
   letter-spacing: 2px;
 }
 
@@ -135,4 +133,9 @@ body {
   text-align: center;
   padding: 20px;
   transition: background 0.2s linear;
+}
+
+::selection {
+  background: #7b00ff;  /* color de fondo */
+  color: #ffffff;       /* color del texto */
 }
