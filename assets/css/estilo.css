@@ -114,17 +114,15 @@ body {
 
 .page__heading {
   font-family: Century Gothic, sans-serif; 
-  color: #492AE6; 
   font-size: 56px;
   margin: 0;
-
-  background: linear-gradient(90deg, #6a00ff, #ff4df0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+  color: transparent;
+  -webkit-text-stroke: 1.5px #7b2cff;
 
   text-shadow: 
-    0 0 10px rgba(120, 0, 255, 0.4),
-    0 0 20px rgba(200, 80, 255, 0.2);
+    0 0 10px rgba(123, 44, 255, 0.5),
+    0 0 20px rgba(200, 80, 255, 0.3);
 
   letter-spacing: 2px;
 }
