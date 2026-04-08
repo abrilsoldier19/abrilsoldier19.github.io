@@ -115,8 +115,18 @@ body {
 .page__heading {
   font-family: Century Gothic, sans-serif; 
   color: #492AE6; 
-  font-size: 50px;
+  font-size: 56px;
   margin: 0;
+
+  background: linear-gradient(90deg, #6a00ff, #ff4df0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 
+    0 0 10px rgba(120, 0, 255, 0.4),
+    0 0 20px rgba(200, 80, 255, 0.2);
+
+  letter-spacing: 2px;
 }
 
 .section-header {
