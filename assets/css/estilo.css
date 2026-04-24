@@ -169,43 +169,57 @@ body {
 \*------------------------------------*/
 
 #footer {
-    position: relative;
+  position: relative;
+  background: #000;
+  padding: 50px 20px 30px;
+  margin-top: 40px;
 }
 
 .footer-logo {
-    text-align: center;
-    margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-.footer-logo>a>img {
-    max-height: 80px;
+.footer-logo img {
+  max-height: 80px;
+  width: auto;
+  display: inline-block;
 }
 
 .footer-follow {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 25px;
+  padding: 0;
 }
 
 .footer-follow li {
-    display: inline-block;
-    margin-right: 10px;
-    margin-bottom: 13px;
+  display: inline-block;
+  margin: 0 8px 12px;
 }
 
 .footer-follow li a {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 8px;
   background-color: #6600FF;
-  color:#FFF;
+  color: #FFF;
+  text-decoration: none;
+  font-size: 22px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-follow li a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(179, 0, 255, 0.5);
 }
 
 .footer-copyright p {
-    text-align: center;
-    font-size: 14px;
-    text-transform: uppercase;
-    margin-bottom: 0;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  color: white;
 }
