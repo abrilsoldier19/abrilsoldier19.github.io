@@ -217,9 +217,8 @@ body {
 }
 
 .footer-copyright p {
-  text-align: center;
-  font-size: 14px;
-  text-transform: uppercase;
-  margin-bottom: 0;
-  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.7);
 }
