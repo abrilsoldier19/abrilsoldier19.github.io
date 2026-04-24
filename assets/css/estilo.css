@@ -218,9 +218,8 @@ body {
 
 .footer-copyright p {
   text-align: center;
-  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   margin-bottom: 0;
-  color: white;
+  color: #868f9b;
 }
