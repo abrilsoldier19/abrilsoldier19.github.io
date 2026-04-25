@@ -5,7 +5,7 @@
   font-family: century gothic, sans-serif;
   padding: 10px 20px;
   text-align: center;
-  text-decoration: none;
+  text-decoration: none !important;
   font-weight: bold;
   border-radius: 5px;
   border: #d630ff solid 2px;
@@ -21,6 +21,7 @@
 .button:hover {
   background-color: #000000;
   color: #b300ff;
+  text-decoration: none !important;
   border: #a6a6a6 solid 2px;
   text-shadow: 0 0 10px #c336ff;
 }
