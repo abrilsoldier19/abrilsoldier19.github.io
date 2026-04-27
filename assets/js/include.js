@@ -1,39 +1,13 @@
 function loadHTML(id, file) {
-  const element = document.getElementById(id);
-
-  if (!element) return;
-
   fetch(file)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`No se pudo cargar: ${file}`);
-      }
-      return response.text();
-    })
+    .then(res => res.text())
     .then(data => {
-      element.innerHTML = data;
+      const el = document.getElementById(id);
+      if (el) el.innerHTML = data;
     })
-    .catch(error => {
-      console.error(error);
-    });
+    .catch(err => console.error("Error cargando:", file, err));
 }
 
-function getBasePath() {
-  const path = window.location.pathname;
-
-  // index.html en raíz
-  if (!path.includes("/vistas/")) {
-    return "";
-  }
-
-  // cuenta cuántas carpetas hay después de /vistas/
-  const afterVistas = path.split("/vistas/")[1];
-  const folders = afterVistas.split("/").slice(0, -1);
-
-  return "../".repeat(folders.length + 1);
-}
-
-const basePath = getBasePath();
-
-loadHTML("header", basePath + "vistas/layout/header.html");
-loadHTML("footer", basePath + "vistas/layout/footer.html");
+// 🔥 rutas absolutas (CLAVE)
+loadHTML("header", "/vistas/layout/header.html");
+loadHTML("footer", "/vistas/layout/footer.html");
