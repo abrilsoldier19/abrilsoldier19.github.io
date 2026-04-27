@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+          background-image: url("https://t3.ftcdn.net/jpg/04/55/62/46/360_F_455624616_HQElDnVTyZMIgcx7SZ5CnvgCjbC6ucRF.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      </style>
+<section class="section">
+  <div class="section-header">
+      <h3 class="page__heading" style="font-family: Lastica, Arial, sans-serif; background-color: #000000; padding: 20px; text-align: center; margin-top: 100x; color: #492AE6; font-size: 50px;">
+          Simulacion de mecanismos en robotica</h3>
+  </div>
+  
+</section>
+</head>
+<body>
+    
+    <div class="menu" style="text-align: center;">
+        <ul style="list-style-type: none; padding: 0;">
+            <li style="display: inline-block; margin-right: 10px;">
+                <a href="simulacion_mecanismos.html" class="button">Inicio</a>
+              </li>
+          <li style="display: inline-block; margin-right: 10px;">
+            <a href="menu_ejercicios.html" class="button">Ejercicios de mecanismos</a>
+          </li>
+          <li style="display: inline-block; margin-right: 10px;">
+            <a href="menu_formulas.html" class="button">Formulas</a>
+          </li>
+          <li style="display: inline-block; margin-right: 10px;">
+            <a href="datos.html" class="button">Acerca de</a>
+          </li>
+        </ul>
+      </div>
+</body>
+
+    <script>
+        function operacion() {
+          var velocidadN1 = parseFloat(document.getElementById('velocidadN1').value);
+          var velocidadN2 = parseFloat(document.getElementById('velocidadN2').value);
+          var dientesZ1 = parseFloat(document.getElementById('dientesZ1').value);
+          var dientesZ3 = parseFloat(document.getElementById('dientesZ3').value);
+          
+    
+          var i = (velocidadN2)/(velocidadN1);
+          var Z = Math.sqrt((dientesZ1*dientesZ3*velocidadN1)/velocidadN2);
+    
+          document.getElementById('resultado_i').innerHTML = "" + i;
+    
+          document.getElementById('resultado_Z').innerHTML = "" + Z;
+        }
+
+        function mostrarImagen() {
+            var imageContainer = document.getElementById('imageContainer');
+            var image = document.createElement('img');
+            image.src = 'static/Tren_engranes.jpg'; // Reemplaza con la ruta de tu imagen
+              
+            image.style.width = '450px'; // Set the desired width
+            image.style.height = '190px';
+            imageContainer.innerHTML = ''; // Limpiar el contenedor de imágenes
+
+            imageContainer.style.display = 'flex';
+            imageContainer.style.justifyContent = 'center';
+            imageContainer.style.alignItems = 'center';
+            imageContainer.appendChild(image); // Agregar la imagen al contenedor
+    }
+      </script>
+
+<h1 style ="color: white; font-family: Century Gothic, sans-serif; text-align: center;">Simulación del cálculo del número de 
+    dientes de las ruedas conducidas de un tren de engranajes en mm</h1>
+<div style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">
+    <p style="color: #ffffff;  text-align: center; font-family: Arial, sans-serif; font-size: 20px;">
+        a partir de la ecuación de la relación de transmisión:
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        \(i = \frac{N2}{N1}=\frac{Z1}{Z2}=\frac{Z1 \cdot Z3}{Z2 \cdot Z4}=\frac{Z1 \cdot Z3}{Z}\)
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        donde:
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        i relación de transmisión
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        N1 velocidad del eje de entrada en RPM
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        N2 velocidad del eje de salida en RPM
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        Z1 número de dientes del engranaje de entrada 1
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        Z3 número de dientes del engranaje de entrada 3
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        Z2 número de dientes del engranaje de salida 2
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        Z4 número de dientes del engranaje de salida 4
+      </p>
+      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
+        Z número de dientes del engranaje de salida
+      </p>
+  </div>
+<body>
+    
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div style = "height: 3em;">
+              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="velocidadN1">Proporcione el valor de la velocidad del eje de entrada N1 en RPM:</label>
+            </div>
+            <div style = "height: 3em;">
+              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="velocidadN1" placeholder="">
+            </div>
+          
+            <div style = "height: 3em;">
+              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="velocidadN2">Proporcione el valor de la velocidad del eje de salida N2 en RPM:</label>
+            </div>
+            <div style = "height: 3em;">
+              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="velocidadN2" placeholder="">
+            </div>
+            <div style = "height: 3em;">
+                <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="dientesZ1">Proporcione el número de dientes Z1 del engranaje de entrada 1:</label>
+            </div>
+            <div style = "height: 3em;">
+                <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="dientesZ1" placeholder="">
+            </div>
+            <div style = "height: 3em;">
+                <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="dientesZ3">Proporcione el número de dientes Z3 del engranaje de entrada 3:</label>
+            </div>
+            <div style = "height: 3em;">
+                <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="dientesZ3" placeholder="">
+            </div>
+        </div>
+  
+          <div style="display: flex; justify-content: center;">
+            <button style="background-color: #000000; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; " class="button" onclick="operacion()">Calcular</button>
+          </div>
+    <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+       <p> La relación de transmisión del mecanismo es </p>
+    </div>
+    <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+        <p style="display: flex; flex-direction: column; align-items: center;" id="resultado_i">  </p>
+    </div>
+    <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+      <p> El número de dientes Z de las ruedas conducidas Z2 y Z4 es:  </p>
+   </div>
+   <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
+       <p style="display: flex; flex-direction: column; align-items: center;" id="resultado_Z">  </p>
+   </div>
+    <div style="display: flex; justify-content: center;">
+        <button style="background-color: #000000; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; " class="button" onclick="mostrarImagen()">Generar </button>
+      </div>
+
+      <div id="imageContainer" style="display: flex; justify-content: center;"> </div>
+  
+  </body>
+  <button class="button" style="display: inline-block;
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;" onclick="window.location.href='https://github.com/abrilsoldier19/SimuladorMecanismosRobotica/tree/main'">Enlace a Github</button>
+
+<button class="button2"  onclick="window.location.href='https://avril-rock1471-gmail-com.trinket.io/sites/ejercicio-iiib-velocidad-ultimo-arbol'">Enlace a simulador ejercicio ivd) en Python</button>
+<button class="button2"  onclick="window.location.href='https://avril-rock1471-gmail-com.trinket.io/sites/ivd-calculo-de-numero-de-dientes'">Simulador interactivo ejercicio ivd) en Python</button>
+
+
+<style>
+  .button {
+  display: inline-block;
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.button2 {
+  display: inline-block;
+  background-color: #9F37F5;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #333;
+}
+
+.center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  </style>
+</body>
+</html>
+
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+
+    <!-- Owl Carousel -->
+    <link type="text/css" rel="stylesheet" href="../assets/css/owl.carousel.css" />
+    <link type="text/css" rel="stylesheet" href="../assets/css/owl.theme.default.css" />
+
+    <!-- Magnific Popup -->
+    <link type="text/css" rel="stylesheet" href="../assets/css/magnific-popup.css" />
+
+    <!-- Font Awesome Icon -->
+    <link type="text/css" rel="stylesheet" href="../assets/css/font-awesome.min.css">
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="../assets/css/estilo.css" />
+
+</head>
+
+<body>
+
+  <div id="header"></div>
+  
+
+  <h1 style="color: black; text-align: center; font-family: Arial, sans-serif; padding: 20px;">Bienvenido a mi página web</h1>
+  <p style="color: #333;  text-align: center; font-family: Arial, sans-serif;">¡Explora más contenido en los siguientes enlaces!</p>
+
+  <div class="info-card">
+    <h2 class="simulador-interactivo">Simulador interactivo</h2>
+
+    <p class="texto-principal">
+      Explora y simula mecanismos en robótica modificando parámetros en tiempo real.<br>
+      Visualiza resultados y genera gráficas automáticamente.
+    </p>
+
+    <div class="contenedor-boton">
+      <button class="simulador-interactivo-btn" onclick="toggleSimulador('simulador-interactivo')">
+        Mostrar simulador interactivo
+      </button>
+    </div>
+
+    <div id="simulador-interactivo" class="contenedor-simulador">
+      <iframe 
+        src="https://avril-rock1471-gmail-com.trinket.io/sites/simulacionproyectofinal"
+        width="100%" 
+        height="500">
+      </iframe>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="info-card">
+    <h2 class="simulador-GUI">Simulador en Python con interfaz gráfica</h2>
+
+    <p class="texto-principal">
+      Simulador con interfaz gráfica que permite resolver ejercicios de mecanismos.<br>
+      Ingresa datos, obtén resultados y visualiza su comportamiento mediante gráficas.
+    </p>
+
+    <div class="contenedor-boton">
+      <button class="simulador-GUI-btn" onclick="toggleSimulador('simulador-GUI')">
+        Mostrar simulador GUI
+      </button>
+    </div>
+
+    <div id="simulador-GUI" class="contenedor-simulador">
+      <iframe 
+        src="https://trinket.io/embed/pygame/46fdee9423"
+        width="100%" 
+        height="500">
+      </iframe>
+    </div>
+  </div>
+  
+  <div id="footer"></div>
+
+   <script type="text/javascript" src="../assets/js/main.js"></script>
+   <script type="text/javascript" src="../assets/js/include.js"></script>
+</body>
+</html>
