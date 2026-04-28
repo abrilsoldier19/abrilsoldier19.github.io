@@ -1,20 +1,4 @@
-body {
-       background-image: url("static/clockwork.JPG");
-       background-size: auto;
-    }
 
-    
-    .menu ul {
-      list-style-type: none;
-      padding: 0;
-      text-align: center;
-    }
-    
-    .menu li {
-      display: inline-block;
-      margin-right: 10px;
-    }
-    
     .button {
     display: inline-block;
     background-color: #8c00ff55;
@@ -32,10 +16,7 @@ body {
   .button:hover {
     background-color: #333;
   }
-  
-  .center {
-    text-align: center;
-  }
+
   
           .img1 {
               max-width: 100%;
@@ -43,10 +24,7 @@ body {
               border: 2px solid #ccc;
               transition: transform 0.3s ease;
           }
-    .button:hover {
-      background-color: #333;
-    }
-    
+
     
     .image-container {
       margin-top: 20px;
@@ -156,10 +134,8 @@ body {
 }
 
 body {
-      background-image: url("https://wallpaperaccess.com/full/1943075.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
+       background-image: url("static/clockwork.JPG");
+       background-size: auto;
     }
 
     .button {
