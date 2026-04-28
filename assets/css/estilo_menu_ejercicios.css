@@ -1,0 +1,26 @@
+.button2 {
+  display: inline-block;
+  background-color: #9F37F5;
+  color: white;
+  padding: 10px 20px;
+  border: #d630ff solid 2px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  transition:     background 0.3s ease, 
+    color 0.3s ease, 
+    transform 0.3s ease,
+    text-shadow 0.3s ease;
+}
+.button2:hover {
+  display: inline-block;
+  background-color: #000000;
+  color: #9F37F5;
+  text-decoration: none !important;
+  border: #d630ff solid 2px;
+  text-shadow: 0 0 10px #c336ff;
+}
