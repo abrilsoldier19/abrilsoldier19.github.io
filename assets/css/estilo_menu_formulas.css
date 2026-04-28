@@ -3,25 +3,6 @@ body {
        background-size: auto;
     }
 
-    .section-body {
-      padding: 20px;
-      text-align: center;
-    }
-    
-    .section-header {
-      padding: 20px;
-      text-align: center;
-      border-radius: 90px;
-    }
-    
-    .page-heading {
-      font-size: 56px;
-      margin: 0;
-      font-weight: 1000;
-      letter-spacing: 4px;
-      -webkit-text-stroke: 0.1px rgb(43, 0, 255);
-      text-shadow: 2px 2px 4px rgb(240, 114, 242);
-    }
     
     .menu ul {
       list-style-type: none;
@@ -122,3 +103,198 @@ body {
       width: 300;
       height: 214;
 }
+
+
+.page__heading {
+  font-family: Century Gothic, sans-serif; 
+  font-size: 56px;
+  margin: 0;
+  line-height: 1.2;
+  color: transparent;
+  -webkit-text-stroke: 1.5px #7b2cff;
+  text-shadow: 
+    0 0 10px rgba(123, 44, 255, 0.5),
+    0 0 20px rgba(200, 80, 255, 0.3);
+  letter-spacing: 2px;
+}
+
+.section-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #000000;
+  text-align: center;
+  padding: 20px;
+  transition: background 0.2s linear;
+}
+
+.button2 {
+  display: inline-block;
+  background-color: #9F37F5;
+  color: white;
+  padding: 10px 20px;
+  border: #d630ff solid 2px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  transition:     background 0.3s ease, 
+    color 0.3s ease, 
+    transform 0.3s ease,
+    text-shadow 0.3s ease;
+}
+.button2:hover {
+  display: inline-block;
+  background-color: #000000;
+  color: #9F37F5;
+  text-decoration: none !important;
+  border: #d630ff solid 2px;
+  text-shadow: 0 0 10px #c336ff;
+}
+
+body {
+      background-image: url("https://wallpaperaccess.com/full/1943075.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .button {
+  display: inline-block;
+  background-color: #000000;
+  color: white;
+  font-family: century gothic, sans-serif;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none !important;
+  font-weight: bold;
+  border-radius: 5px;
+  border: #d630ff solid 2px;
+  text-shadow: 0 0 0 transparent;
+  transition:     background 0.3s ease, 
+    color 0.3s ease, 
+    transform 0.3s ease,
+    text-shadow 0.3s ease;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #000000;
+  color: #b300ff;
+  text-decoration: none !important;
+  border: #a6a6a6 solid 2px;
+  text-shadow: 0 0 10px #c336ff;
+}
+
+
+/*------------------------------------*\
+	Footer
+\*------------------------------------*/
+
+#footer {
+  position: relative;
+  background: #1c1d21;
+  padding: 20px 20px 30px;
+  margin-top: 10px;
+}
+
+.footer-logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.footer-logo img {
+  max-height: 80px;
+  width: auto;
+  display: inline-block;
+}
+
+.footer-follow {
+  text-align: center;
+  margin-bottom: 25px;
+  padding: 0;
+}
+
+.footer-follow li {
+  display: inline-block;
+  margin: 0 8px 12px;
+}
+
+.footer-follow li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 8px;
+  background-color: #6600FF;
+  color: #FFF;
+  text-decoration: none;
+  font-size: 22px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-follow li a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(179, 0, 255, 0.5);
+}
+
+.footer-copyright p {
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  color: #868f9b;
+}
+
+::selection {
+  background: #7b00ff;  /* color de fondo */
+  color: #ffffff;       /* color del texto */
+}
+
+.titulo-principal-formulas {
+  background-color: rgba(62, 50, 50, 0.5); 
+  padding: 20px; 
+  border-radius: 10px; 
+  width: 820px; 
+  margin: 0 auto; 
+  color: white; 
+  font-family: lastica, sans-serif; 
+  font-size: 25px;
+}
+
+.texto-principal-formulas {
+  background-color: rgba(192, 4, 213, 0.5);
+  color: #ffffff; 
+  font-family: Century  Gothic, sans-serif; 
+  font-size: 18px; 
+  text-align: justify; 
+  padding: 20px; 
+  border-radius: 10px; 
+  width: 720px; 
+  margin: 0 auto;
+}
+.subtitulo-texto-formulas {
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 20px; 
+  border-radius: 10px; 
+  width: 820px; 
+  margin: 0 auto; 
+  color: white; 
+  font-family: century gothic, sans-serif; 
+  font-size: 25px;
+}
+
+.texto-temas-formulas {
+  color: #ffffff; 
+  font-family: Century  Gothic, sans-serif; 
+  font-size: 18px; 
+  text-align: justify; 
+  width: 720px; 
+  margin: 0 auto;
+}
+
