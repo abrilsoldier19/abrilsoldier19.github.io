@@ -1,0 +1,124 @@
+body {
+       background-image: url("static/clockwork.JPG");
+       background-size: auto;
+    }
+
+    .section-body {
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .section-header {
+      padding: 20px;
+      text-align: center;
+      border-radius: 90px;
+    }
+    
+    .page-heading {
+      font-size: 56px;
+      margin: 0;
+      font-weight: 1000;
+      letter-spacing: 4px;
+      -webkit-text-stroke: 0.1px rgb(43, 0, 255);
+      text-shadow: 2px 2px 4px rgb(240, 114, 242);
+    }
+    
+    .menu ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+    }
+    
+    .menu li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    
+    .button {
+    display: inline-block;
+    background-color: #8c00ff55;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #333;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+          .img1 {
+              max-width: 100%;
+              height: auto;
+              border: 2px solid #ccc;
+              transition: transform 0.3s ease;
+          }
+    .button:hover {
+      background-color: #333;
+    }
+    
+    
+    .image-container {
+      margin-top: 20px;
+      width: 100%; /* Adjust the width as needed */
+  height: auto; /* Allow the height to adjust proportionally */
+  text-align: center; 
+    }
+    
+    .image-button {
+      display: inline-block;
+      background-color: rgb(172, 91, 168);
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      transition: transform 1.9 ease;
+    }
+    
+    .image-button:hover {
+      background-color: rgb(255, 255, 255);
+      transform: scale(1.09);
+      transition: transform 0.9 ease;
+    }
+    
+    .image-button img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .imagebutton1 {
+      display: inline-block;
+      background-color: rgb(172, 91, 168);
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.9 ease;
+    }
+    
+    .imagebutton1:hover {
+      background-color: rgb(255, 255, 255);
+      transform: scale(1.09);
+      transition: transform 0.9 ease;
+    }
+    .imagebutton1 img {
+      width: 300;
+      height: 214;
+}
