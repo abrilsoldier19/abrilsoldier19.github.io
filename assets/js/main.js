@@ -24,7 +24,45 @@ function toggleSimulador(id) {
 }
 
 
+// Función para realizar la operación en opcion a) Sistema de polea y correa
+function operacion_ia() {
+          var label_num_D1 = parseFloat(document.getElementById('label_num_D1').value);
+          var label_num_D2 = parseFloat(document.getElementById('label_num_D2').value);
+    
+          var i = (label_num_D1)/(label_num_D2);
+    
+          document.getElementById('resultado').innerHTML = "" + i;
+        }
 
+        function mostrarImagen_ia() {
+            var imageContainer = document.getElementById('imageContainer');
+            var image = document.createElement('img');
+            image.src = '/static/ia)_relacion_transmision.JPG'; // Reemplaza con la ruta de tu imagen
+            image.style.width = '350px'; // Set the desired width
+            image.style.height = '250px';
+        
+            // Agregar estilo para el efecto de luz
+            image.style.borderRadius = '10px';
+            image.style.boxShadow = '0 0 20px rgba(255, 255, 255, 0.7)'; // Cambia el valor según tus preferencias
+
+            imageContainer.innerHTML = ''; // Limpiar el contenedor de imágenes
+            imageContainer.style.display = 'flex';
+            imageContainer.style.justifyContent = 'center';
+            imageContainer.style.alignItems = 'center';
+            imageContainer.appendChild(image); // Agregar la imagen al contenedor
+    }
+
+  (function () {
+    $('[data-toggle="popover"]').popover({
+      template: '<div class="popover custom-popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
+    })
+      .on('shown.bs.popover', function () {
+        MathJax.Hub.Queue(['Typeset', MathJax.Hub, $(this).next('.popover').find('.popover-body')[0]]);
+      });
+  });
+    (function() {
+        $('[data-toggle="popover"]').popover();
+    });
 
 // Función para realizar la operación en opcion h) Accionamiento por cremallera y por tornillo sin fin
 function operacion() {

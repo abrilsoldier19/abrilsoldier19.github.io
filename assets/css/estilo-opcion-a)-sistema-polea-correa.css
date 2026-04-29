@@ -230,3 +230,140 @@ body {
   flex-direction: column;
   margin-bottom: 10px;
 }
+
+
+/*------------------------------------*\
+	opcion ia)
+\*------------------------------------*/
+.body-bg {
+  background-image: url("https://t3.ftcdn.net/jpg/04/55/62/46/360_F_455624616_HQElDnVTyZMIgcx7SZ5CnvgCjbC6ucRF.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.titulo-principal-ia {
+  color: rgb(255, 255, 255); 
+  text-align: center; 
+  font-family: Century  Gothic, sans-serif; 
+  font-size: 25px;
+}
+
+.contenido-ia {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 🔥 centra todo horizontal */
+  text-align: center;
+}
+
+.contenedor-card-ia {
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 20px; 
+  border-radius: 10px;
+  width: 90%;
+  max-width: 750px;
+  margin: 40px auto;
+}
+
+.center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+.texto-formulas-ia {
+  color: #ffffff; 
+  text-align: center; 
+  font-family: Century Gothic, sans-serif; 
+  font-size: 20px;
+  margin: 8px 0;
+}
+
+.texto-ejercicio-ia {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.campo-ia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.label-ia {
+  color: #ffffff; 
+  text-align: center; 
+  font-family: Century Gothic, sans-serif; 
+  font-size: 20px;
+}
+
+.input-ia {
+  color: #db48e6; 
+  text-align: center; 
+  font-family: Century Gothic, sans-serif; 
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.resultado-ia {
+  color: #db48e6; 
+  text-align: center; 
+  font-family: Century Gothic, sans-serif; 
+  font-size: 20px;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  font-weight: bold;
+
+}
+.resultado-ia-texto {
+  color: #ffffff; 
+  text-align: center; 
+  font-family: Century Gothic, sans-serif; 
+  font-size: 20px;
+  font-weight: bold;
+  display: flex; 
+  justify-content: center;
+  
+}
+
+.contenedor-boton-ia {
+  list-style-type: none; 
+  padding: 0;
+  display: flex; 
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.boton-calcular-generar-ia {
+  display: inline-block;
+  background-color: #000000;
+  color: white;
+  font-family: century gothic, sans-serif;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none !important;
+  font-weight: bold;
+  border-radius: 5px;
+  border: #d630ff solid 2px;
+  text-shadow: 0 0 0 transparent;
+  transition:     background 0.3s ease, 
+    color 0.3s ease, 
+    transform 0.3s ease,
+    text-shadow 0.3s ease;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.boton-calcular-generar-ia:hover {
+  background-color: #000000;
+  color: #b300ff;
+  text-decoration: none !important;
+  border: #a6a6a6 solid 2px;
+  text-shadow: 0 0 10px #c336ff;
+}
