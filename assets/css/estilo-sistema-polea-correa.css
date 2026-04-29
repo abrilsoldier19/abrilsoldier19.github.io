@@ -50,11 +50,11 @@ body {
   cursor: pointer;
   transition:     background 0.3s ease, 
     color 0.3s ease, 
+    transform 0.3s ease,
     text-shadow 0.3s ease;
    width: 250px;
 }
 .button2:hover {
-  display: inline-block;
   background-color: #000000;
   color: #9F37F5;
   text-decoration: none !important;
