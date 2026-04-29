@@ -179,6 +179,13 @@
 /*------------------------------------*\
 	Contenedor card
 \*------------------------------------*/
+.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 🔥 centra todo horizontal */
+  text-align: center;
+}
+
 .contenedor-card {
   background-color: rgba(0, 0, 0, 0.5); 
   padding: 20px; 
