@@ -134,7 +134,7 @@
 }
 
 body {
-    background-image: url("../../static/Clockwork.JPG");
+    background-image: url("../../static/clockwork.JPG");
     background-size: cover;      /* Escala la imagen para llenar todo el espacio */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se duplique */
