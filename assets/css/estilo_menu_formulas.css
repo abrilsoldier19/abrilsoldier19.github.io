@@ -134,9 +134,14 @@
 }
 
 body {
-       background-image: url("../../static/clockwork.JPG");
-       background-size: auto;
-    }
+    background-image: url("../../static/Clockwork.JPG");
+    background-size: cover;      /* Escala la imagen para llenar todo el espacio */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se duplique */
+    background-attachment: fixed; /* Mantiene el fondo quieto al hacer scroll */
+    min-height: 100vh;           /* Asegura que el body mida al menos el alto de la pantalla */
+    margin: 0;                   /* Elimina márgenes por defecto */
+}
 
     .button {
   display: inline-block;
@@ -237,7 +242,7 @@ body {
   padding: 20px; 
   border-radius: 10px; 
   align-content: center;
-  width: 820px; 
+  width: 720px; 
   text-align: center;
   margin: 0 auto; 
   color: white; 
@@ -260,7 +265,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5); 
   padding: 20px; 
   border-radius: 10px; 
-  width: 820px; 
+  width: 720px; 
   text-align: center;
   margin: 0 auto; 
   color: white; 
