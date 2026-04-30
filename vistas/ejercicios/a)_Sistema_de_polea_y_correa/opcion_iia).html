@@ -49,62 +49,60 @@
         <p class="texto-formulas-iia">N1 velocidad giro inicial</p>
         <p class="texto-formulas-iia">D2 diámetro polea mayor</p>
         <p class="texto-formulas-iia">N2 velocidad giro conducido</p>
+        <div class="texto-ejercicio-iia">
+          <div class="campo-iia">
+            <label class="label-iia" for="label_num_D1">
+              Proporcione el valor del diámetro D1 de la polea menor en mm:
+            </label>
+          </div>
+          <div class="campo-iia">
+            <input class="input-iia" type="number" id="label_num_D1" placeholder="" />
+          </div>
+
+          <div class="campo-iia">
+            <label class="label-iia" for="label_num_N1">
+              Proporcione el valor del eje inicial en rpm:
+            </label>
+          </div>
+          <div class="campo-iia">
+            <input class="input-iia" type="number" id="label_num_N1" placeholder="" />
+          </div>
+
+          <div class="campo-iia">
+            <label class="label-iia" for="label_num_D2">
+              Proporcione el valor del diámetro D2 de la polea mayor en mm:
+            </label>
+          </div>
+          <div class="campo-iia">
+            <input class="input-iia" type="number" id="label_num_D2" placeholder="" />
+          </div>
+        </div>
+
+        <div class="contenedor-boton-iia">
+          <button class="boton-calcular-generar-iia button" onclick="operacion_iia()">
+            Calcular
+          </button>
+        </div>
+
+        <div class="resultado-iia-texto">
+          <p>El resultado de la velocidad que gira el eje conducido es N2</p>
+        </div>
+
+        <div class="resultado-iia">
+          <p id="resultado"></p>
+        </div>
+
+        <div class="contenedor-boton-iia">
+          <button class="boton-calcular-generar-iia button" onclick="mostrarImagen_iia()">
+            Generar
+          </button>
+        </div>
+
+        <div id="imageContainer" style="display: flex; justify-content: center;"></div>
       </div>
 
-      <div class="texto-ejercicio-iia">
-        <div class="campo-iia">
-          <label class="label-iia" for="label_num_D1">
-            Proporcione el valor del diámetro D1 de la polea menor en mm:
-          </label>
-        </div>
-        <div class="campo-iia">
-          <input class="input-iia" type="number" id="label_num_D1" placeholder="" />
-        </div>
-
-        <div class="campo-iia">
-          <label class="label-iia" for="label_num_N1">
-            Proporcione el valor del eje inicial en rpm:
-          </label>
-        </div>
-        <div class="campo-iia">
-          <input class="input-iia" type="number" id="label_num_N1" placeholder="" />
-        </div>
-
-        <div class="campo-iia">
-          <label class="label-iia" for="label_num_D2">
-            Proporcione el valor del diámetro D2 de la polea mayor en mm:
-          </label>
-        </div>
-        <div class="campo-iia">
-          <input class="input-iia" type="number" id="label_num_D2" placeholder="" />
-        </div>
-      </div>
-
-      <div class="contenedor-boton-iia">
-        <button class="boton-calcular-generar-iia button" onclick="operacion_iia()">
-          Calcular
-        </button>
-      </div>
-
-      <div class="resultado-iia-texto">
-        <p>El resultado de la velocidad que gira el eje conducido es N2</p>
-      </div>
-
-      <div class="resultado-iia">
-        <p id="resultado"></p>
-      </div>
-
-      <div class="contenedor-boton-iia">
-        <button class="boton-calcular-generar-iia button" onclick="mostrarImagen_iia()">
-          Generar
-        </button>
-      </div>
-
-      <div id="imageContainer" style="display: flex; justify-content: center;"></div>
-
-      
       <button class="button" onclick="window.location.href='https://github.com/abrilsoldier19/SimuladorMecanismosRobotica/tree/main'">
-          Enlace a Github
+        Enlace a Github
       </button>
       <button class="button2" onclick="window.location.href='https://trinket.io/pygame/56a2f549cd?showInstructions=true'"> Enlace a simulador ejercicio iia) en Python</button>
       <button class="button2" onclick="window.location.href='https://avril-rock1471-gmail-com.trinket.io/sites/iia-velocidad-giro-eje-conducido'">Simulador ejercicio iia) en Python menú interactivo</button>
