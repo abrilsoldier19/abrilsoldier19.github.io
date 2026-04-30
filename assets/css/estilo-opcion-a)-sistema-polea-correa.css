@@ -247,6 +247,10 @@ body {
   text-align: center; 
   font-family: Century  Gothic, sans-serif; 
   font-size: 25px;
+  max-width: 900px;
+  margin: 30px auto;  
+  padding: 0 20px;   
+  line-height: 1.4;   
 }
 
 .contenido-ia {
