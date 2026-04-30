@@ -1,9 +1,12 @@
 body {
-          background-image: url("https://images.unsplash.com/photo-1675334758735-5f989ff8237f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE3fHx8ZW58MHx8fHx8&w=1000&q=80");
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: center;
-        }
+  background-image: url("https://images.unsplash.com/photo-1675334758735-5f989ff8237f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE3fHx8ZW58MHx8fHx8&w=1000&q=80");
+  background-size: cover;      /* Escala la imagen para llenar todo el espacio */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se duplique */
+  background-attachment: fixed; /* Mantiene el fondo quieto al hacer scroll */
+  min-height: 100vh;           /* Asegura que el body mida al menos el alto de la pantalla */
+  margin: 0;   
+  }
 
         @keyframes blink {
             0% { transform: translateX(10px);  color: rgb(196, 127, 245);}
@@ -237,9 +240,12 @@ body {
 \*------------------------------------*/
 .body-bg {
   background-image: url("https://t3.ftcdn.net/jpg/04/55/62/46/360_F_455624616_HQElDnVTyZMIgcx7SZ5CnvgCjbC6ucRF.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-size: cover;      /* Escala la imagen para llenar todo el espacio */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se duplique */
+  background-attachment: fixed; /* Mantiene el fondo quieto al hacer scroll */
+  min-height: 100vh;           /* Asegura que el body mida al menos el alto de la pantalla */
+  margin: 0;    
 }
 
 .titulo-principal-ia {
@@ -376,9 +382,12 @@ body {
 \*------------------------------------*/
 .body-bg-iia {
   background-image: url("https://t3.ftcdn.net/jpg/04/55/62/46/360_F_455624616_HQElDnVTyZMIgcx7SZ5CnvgCjbC6ucRF.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-size: cover;      /* Escala la imagen para llenar todo el espacio */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se duplique */
+  background-attachment: fixed; /* Mantiene el fondo quieto al hacer scroll */
+  min-height: 100vh;           /* Asegura que el body mida al menos el alto de la pantalla */
+  margin: 0;   
 }
 
 .titulo-principal-iia {
