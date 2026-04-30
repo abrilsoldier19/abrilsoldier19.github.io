@@ -279,4 +279,4 @@ window.addEventListener("scroll", () => {
 });
 
 }
-document.addEventListener("DOMContentLoaded", efectoScroll);
+
