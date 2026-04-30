@@ -407,6 +407,11 @@ body {
   margin: 40px auto;
 }
 
+.contenedor-simulador-iia {
+ display: none;
+  margin-top: 20px;
+}
+
 
 .texto-formulas-iia {
   color: #ffffff; 
