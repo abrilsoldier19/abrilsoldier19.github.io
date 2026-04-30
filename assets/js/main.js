@@ -1,24 +1,20 @@
-function mostrarSimuladorInteractivo() {
-  document.getElementById("simulador-interactivo").style.display = "block";
-}
-
-function mostrarSimuladorGUI() {
-  document.getElementById("simulador-GUI").style.display = "block";
-}
-
-
-function toggleSimulador(id) {
-  const simInteractivo = document.getElementById("simulador-interactivo");
-  const simGUI = document.getElementById("simulador-GUI");
-
+function toggleSimulador(id, clase) {
+  // Obtener el simulador que se quiere mostrar
   const actual = document.getElementById(id);
 
-  // Ocultar ambos primero
-  if (actual.style.display === "block") {
-    actual.style.display = "none";
-  } else {
-    simInteractivo.style.display = "none";
-    simGUI.style.display = "none";
+  // Obtener todos los simuladores del mismo grupo
+  const simuladores = document.querySelectorAll("." + clase);
+
+  // Verificar si ya está visible
+  const estaVisible = actual.style.display === "block";
+
+  // Ocultar todos los simuladores
+  simuladores.forEach(sim => {
+    sim.style.display = "none";
+  });
+
+  // Si NO estaba visible, lo mostramos
+  if (!estaVisible) {
     actual.style.display = "block";
   }
 }
