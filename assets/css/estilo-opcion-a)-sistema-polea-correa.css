@@ -382,6 +382,47 @@ body {
   margin-top: 20px;
 }
 
+.simulador-interactivo-ia {
+  color: rgb(149, 0, 157);
+  font-family: century gothic, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 28px;
+  position: relative;
+}
+
+.simulador-interactivo-ia::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  color: black;
+  background: rgb(244, 114, 251);
+  margin: 10px auto 0;
+}
+
+.simulador-GUI-ia {
+    font-family: century gothic, sans-serif;
+  color: rgb(149, 0, 157);
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 28px;
+  position: relative;
+}
+
+.simulador-GUI-ia::after {
+    font-family: century gothic, sans-serif;
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  color: black;
+  background: rgb(244, 114, 251);
+  margin: 10px auto 0;
+}
+
 /*------------------------------------*\
 	opcion iia)
 \*------------------------------------*/
@@ -524,7 +565,7 @@ body {
   text-shadow: 0 0 10px #c336ff;
 }
 
-.simulador-interactivo {
+.simulador-interactivo-iia {
   color: rgb(149, 0, 157);
   font-family: century gothic, sans-serif;
   font-weight: bold;
@@ -534,7 +575,7 @@ body {
   position: relative;
 }
 
-.simulador-interactivo::after {
+.simulador-interactivo-iia::after {
   content: "";
   display: block;
   width: 60px;
@@ -544,7 +585,7 @@ body {
   margin: 10px auto 0;
 }
 
-.simulador-GUI {
+.simulador-GUI-iia {
     font-family: century gothic, sans-serif;
   color: rgb(149, 0, 157);
   font-weight: bold;
@@ -554,7 +595,7 @@ body {
   position: relative;
 }
 
-.simulador-GUI::after {
+.simulador-GUI-iia::after {
     font-family: century gothic, sans-serif;
   content: "";
   display: block;
