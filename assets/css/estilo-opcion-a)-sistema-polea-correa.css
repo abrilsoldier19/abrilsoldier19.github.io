@@ -377,6 +377,11 @@ body {
   text-shadow: 0 0 10px #c336ff;
 }
 
+.contenedor-simulador-ia {
+ display: none;
+  margin-top: 20px;
+}
+
 /*------------------------------------*\
 	opcion iia)
 \*------------------------------------*/
