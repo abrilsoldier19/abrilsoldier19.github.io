@@ -267,6 +267,7 @@ body {
   width: 90%;
   max-width: 750px;
   margin: 40px auto;
+  border: #9500ffb8 solid 2px;
 }
 
 .center {
@@ -405,6 +406,7 @@ body {
   width: 90%;
   max-width: 750px;
   margin: 40px auto;
+  border: #9500ffb8 solid 2px;
 }
 
 .contenedor-simulador-iia {
