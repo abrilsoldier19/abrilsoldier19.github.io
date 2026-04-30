@@ -23,8 +23,8 @@ function toggleSimulador(id) {
   }
 }
 
-
-// Función para realizar la operación en opcion a) Sistema de polea y correa
+//a) Sistema de polea y correa
+// Función para realizar la operación en opcion ia)Cálculo de relación de transmisión de velocidad del mecanismo de un una correa plana en m de Sistema de polea y correa
 function operacion_ia() {
           var label_num_D1 = parseFloat(document.getElementById('label_num_D1').value);
           var label_num_D2 = parseFloat(document.getElementById('label_num_D2').value);
@@ -38,6 +38,46 @@ function operacion_ia() {
             var imageContainer = document.getElementById('imageContainer');
             var image = document.createElement('img');
             image.src = '/static/ia)_relacion_transmision.JPG'; // Reemplaza con la ruta de tu imagen
+            image.style.width = '350px'; // Set the desired width
+            image.style.height = '250px';
+        
+            // Agregar estilo para el efecto de luz
+            image.style.borderRadius = '10px';
+            image.style.boxShadow = '0 0 20px rgba(255, 255, 255, 0.7)'; // Cambia el valor según tus preferencias
+
+            imageContainer.innerHTML = ''; // Limpiar el contenedor de imágenes
+            imageContainer.style.display = 'flex';
+            imageContainer.style.justifyContent = 'center';
+            imageContainer.style.alignItems = 'center';
+            imageContainer.appendChild(image); // Agregar la imagen al contenedor
+    }
+
+  (function () {
+    $('[data-toggle="popover"]').popover({
+      template: '<div class="popover custom-popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
+    })
+      .on('shown.bs.popover', function () {
+        MathJax.Hub.Queue(['Typeset', MathJax.Hub, $(this).next('.popover').find('.popover-body')[0]]);
+      });
+  });
+    (function() {
+        $('[data-toggle="popover"]').popover();
+    });
+// Función para realizar la operación en opcion iia)Simulacion del calculo de la velocidad que gira el eje conducido de correa plana en rpm de Sistema de polea y correa
+    function operacion_iia() {
+          var label_num_D1 = parseFloat(document.getElementById('label_num_D1').value);
+          var label_num_N1 = parseFloat(document.getElementById('label_num_N1').value);
+          var label_num_D2 = parseFloat(document.getElementById('label_num_D2').value);
+    
+          var N2 = (label_num_D1)*(label_num_N1)/(label_num_D2);
+    
+          document.getElementById('resultado').innerHTML = "" + N2;
+        }
+
+        function mostrarImagen_iia() {
+            var imageContainer = document.getElementById('imageContainer');
+            var image = document.createElement('img');
+            image.src = 'static/iia)velocidad_eje.JPG'; // Reemplaza con la ruta de tu imagen
             image.style.width = '350px'; // Set the desired width
             image.style.height = '250px';
         
