@@ -208,7 +208,8 @@ body {
   text-align: center; 
   font-family: Century  Gothic, sans-serif; 
   font-size: 17px; 
-  text-align: justify;
+  text-align: center;
+  line-height: 1.6;
 }
 
 .texto-ejercicios {
