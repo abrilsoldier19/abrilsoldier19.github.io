@@ -1,189 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        body {
-          background-image: url("https://t3.ftcdn.net/jpg/04/55/62/46/360_F_455624616_HQElDnVTyZMIgcx7SZ5CnvgCjbC6ucRF.jpg");
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: center;
-        }
-      </style>
-<section class="section">
-  <div class="section-header">
-      <h3 class="page__heading" style="font-family: Lastica, Arial, sans-serif; background-color: #000000; padding: 20px; text-align: center; margin-top: 100x; color: #492AE6; font-size: 50px;">
-          Simulacion de mecanismos en robotica</h3>
-  </div>
-  
-</section>
+  <meta charset="UTF-8">
+  <title>Simulación longitud de correa</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet"/>
+  <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../../../assets/css/owl.carousel.css" />
+  <link rel="stylesheet" href="../../../assets/css/owl.theme.default.css"/>
+  <link rel="stylesheet" href="../../../assets/css/magnific-popup.css" />
+  <link rel="stylesheet" href="../../../assets/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../../../assets/css/estilo-opcion-a)-sistema-polea-correa.css"/>
+  <link rel="shortcut icon" type="image/jpg" href="../../../img/mechanic.png" />
 </head>
-<body>
-    
-    <div class="menu" style="text-align: center;">
-        <ul style="list-style-type: none; padding: 0;">
-            <li style="display: inline-block; margin-right: 10px;">
-                <a href="simulacion_mecanismos.html" class="button">Inicio</a>
-              </li>
-          <li style="display: inline-block; margin-right: 10px;">
-            <a href="menu_ejercicios.html" class="button">Ejercicios de mecanismos</a>
-          </li>
-          <li style="display: inline-block; margin-right: 10px;">
-            <a href="menu_formulas.html" class="button">Formulas</a>
-          </li>
-          <li style="display: inline-block; margin-right: 10px;">
-            <a href="datos.html" class="button">Acerca de</a>
-          </li>
-        </ul>
-      </div>
-</body>
+<body class="body-bg-iiia">
+  <div id="header"></div>
 
-    <script>
-        function operacion() {
-          var label_num_longitud1 = parseFloat(document.getElementById('label_num_longitud1').value);
-          var label_num_longitud2 = parseFloat(document.getElementById('label_num_longitud2').value);
-          var label_num_longitud3 = parseFloat(document.getElementById('label_num_longitud3').value);
-    
-          var L = Math.PI*(label_num_longitud1 + label_num_longitud2) + 2 * Math.sqrt(Math.pow(label_num_longitud3,2) + Math.pow(label_num_longitud1 - label_num_longitud2, 2));
-    
-          document.getElementById('resultado').innerHTML = "" + L;
-        }
+  <div class="contenido-iiia">
+    <h1 class="titulo-principal-iiia">Simulación del cálculo de la longitud de la correa que se necesita en mm</h1>
 
-        function mostrarImagen() {
-            var imageContainer = document.getElementById('imageContainer');
-            var image = document.createElement('img');
-            image.src = 'static/longitud_correa.png'; // Reemplaza con la ruta de tu imagen
-              
-            imageContainer.innerHTML = ''; // Limpiar el contenedor de imágenes
-            imageContainer.appendChild(image); // Agregar la imagen al contenedor
-    }
-      </script>
+    <div class="contenedor-card-iiia">
+      <p class="texto-formulas-iiia">Fórmula de la ecuación de longitud</p>
+      <p class="texto-formulas-iiia">
+        \( L = \pi \cdot (L1 + L2) + 2 \cdot \sqrt{L3^2 + (L1 - L2)^2} \)
+      </p>
+      <p class="texto-formulas-iiia">donde:</p>
+      <p class="texto-formulas-iiia">L longitud de la correa</p>
+      <p class="texto-formulas-iiia">L1 semicircunferencia de la polea conducida</p>
+      <p class="texto-formulas-iiia">L2 semicircunferencia de la polea conductora</p>
+      <p class="texto-formulas-iiia">L3 distancia entre los ejes de las poleas</p>
 
-<h1 style ="color: white; font-family: Century Gothic, sans-serif; text-align: center;">Simulacion del calculo de la longitud de la correa que se necesita en mm</h1>
-<div style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">
-    <p style="color: #ffffff;  text-align: center; font-family: Arial, sans-serif; font-size: 20px;">
-        Fórmula de la ecuacion de longitud
-      </p>
-      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
-        \( L = \pi \cdot (L1 + L2) + 2 \cdot \sqrt{{L3^2 + (L1 - L2)^2}} \)
-      </p>
-      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
-        donde:
-      </p>
-      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
-        L longitud de la correa
-      </p>
-      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
-        L1 semicircunferencia de la polea conducida
-      </p>
-      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
-        L2 semicircunferencia de la polea conductora 
-      </p>
-      <p style="color: #ffffff;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 20px;">
-        L3  distancia  entre  los  ejes de las poleas
-      </p>
-  </div>
-<body>
-    
-        <div style="display: flex; flex-direction: column; align-items: center;">
-            <div style = "height: 3em;">
-              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="label_num_longitud1">Proporcione el valor de la semicircuferencia de la polea conducida en mm:</label>
-            </div>
-            <div style = "height: 3em;">
-              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="label_num_longitud1" placeholder="">
-            </div>
-          
-            <div style = "height: 3em;">
-              <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="label_num_longitud2">Proporcione el valor de la semicircuferencia de la polea conductora en mm:</label>
-            </div>
-            <div style = "height: 3em;">
-              <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="label_num_longitud2" placeholder="">
-            </div>
-            <div style = "height: 3em;">
-                <label style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" for="label_num_longitud3">Proporcione el valor de la distancia entre los ejes de las poleas en mm:</label>
-            </div>
-            <div style = "height: 3em;">
-                <input style="color: #db48e6; text-align: center; font-family: Arial, sans-serif; font-size: 20px;" type="number" id="label_num_longitud3" placeholder="">
-            </div>
+      <div class="texto-ejercicio-iiia">
+        <div class="campo-iiia">
+          <label class="label-iiia" for="label_num_longitud1">Proporcione el valor de la semicircunferencia de la polea conducida en mm:</label>
         </div>
-  
-          <div style="display: flex; justify-content: center;">
-            <button style="background-color: #000000; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; " class="button" onclick="operacion()">Calcular</button>
-          </div>
-    <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
-       <p> El resultado de la longitud de la correa es L </p>
-    </div>
-    <div style="display: flex; justify-content: center; color: #ffffff; font-family: Century Gothic, sans-serif; ">
-        <p style="display: flex; flex-direction: column; align-items: center;" id="resultado">  </p>
-    </div>
-    <div style="display: flex; justify-content: center;">
-        <button style="background-color: #000000; color: white; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; " class="button" onclick="mostrarImagen()">Generar </button>
+        <div class="campo-iiia">
+          <input class="input-iiia" type="number" id="label_num_longitud1" placeholder="">
+        </div>
+
+        <div class="campo-iiia">
+          <label class="label-iiia" for="label_num_longitud2">Proporcione el valor de la semicircunferencia de la polea conductora en mm:</label>
+        </div>
+        <div class="campo-iiia">
+          <input class="input-iiia" type="number" id="label_num_longitud2" placeholder="">
+        </div>
+
+        <div class="campo-iiia">
+          <label class="label-iiia" for="label_num_longitud3">Proporcione el valor de la distancia entre los ejes de las poleas en mm:</label>
+        </div>
+        <div class="campo-iiia">
+          <input class="input-iiia" type="number" id="label_num_longitud3" placeholder="">
+        </div>
       </div>
 
-      <div id="imageContainer" style="display: flex; justify-content: center;"> </div>
-  
-  </body>
-  <button class="button" style="display: inline-block;
-  background-color: #000000;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 5px;
-  margin-top: 20px;
-  border: none;
-  cursor: pointer;" onclick="window.location.href='https://github.com/abrilsoldier19/SimuladorMecanismosRobotica/tree/main'">Enlace a Github</button>
+      <div class="contenedor-boton-iiia">
+        <button class="boton-calcular-generar-iiia button" onclick="operacion_iiia()">Calcular</button>
+      </div>
 
-<button class="button2"  onclick="window.location.href='https://trinket.io/pygame/972be6b2dc?showInstructions=true'">Enlace a simulador ejercicio iiia) en Python</button>
-<button class="button2"  onclick="window.location.href='https://avril-rock1471-gmail-com.trinket.io/sites/iiia-longitud-correa'">Simulador ejercicio iiia) en Python menu interactivo</button>
+      <div class="resultado-iiia-texto">
+        <p>El resultado de la longitud de la correa es L</p>
+      </div>
 
+      <div class="resultado-iiia">
+        <p id="resultado"></p>
+      </div>
 
-<style>
-  .button {
-  display: inline-block;
-  background-color: #000000;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  margin-top: 20px;
-  border: none;
-  cursor: pointer;
-}
+      <div class="contenedor-boton-iiia">
+        <button class="boton-calcular-generar-iiia button" onclick="mostrarImagen_iiia()">Generar</button>
+      </div>
 
-.button2 {
-  display: inline-block;
-  background-color: #9F37F5;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  margin-top: 20px;
-  border: none;
-  cursor: pointer;
-}
+      <div id="imageContainer" style="display: flex; justify-content: center;"></div>
+    </div>
 
-.button:hover {
-  background-color: #333;
-}
+    <div class="contenedor-card-iiia">
+      <h2 class="simulador-interactivo-iiia">Simulador interactivo</h2>
+      <p class="texto-principal">
+        Explora y simula mecanismos en robótica para calcular la longitud de la correa que se necesita en mm en tiempo real.<br>
+        Visualiza resultados y genera gráficas automáticamente.
+      </p>
+      <div class="contenedor-boton-iiia">
+        <button class="button2" onclick="toggleSimulador('simulador-interactivo-iiia', 'contenedor-simulador-iiia')">
+          Simulador ejercicio iiia) en Python menú interactivo
+        </button>
+      </div>
+      <div id="simulador-interactivo-iiia" class="contenedor-simulador-iiia">
+        <iframe src="https://avril-rock1471-gmail-com.trinket.io/sites/iiia-longitud-correa" width="100%" height="500"></iframe>
+      </div>
+    </div>
 
-.center {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+    <div class="contenedor-card-iiia">
+      <h2 class="simulador-GUI-iiia">Simulador en Python con interfaz gráfica</h2>
+      <p class="texto-principal">
+        Simulador con interfaz gráfica que permite resolver la longitud de la correa que se necesita en mm.<br>
+        Ingresa datos, obtén resultados y visualiza su comportamiento mediante gráficas.
+      </p>
+      <div class="contenedor-boton-iia">
+        <button class="button2" onclick="toggleSimulador('simulador-GUI-iiia', 'contenedor-simulador-iiia')">
+          Simulador ejercicio iiia) en Python GUI
+        </button>
+      </div>
+      <div id="simulador-GUI-iiia" class="contenedor-simulador-iiia">
+        <iframe src="https://trinket.io/pygame/972be6b2dc?showInstructions=true" width="100%" height="500"></iframe>
+      </div>
+    </div>
 
-  </style>
+    <button class="button" onclick="window.location.href='https://github.com/abrilsoldier19/SimuladorMecanismosRobotica/tree/main'">
+      Enlace a Github
+    </button>
+  </div>
+
+  <div id="footer"></div>
+  <script type="text/javascript" src="../../../assets/js/main.js"></script>
+  <script type="text/javascript" src="../../../assets/js/include.js"></script>
 </body>
 </html>
-
-
-
-

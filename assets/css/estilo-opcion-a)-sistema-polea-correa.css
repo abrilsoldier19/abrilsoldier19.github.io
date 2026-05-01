@@ -236,9 +236,9 @@ body {
 
 
 /*------------------------------------*\
-	opcion ia)
+	opcion ia), iia) y iiia)
 \*------------------------------------*/
-.body-bg {
+.body-bg, .body-bg-iia, .body-bg-iiia {
   background-image: url("https://t3.ftcdn.net/jpg/04/55/62/46/360_F_455624616_HQElDnVTyZMIgcx7SZ5CnvgCjbC6ucRF.jpg");
   background-size: cover;      /* Escala la imagen para llenar todo el espacio */
   background-position: center; /* Centra la imagen */
@@ -248,7 +248,7 @@ body {
   margin: 0;    
 }
 
-.titulo-principal-ia {
+.titulo-principal-ia, .titulo-principal-iia, .titulo-principal-iiia {
   color: rgb(255, 255, 255); 
   text-align: center; 
   font-family: Century  Gothic, sans-serif; 
@@ -259,14 +259,14 @@ body {
   line-height: 1.4;   
 }
 
-.contenido-ia {
+.contenido-ia, .contenido-iia, .contenido-iiia {
   display: flex;
   flex-direction: column;
   align-items: center; /* 🔥 centra todo horizontal */
   text-align: center;
 }
 
-.contenedor-card-ia {
+.contenedor-card-ia, .contenedor-card-iia, .contenedor-card-iiia {
   background-color: rgba(0, 0, 0, 0.5); 
   padding: 20px; 
   border-radius: 10px;
@@ -282,7 +282,7 @@ body {
       align-items: center;
     }
 
-.texto-formulas-ia {
+.texto-formulas-ia, .texto-formulas-iia, .texto-formulas-iiia {
   color: #ffffff; 
   text-align: center; 
   font-family: Century Gothic, sans-serif; 
@@ -290,7 +290,7 @@ body {
   margin: 8px 0;
 }
 
-.texto-ejercicio-ia {
+.texto-ejercicio-ia, .texto-ejercicio-iia, .texto-ejercicio-iiia {
   display: flex; 
   flex-direction: column; 
   align-items: center;
@@ -298,7 +298,7 @@ body {
   margin: 25px 0;
 }
 
-.campo-ia {
+.campo-ia, .campo-iia, .campo-iiia {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -306,14 +306,14 @@ body {
   margin-bottom: 10px;
 }
 
-.label-ia {
+.label-ia, .label-iia, .label-iiia {
   color: #ffffff; 
   text-align: center; 
   font-family: Century Gothic, sans-serif; 
   font-size: 20px;
 }
 
-.input-ia {
+.input-ia, .input-iia, .input-iiia {
   color: #db48e6; 
   text-align: center; 
   font-family: Century Gothic, sans-serif; 
@@ -321,7 +321,7 @@ body {
   font-weight: bold;
 }
 
-.resultado-ia {
+.resultado-ia, .resultado-iia, .resultado-iiia {
   color: #db48e6; 
   text-align: center; 
   font-family: Century Gothic, sans-serif; 
@@ -332,7 +332,7 @@ body {
   font-weight: bold;
 
 }
-.resultado-ia-texto {
+.resultado-ia-texto, .resultado-iia-texto, .resultado-iiia-texto {
   color: #ffffff; 
   text-align: center; 
   font-family: Century Gothic, sans-serif; 
@@ -343,13 +343,13 @@ body {
   
 }
 
-.contenedor-boton-ia {
+.contenedor-boton-ia, .contenedor-boton-iia, .contenedor-boton-iiia {
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
 }
 
-.boton-calcular-generar-ia {
+.boton-calcular-generar-ia, .boton-calcular-generar-iia, .boton-calcular-generar-iiia {
   display: inline-block;
   background-color: #000000;
   color: white;
@@ -369,7 +369,7 @@ body {
   cursor: pointer;
 }
 
-.boton-calcular-generar-ia:hover {
+.boton-calcular-generar-ia, .boton-calcular-generar-iia, .boton-calcular-generar-iiia:hover {
   background-color: #000000;
   color: #b300ff;
   text-decoration: none !important;
@@ -377,12 +377,12 @@ body {
   text-shadow: 0 0 10px #c336ff;
 }
 
-.contenedor-simulador-ia {
+.contenedor-simulador-ia, .contenedor-simulador-iia, .contenedor-simulador-iiia {
  display: none;
   margin-top: 20px;
 }
 
-.simulador-interactivo-ia {
+.simulador-interactivo-ia, .simulador-interactivo-iia, .simulador-interactivo-iiia {
   color: rgb(149, 0, 157);
   font-family: century gothic, sans-serif;
   font-weight: bold;
@@ -392,7 +392,7 @@ body {
   position: relative;
 }
 
-.simulador-interactivo-ia::after {
+.simulador-interactivo-ia, .simulador-interactivo-iia, .simulador-interactivo-iiia::after {
   content: "";
   display: block;
   width: 60px;
@@ -402,7 +402,7 @@ body {
   margin: 10px auto 0;
 }
 
-.simulador-GUI-ia {
+.simulador-GUI-ia, .simulador-GUI-iia, .simulador-GUI-iiia {
     font-family: century gothic, sans-serif;
   color: rgb(149, 0, 157);
   font-weight: bold;
@@ -412,191 +412,8 @@ body {
   position: relative;
 }
 
-.simulador-GUI-ia::after {
-    font-family: century gothic, sans-serif;
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  color: black;
-  background: rgb(244, 114, 251);
-  margin: 10px auto 0;
-}
-
-/*------------------------------------*\
-	opcion iia)
-\*------------------------------------*/
-.body-bg-iia {
-  background-image: url("https://t3.ftcdn.net/jpg/04/55/62/46/360_F_455624616_HQElDnVTyZMIgcx7SZ5CnvgCjbC6ucRF.jpg");
-  background-size: cover;      /* Escala la imagen para llenar todo el espacio */
-  background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que la imagen se duplique */
-  background-attachment: fixed; /* Mantiene el fondo quieto al hacer scroll */
-  min-height: 100vh;           /* Asegura que el body mida al menos el alto de la pantalla */
-  margin: 0;   
-}
-
-.titulo-principal-iia {
-  color: rgb(255, 255, 255); 
-  text-align: center; 
-  font-family: Century  Gothic, sans-serif; 
-  font-size: 25px;
-  max-width: 900px;
-  margin: 30px auto;  
-  padding: 0 20px;   
-  line-height: 1.4;   
-}
-
-.contenido-iia {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* 🔥 centra todo horizontal */
-  text-align: center;
-}
-
-.contenedor-card-iia {
-  background-color: rgba(0, 0, 0, 0.5); 
-  padding: 20px; 
-  border-radius: 10px;
-  width: 90%;
-  max-width: 750px;
-  margin: 40px auto;
-  border: #9500ffb8 solid 2px;
-}
-
-.contenedor-simulador-iia {
- display: none;
-  margin-top: 20px;
-}
-
-
-.texto-formulas-iia {
-  color: #ffffff; 
-  text-align: center; 
-  font-family: Century Gothic, sans-serif; 
-  font-size: 20px;
-  margin: 8px 0;
-}
-
-.texto-ejercicio-iia {
-  display: flex; 
-  flex-direction: column; 
-  align-items: center;
-  gap: 12px;
-  margin: 25px 0;
-}
-
-.campo-iia {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 10px;
-}
-
-.label-iia {
-  color: #ffffff; 
-  text-align: center; 
-  font-family: Century Gothic, sans-serif; 
-  font-size: 20px;
-}
-
-.input-iia {
-  color: #db48e6; 
-  text-align: center; 
-  font-family: Century Gothic, sans-serif; 
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.resultado-iia {
-  color: #db48e6; 
-  text-align: center; 
-  font-family: Century Gothic, sans-serif; 
-  font-size: 20px;
-  display: flex; 
-  flex-direction: column; 
-  align-items: center;
-  font-weight: bold;
-
-}
-.resultado-iia-texto {
-  color: #ffffff; 
-  text-align: center; 
-  font-family: Century Gothic, sans-serif; 
-  font-size: 20px;
-  font-weight: bold;
-  display: flex; 
-  justify-content: center;
-  
-}
-
-.contenedor-boton-iia {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-.boton-calcular-generar-iia {
-  display: inline-block;
-  background-color: #000000;
-  color: white;
+.simulador-GUI-ia::after, .simulador-GUI-iia::after, .simulador-GUI-iiia::after {
   font-family: century gothic, sans-serif;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none !important;
-  font-weight: bold;
-  border-radius: 8px;
-  border: #d630ff solid 2px;
-  text-shadow: 0 0 0 transparent;
-  transition:     background 0.3s ease, 
-    color 0.3s ease, 
-    transform 0.3s ease,
-    text-shadow 0.3s ease;
-  margin-top: 20px;
-  cursor: pointer;
-}
-
-.boton-calcular-generar-iia:hover {
-  background-color: #000000;
-  color: #b300ff;
-  text-decoration: none !important;
-  border: #a6a6a6 solid 2px;
-  text-shadow: 0 0 10px #c336ff;
-}
-
-.simulador-interactivo-iia {
-  color: rgb(149, 0, 157);
-  font-family: century gothic, sans-serif;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 40px;
-  font-size: 28px;
-  position: relative;
-}
-
-.simulador-interactivo-iia::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  color: black;
-  background: rgb(244, 114, 251);
-  margin: 10px auto 0;
-}
-
-.simulador-GUI-iia {
-    font-family: century gothic, sans-serif;
-  color: rgb(149, 0, 157);
-  font-weight: bold;
-  text-align: center;
-  margin-top: 40px;
-  font-size: 28px;
-  position: relative;
-}
-
-.simulador-GUI-iia::after {
-    font-family: century gothic, sans-serif;
   content: "";
   display: block;
   width: 60px;
