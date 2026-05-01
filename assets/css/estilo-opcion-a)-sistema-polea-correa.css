@@ -393,7 +393,7 @@ body {
   position: relative;
 }
 
-.simulador-interactivo-ia, .simulador-interactivo-iia, .simulador-interactivo-iiia::after {
+.simulador-interactivo-ia::after, .simulador-interactivo-iia::after, .simulador-interactivo-iiia::after {
   content: "";
   display: block;
   width: 60px;
