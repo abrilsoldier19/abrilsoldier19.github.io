@@ -73,7 +73,7 @@ function operacion_ia() {
         function mostrarImagen_iia() {
             var imageContainer = document.getElementById('imageContainer');
             var image = document.createElement('img');
-            image.src = 'static/iia)velocidad_eje.JPG'; // Reemplaza con la ruta de tu imagen
+            image.src = '/static/iia)velocidad_eje.JPG'; // Reemplaza con la ruta de tu imagen
             image.style.width = '350px'; // Set the desired width
             image.style.height = '250px';
         
@@ -114,7 +114,7 @@ function operacion_ia() {
         function mostrarImagen_iiia() {
             var imageContainer = document.getElementById('imageContainer');
             var image = document.createElement('img');
-            image.src = 'static/longitud_correa.png'; // Reemplaza con la ruta de tu imagen
+            image.src = '/static/longitud_correa.png'; // Reemplaza con la ruta de tu imagen
             image.style.width = '350px'; // Set the desired width
             image.style.height = '250px';
         
