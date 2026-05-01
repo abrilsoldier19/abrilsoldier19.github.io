@@ -205,10 +205,9 @@ body {
 
 .texto-principal {
   color: #ffffff; 
-  text-align: center; 
   font-family: Century  Gothic, sans-serif; 
   font-size: 17px; 
-  text-align: center;
+  text-align: justify;
   line-height: 1.6;
 }
 
