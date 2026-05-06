@@ -1,96 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        body {
-          background-image: url("https://images.unsplash.com/photo-1675334758735-5f989ff8237f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE3fHx8ZW58MHx8fHx8&w=1000&q=80");
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: center;
-        }
+  <title>Tren de Poleas | Simulación de mecanismos en robótica</title>
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
 
-        @keyframes blink {
-            0% { transform: translateX(10px);  color: rgb(196, 127, 245);}
-            50% { transform: translateX(150px);  color: white;}
-            100% { transform: translateX(10px);  color: rgb(196, 127, 245);}
-        }
-      </style>
-<section class="section">
-  <div class="section-header">
-      <h3 class="page__heading" style="font-family: Lastica, Arial, sans-serif; background-color: #000000; padding: 20px; text-align: center; margin-top: 100x; color: #492AE6; font-size: 50px;">
-          Simulacion de mecanismos en robotica</h3>
-  </div>
-</section>
+  <!-- Bootstrap -->
+  <link type="text/css" rel="stylesheet" href="../../../assets/css/bootstrap.min.css" />
+
+  <!-- Owl Carousel -->
+  <link type="text/css" rel="stylesheet" href="../../../assets/css/owl.carousel.css" />
+  <link type="text/css" rel="stylesheet" href="../../../assets/css/owl.theme.default.css" />
+
+  <!-- Magnific Popup -->
+  <link type="text/css" rel="stylesheet" href="../../../assets/css/magnific-popup.css" />
+
+  <!-- Font Awesome Icon -->
+  <link type="text/css" rel="stylesheet" href="../../../assets/css/font-awesome.min.css">
+
+  <!-- Custom stlylesheet -->
+  <link type="text/css" rel="stylesheet" href="../../../assets/css/estilo-opcion-b)-tren-de-poleas.css" />
+  <link rel="shortcut icon" type="image/jpg" href="../../../img/mechanic.png" />
 </head>
 <body>
-  
-
-  <div class="menu" style="text-align: center; margin-top: 20px;">
-    <ul style="list-style-type: none; padding: 0;">
-        <li style="display: inline-block; margin-right: 10px;">
-            <a href="simulacion_mecanismos.html" class="button">Inicio</a>
-          </li>
-      <li style="display: inline-block; margin-right: 10px;">
-        <a href="menu_ejercicios.html" class="button">Ejercicios de mecanismos</a>
-      </li>
-      <li style="display: inline-block; margin-right: 10px;">
-        <a href="menu_formulas.html" class="button">Formulas</a>
-      </li>
-      <li style="display: inline-block; margin-right: 10px;">
-        <a href="datos.html" class="button">Acerca de</a>
-      </li>
+  <div id="header"></div>
+  <div class="contenido">
+    <h1 class="titulo-principal">Tren de Poleas</h1>
+    <div class="contenedor-card">
+      <h1 class="titulo-bienvenida">Bienvenido/a</h1>
+      <p class="texto-principal">
+        Un tren de poleas con correa consiste en la combinación de más de dos poleas. 
+        La relación entre las velocidades de giro de las ruedas motriz y 
+        conducida depende del tamaño relativo de las ruedas del sistema y puede expresarse fácilmente en función de sus diámetros
+      </p>
+      <div class="center">
+        <img src="../../../static/tren-de-poleas.gif" alt="Descripción de la imagen">
+      </div>
+      <h1 class="subtitulo-tema">Elementos del tren de poleas</h1>
+      <p class="texto-principal">
+        El elemento principal es la polea doble. Un tren de poleas consta de varias parejas de poleas encajadas en las que las intermedias 
+        (la 2 y la 3) giran a la vez. Sus elementos son:
+      </p>
+      <ul class="lista-elementos">
+      <li> Poleas </li>
+      <div class="horizontal-list">
+        <img src="../../../static/poleas.png" alt="Descripción de la imagen">
+      </div>
+      <li> Cuerdas o cadena </li>
+      <div class="horizontal-list">
+        <img src="../../../static/cadenas.png" alt="Descripción de la imagen">
+      </div>
+      <li> Cargas </li>
+      <div class="horizontal-list">
+        <img src="../../../static/cargas.png" alt="Descripción de la imagen">
+      </div>
+      <li>Mecanismo de accionamiento </li>
+      <div class="horizontal-list">
+        <img src="../../../static/chain_drive.gif" alt="Descripción de la imagen">
+      </div>
     </ul>
-  </div>
-  <body>
-    <h1 style= "animation: blink 2s infinite, slide 4s linear infinite; color: rgb(196, 127, 245); text-align: center; font-family: a Astro Space, Arial, sans-serif; padding: 15px; font-size: 40px; text-shadow: 2px 2px 4px black;">Tren de Poleas</h1>
-</body>
-<div style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px; width: 820px;margin: 0 auto;">
-    <h1 style="color: rgb(255, 255, 255); text-align: center; font-family: Arial, sans-serif; font-size: 25px;">Bienvenido/a</h1>
-    <p style="color: #ffffff; font-family: Century  Gothic, sans-serif; font-size: 22px; text-align: justify; width: 820px; margin: 0 auto;">
-      Un tren de poleas con correa consiste en la combinación de más de dos poleas. La relación entre las velocidades de giro de las ruedas motriz y 
-      conducida depende del tamaño relativo de las ruedas del sistema y puede expresarse fácilmente en función de sus diámetros
-    </p>
-    <div class="center">
-      <img src="https://www.ies5.org.es/tecnologias/mecaneso/ejercicios/imagenes/ejr_mec08-01.gif" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);max-width: 400px;" alt="Descripción de la imagen">
-  </div>
-    <h1 style="color: rgb(255, 255, 255); text-align: center; font-family: Arial, sans-serif; font-size: 20px;">Elementos del tren de poleas</h1>
-    <p style="color: #ffffff; font-family: Century  Gothic, sans-serif; font-size: 22px; text-align: justify; width: 820px; margin: 0 auto;">
-      El elemento principal es la polea doble. Un tren de poleas consta de varias parejas de poleas encajadas en las que las intermedias 
-      (la 2 y la 3) giran a la vez. Sus elementos son:
-    </p>
-    <lu style = "  list-style-type: none; padding: 0;">
-      <li style="color: #f2eeee;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px; ">
-      Poleas 
-      </li>
-      <div class="horizontal-list">
-        <img src="static/poleas.png" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);max-width: 400px;" alt="Descripción de la imagen">
-      </div>
-      <li style="color: #f2eeee;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px; ">
-       Cuerdas o cadena 
-      </li>
-      <div class="horizontal-list">
-        <img src="static/cadenas.png" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);max-width: 400px;" alt="Descripción de la imagen">
-      </div>
-      <li style="color: #f2eeee;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px; ">
-        Cargas 
-      </li>
-      <div class="horizontal-list">
-        <img src="static/cargas.png" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);max-width: 400px;" alt="Descripción de la imagen">
-      </div>
-      <li style="color: #f2eeee;  text-align: center; font-family: Century Gothic, sans-serif; font-size: 17px; ">
-      Mecanismo de accionamiento 
-      </li>
-      <div class="horizontal-list">
-        <img src="static/chain_drive.gif" style ="border-radius: 10px;box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);max-width: 400px;" alt="Descripción de la imagen">
-      </div>
-    </lu>
-    <p style="color: #ffffff; text-align: center; font-family: Arial, sans-serif; font-size: 20px;">
+      <p class="texto-ejercicios">
         Escoge cualquier ejercicio para calcular:
       </p>
-  </div>
-  <div class="menu" style="text-align: left; margin-top: 20px;">
-    <ul style="list-style-type: none; padding: 0; display: flex; flex-direction: column;">
-      <li style="margin-bottom: 10px;">
+     </div> 
+    <div class="menu-ejercicios">
+      <ul class="lista-ejercicios">
+        <li style="margin-bottom: 10px;">
         <a href="opcion_ib).html" class="button">Ejercicio ib) Cálculo de la relación de transmisión del mecanismo</a>
       </li>
       <li style="margin-bottom: 10px;">
@@ -105,74 +80,14 @@
       <li style="margin-bottom: 10px;">
         <a href="opcion_vb).html" class="button">Ejercicio vb) Cálculo de diámetro de polea</a>
       </li>
-    </ul>
+      </ul>
+    </div>
+    <button class="button" onclick="window.location.href='https://github.com/abrilsoldier19/SimuladorMecanismosRobotica/tree/main'">Enlace a Github</button>
   </div>
-  
-  
-  
+  <div id="footer"></div>
 
+  <script type="text/javascript" src="../../../assets/js/main.js"></script>
+  <script type="text/javascript" src="../../../assets/js/include.js"></script>
 
-  <button class="button" style="display: inline-block;
-  background-color: #000000;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 5px;
-  margin-top: 20px;
-  border: none;
-  cursor: pointer;" onclick="window.location.href='https://github.com/abrilsoldier19/SimuladorMecanismosRobotica/tree/main'">Enlace a Github</button>
-
-
-<style>
-  .button {
-  display: inline-block;
-  background-color: #000000;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  margin-top: 20px;
-  border: none;
-  cursor: pointer;
-}
-
-.button2 {
-  display: inline-block;
-  background-color: #9F37F5;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  margin-top: 20px;
-  border: none;
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: #333;
-}
-
-.center {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-.horizontal-list {
-  display: flex;
-  justify-content: center;
-}
-
-.horizontal-list li {
-  margin-right: 20px;
-}
-
-  </style>
 </body>
 </html>
